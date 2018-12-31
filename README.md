@@ -2,7 +2,7 @@
 
 An initiative to empower the software engineer to excel in the interview.
 
-The Exhaustive Topics A Software Engineer Needs To Know To Pass A Big N Interview:
+<b>The Exhaustive Topics A Software Engineer Needs To Know To Pass A Big N Interview:</b>
 - Fundamentals of Computer Systems (just a general knowing how computers store information etc.)
 - Big O Time & Space Complexity Computation
 - Arrays
@@ -31,16 +31,16 @@ I am only a humble teacher, I am not perfect.
 
 If even one person gets an offer from my work my day is complete.
 
-YouTube: https://www.youtube.com/c/BackToBackSWE
+YouTube: https://www.youtube.com/c/BackToBackSWE <br>
 Facebook: https://www.facebook.com/backtobackswe/
 
 ---
 
 The best books for preparing for the interview? (no affiliate links here)
 
-Bare Beginner: https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850
-Medium/Advanced: https://www.amazon.com/Elements-Programming-Interviews-Java-Insiders/dp/1517671272
-Advanced: https://cses.fi/book/
+<b>Bare Beginner:</b> https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850
+<b>Medium/Advanced:</b> https://www.amazon.com/Elements-Programming-Interviews-Java-Insiders/dp/1517671272
+<b>Advanced:</b> https://cses.fi/book/
 
 My Comments: Cracking The Coding Interview is a good start but pales in comparison to how much Elements
 of Programming Interviews (EPI) will prepare you for the interview. Everything that I do has been inspired
