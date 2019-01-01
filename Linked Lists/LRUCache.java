@@ -1,5 +1,5 @@
 /*
-	LRU Cache - LeetCode: https://leetcode.com/problems/lru-cache/
+    LRU Cache - LeetCode: https://leetcode.com/problems/lru-cache/
 
   An adaption of the answer from user "liaison" on Leetcode.
   Link: https://leetcode.com/problems/lru-cache/discuss/45911/Java-Hashtable-%2B-Double-linked-list-(with-a-touch-of-pseudo-nodes)
@@ -12,7 +12,7 @@
   This code passes all Leetcode test cases as of Dec. 31st 2018
   Runtime: 77 ms, faster than 95.85% of Java online submissions for LRU Cache.
 
-	The video to explain this code is here: [a link will live here someday]
+    The video to explain this code is here: [a link will live here someday]
 */
 
 class LRUCache {
