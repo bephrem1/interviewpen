@@ -27,8 +27,8 @@ private static void exploreCombinations(int n, int k, int offset,
       return;
   }
   
-  final int numRemaining = k - snippet.size();
-  for (int i = offset; i <= n && numRemaining <= n - i + 1 ; ++i) {
+  final int spaceLeftInSnippet = k - snippet.size();
+  for (int i = offset; i <= n && spaceLeftInSnippet <= n - i + 1 ; ++i) {
       snippet.add(i);
       exploreCombinations(n, k, i + 1, snippet , result);
       snippet.remove(snippet.size() - 1);
