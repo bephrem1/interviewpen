@@ -23,7 +23,7 @@ private static void exploreCombinations(int n, int k, int offset,
                                         List<List<Integer>> result) {
 
   if (snippet.size() == k) {
-      result.add(new ArrayList <>(snippet));
+      result.add(new ArrayList<>(snippet));
       return;
   }
   
