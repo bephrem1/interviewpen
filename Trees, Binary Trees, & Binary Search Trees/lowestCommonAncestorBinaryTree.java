@@ -5,8 +5,8 @@
   Runtime: 14 ms, faster than 23.21% of Java online submissions* for
   Lowest Common Ancestor of a Binary Tree.
 
-  * This can be solved faster if we took up more space but this suffices
-    under our constraints for teaching purposes
+  This is the recursion approach and has the same runtime as the
+  accepted recursion approach on Leetcode's "solution" section.
 
   Complexities:
     # Let n be the total nodes in the binary tree.
