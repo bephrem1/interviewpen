@@ -8,7 +8,7 @@
   As of Jan. 3 this code passes all Leetcode test cases.
   Runtime: 3 ms, faster than 97.74% of Java online submissions for Combinations.
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=sVXUOUmfztM
 
 */
 
