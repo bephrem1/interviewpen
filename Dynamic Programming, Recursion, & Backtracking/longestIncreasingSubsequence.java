@@ -1,5 +1,5 @@
 /*
-  Longest Increasing Subsequence - LeetCode: https://leetcode.com/problems/longest-increasing-subsequence/submissions/
+  Longest Increasing Subsequence - LeetCode: https://leetcode.com/problems/longest-increasing-subsequence
 
   This code passes all Leetcode test cases as of Jan. 6 2019
   Runtime: 23 ms*, faster than 29.91% of Java online submissions for Longest Increasing Subsequence.
