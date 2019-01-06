@@ -12,7 +12,7 @@
   This code passes all Leetcode test cases as of Dec. 31st 2018
   Runtime: 77 ms, faster than 95.85% of Java online submissions for LRU Cache.
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=S6IfqDXWa10
 */
 
 class LRUCache {
