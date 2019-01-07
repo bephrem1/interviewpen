@@ -26,7 +26,7 @@ public List<List<String>> partition(String s) {
   2.) Recurse on them
   3.) When base case is hit, we add the answer and backtrack to keep going
 */
-public void decomposeString(String s, int buildPointer, List<String> decompInProgress,
+private void decomposeString(String s, int buildPointer, List<String> decompInProgress,
                 List<List<String>> validDecompositions){
 
   if(buildPointer == s.length()) {
