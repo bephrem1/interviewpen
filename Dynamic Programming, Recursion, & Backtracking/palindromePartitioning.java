@@ -30,7 +30,7 @@ private void decomposeString(String s, int buildPointer, List<String> decompInPr
                 List<List<String>> validDecompositions){
 
   if(buildPointer == s.length()) {
-    validDecompositions.add(new ArrayList<>(decompInProgress));
+    validDecompositions.add(new ArrayList<>(decompInProgress)); // deep copy the list. this is key.
   } else {
 
     /*
