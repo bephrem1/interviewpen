@@ -11,7 +11,7 @@
   This code passes all Leetcode test cases as of Jan. 7th 2019
   Runtime: 7 ms, faster than 38.34% of Java online submissions for Palindrome Partitioning.
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=4ykBXGbonlA
 */
 
 public List<List<String>> partition(String s) {
