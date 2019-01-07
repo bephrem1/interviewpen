@@ -7,7 +7,7 @@
   * Note: There is a O(n * log(n)) solution to this problem. But I cover this methods because it is
   more practical that one would come up with this approach in a real interview.
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=fV-TF4OvZpk
 
   PS: The only difference between LIS and LNDS (Longest Non-Decreasing Subsequence) is ONE CHANGE.
   We change "nums[i] > nums[j]" to "nums[i] >= nums[j]". We basically just change the conditions that
