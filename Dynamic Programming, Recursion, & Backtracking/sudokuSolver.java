@@ -38,13 +38,13 @@ private static boolean solveSudokuCell(int row, int col, char[][] board) {
 
   /*
     Have we finished placements in all columns for
-    the col we are working on?
+    the row we are working on?
   */
   if (col == board[row].length){
 
     /*
-      Yes. Reset to row 0 and advance the col by 1.
-      We will work on the next col.
+      Yes. Reset to col 0 and advance the row by 1.
+      We will work on the next row.
     */
     col = 0;
     row++;
@@ -58,7 +58,7 @@ private static boolean solveSudokuCell(int row, int col, char[][] board) {
 
   }
 
-  // Skip nonempty entries. They already have a value in them.
+  // Skip non-empty entries. They already have a value in them.
   if (board[row][col] != EMPTY_ENTRY) {
     return solveSudokuCell(row, col + 1, board);
   }
@@ -93,6 +93,9 @@ private static boolean solveSudokuCell(int row, int col, char[][] board) {
   return false; // No valid placement was found, this path is faulty, return false
 }
 
+/*
+  Will the placement at (row, col) break the Sudoku properties?
+*/
 private static boolean canPlaceValue(char[][] board, int row, int col, char charToPlace) {
 
   // Check column constraint. For each row, we do a check on column "col".
