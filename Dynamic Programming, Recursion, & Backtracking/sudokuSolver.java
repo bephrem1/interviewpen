@@ -28,10 +28,10 @@ public static boolean solveSudoku(char[][] board){
 }
 
 /*
-  We will start at col 0.
-  We will solve every column in that col.
-  When we reach the last column we move to the next col.
-  If this is past the last col (col == board[row].length) we are done.
+  We will start at row 0.
+  We will solve every column in that row.
+  When we reach the last column we move to the next row.
+  If this is past the last row (row == board.length) we are done.
   The whole board has been solved.
 */
 private static boolean solveSudokuCell(int row, int col, char[][] board) {
@@ -51,6 +51,7 @@ private static boolean solveSudokuCell(int row, int col, char[][] board) {
 
     /*
       Have we completed placements in all rows? If so then we are done.
+      If not, drop through to the logic below and keep solving things.
     */
     if (row == board.length){
       return true; // Entire board has been filled without conflict.
