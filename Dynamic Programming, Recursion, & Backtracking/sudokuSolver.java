@@ -15,7 +15,7 @@
   in working order before I first ran it. IT WORKED FIRST RUN IN LEETCODE. No syntax
   errors, no out of bounds exceptions. That is so impossible, but I'll take it.
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=JzONv5kaPJM
 */
 
 private static final char EMPTY_ENTRY = '.';
