@@ -28,6 +28,10 @@ public static boolean solveSudoku(char[][] board){
 }
 
 /*
+  This function chooses a placement for the cell at (row, col)
+  and continues solving based on the rules we define.
+  
+  Our strategy:
   We will start at row 0.
   We will solve every column in that row.
   When we reach the last column we move to the next row.
