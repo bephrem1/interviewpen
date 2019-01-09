@@ -119,14 +119,29 @@ private static boolean canPlaceValue(char[][] board, int row, int col, char char
 
   /*
     Check region constraints.
+    
+    In a 9 x 9 board, we will have 9 sub-boxes (3 rows of 3 sub-boxes).
+    
+    The "I" tells us that we are in the Ith sub-box row. (there are 3 sub-box rows)
+    The "J" tells us that we are in the Jth sub-box column. (there are 3 sub-box columns)
+    
+    I tried to think of better variable names for like 20 minutes but couldn't so just left
+    I and J.
+    
+    Integer properties will truncate the decimal place so we just know the sub-box number we are in.
+    Each coordinate we touch will be found by an offset from topLeftOfSubBoxRow and topLeftOfSubBoxCol.
   */
   int regionSize = (int) Math.sqrt(board.length);
 
   int I = row / regionSize;
   int J = col / regionSize;
 
-  int topLeftOfBlockRow = regionSize * I; // the row of the top left of the block
-  int topLeftOfBlockCol = regionSize * J; // the column of the tol left of the block
+  /*
+    This multiplication takes us to the EXACT top left of the sub-box. We keep the (row, col)
+    of these values because it is important. It lets us traverse the sub-box with our double for loop.
+  */
+  int topLeftOfSubBoxRow = regionSize * I; // the row of the top left of the block
+  int topLeftOfSubBoxCol = regionSize * J; // the column of the tol left of the block
 
   for (int i = 0; i < regionSize; i++) {
     for (int j = 0; j < regionSize; j++) {
@@ -135,7 +150,7 @@ private static boolean canPlaceValue(char[][] board, int row, int col, char char
         i and j just define our offsets from topLeftOfBlockRow
         and topLeftOfBlockCol respectively
       */
-      if (charToPlace == board[topLeftOfBlockRow + i][topLeftOfBlockCol + j]) {
+      if (charToPlace == board[topLeftOfSubBoxRow + i][topLeftOfSubBoxCol + j]) {
         return false;
       }
 
