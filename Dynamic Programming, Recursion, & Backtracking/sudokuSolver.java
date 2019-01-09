@@ -131,7 +131,7 @@ private static boolean canPlaceValue(char[][] board, int row, int col, char char
     Integer properties will truncate the decimal place so we just know the sub-box number we are in.
     Each coordinate we touch will be found by an offset from topLeftOfSubBoxRow and topLeftOfSubBoxCol.
   */
-  int regionSize = (int) Math.sqrt(board.length);
+  int regionSize = (int) Math.sqrt(board.length); // gives us the size of a sub-box
 
   int I = row / regionSize;
   int J = col / regionSize;
