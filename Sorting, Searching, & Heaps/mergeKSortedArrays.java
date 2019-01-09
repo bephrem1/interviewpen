@@ -37,7 +37,7 @@ public static List<Integer> mergeSortedArrays(List<List<Integer>> sortedArrays){
     Populate the iterator list with a respective iterator for each list
     (we will use these later to fetch the next items in processing)
   */
-  for (List<Integer> array : sortedArrays) {
+  for(List<Integer> array : sortedArrays){
     iters.add(array.iterator());
   }
 
@@ -58,8 +58,8 @@ public static List<Integer> mergeSortedArrays(List<List<Integer>> sortedArrays){
     Add the FIRST item from EACH list via the iterator we "juiced" out
     of it before IF it has an item to add (is not empty).
   */
-  for (int i = 0; i < iters.size(); i++) {
-    if (iters.get(i).hasNext()) {
+  for(int i = 0; i < iters.size(); i++){
+    if(iters.get(i).hasNext()){
       minHeap.add(new ArrayEntry(iters.get(i).next(), i));
     }
   }
