@@ -1,5 +1,4 @@
 /*
-
   Leetcode Question: https://leetcode.com/problems/combinations/submissions/
 
   ALL credit for this code goes to the authors of "Elements of Programming
@@ -9,7 +8,6 @@
   Runtime: 3 ms, faster than 97.74% of Java online submissions for Combinations.
 
   The video to explain this code is here: https://www.youtube.com/watch?v=sVXUOUmfztM
-
 */
 
 public static List<List<Integer>> combine(int n, int k) {
