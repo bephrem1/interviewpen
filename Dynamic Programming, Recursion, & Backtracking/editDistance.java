@@ -87,7 +87,7 @@ private static int computeDistanceBetweenPrefixes(String A, int A_idx , String B
 
 				If the characters don't match we have 3 options to fix this problem:
 
-				substituteLast:
+				substituteLast: (replace)
 					Transform
 						(A_idx, B_idx)
 						"beny" into "eph"
@@ -96,7 +96,7 @@ private static int computeDistanceBetweenPrefixes(String A, int A_idx , String B
 						"ben" into "ep"
 					And then substituting A's last character ("y") with B's last character ("h") to make them the same string.
 
-				addLast:
+				addLast: (insert)
 					Transform
 						(A_idx, B_idx)
 						"beny" into "eph"
@@ -105,7 +105,7 @@ private static int computeDistanceBetweenPrefixes(String A, int A_idx , String B
 						"beny" into "ep"
 					And then adding B's last character ("h") to the end of the transformed A (now "ep") to make them the same string.
 
-				deleteLast:
+				deleteLast: (delete)
 					Transform
 						(A_idx, B_idx)
 						"beny" into "eph"
