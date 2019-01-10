@@ -7,11 +7,7 @@
   Revision by Benyam Ephrem (Jan. 9th 2019)
 
   This code passes all Leetcode test cases as of Jan. 9th 2019
-  This Code's Runtime:           77 ms*, faster than 17.28% of Java online submissions for Partition to K Equal Sum Subsets.
-  Leetcode's Solution Runtime:    98 ms, faster than 11.70% of Java online submissions for Partition to K Equal Sum Subsets.
-
-  * Note: This is FAST for the backtracking approach to this question. The DP solution to this question
-  is asymptotically faster. This is still an accepted solution.
+  Runtime: 11ms (graph distribution was unavaliable but this is fast for the backtracking approach)
 
   The video to explain this code is here: [a link will live here someday]
 */
@@ -22,16 +18,24 @@
     Get the sum of all items in the array. We will use this to
     divide by k to get the sum that each bucket needs to hit
   */
-  int sumOfAllArrayItems = IntStream.of(arr).sum();
+  int sumOfAllArrayItems = 0;
+  for (int num : arr) {
+      sumOfAllArrayItems += num;
+  }
 
   /*
-    1.) k can not be 0 because we can not fill 0 buckets
+    1.) k can not be negative or 0 because we can not fill 0
+    or negative buckets
 
-    2.) sumOfAllArrayItems % k must be 0. If it is not then
+    2.) k can not be greater than the length of the array,
+    we can't partition more buckets than there are elements
+    in the array
+
+    3.) sumOfAllArrayItems % k must be 0. If it is not then
     we would have to have to fill buckets to a floating point
-    sum which would be impossible with only integers.
+    sum which would be impossible with only integers
   */
-  if (k == 0 || sumOfAllArrayItems % k != 0) {
+  if (k <= 0 || k > arr.length || sumOfAllArrayItems % k != 0) {
     return false;
   }
 
