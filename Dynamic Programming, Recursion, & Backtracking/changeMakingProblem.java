@@ -4,7 +4,7 @@
   All credit for code goes to user @elmirap who wrote the solution
   section to this problem: https://leetcode.com/problems/coin-change/solution/
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=jgiZlGzXMBw
 */
 
 /*

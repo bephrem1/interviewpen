@@ -10,7 +10,7 @@
   This code passes all Leetcode test cases as of Jan. 11 2019
   Runtime: 5 ms, faster than 51.10% of Java online submissions for Decode Ways.
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=YcJTyrG3bZs
 */
 
 public int numDecodings(String s) {

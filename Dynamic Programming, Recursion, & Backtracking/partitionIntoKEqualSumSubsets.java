@@ -9,7 +9,7 @@
   This code passes all Leetcode test cases as of Jan. 9th 2019
   Runtime: 11ms (graph distribution was unavaliable but this is fast for the backtracking approach)
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=qpgqhp_9d1s
 */
 
  public boolean canPartitionKSubsets(int[] arr, int k) {
