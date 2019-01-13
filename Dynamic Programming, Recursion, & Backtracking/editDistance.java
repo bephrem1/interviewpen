@@ -11,7 +11,7 @@
   This code passes all Leetcode test cases as of Jan. 10 2019
   Runtime: 8ms (graph distribution was unavaliable)
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=MiqoA-yF-0M
 */
 
 /*
