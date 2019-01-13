@@ -6,7 +6,7 @@
   EPI Question: 11.1, Merge Sorted Files (Merge K Sorted Arrays)
   Similar Question On Leetcode Here: https://leetcode.com/problems/merge-k-sorted-lists/
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=ptYUCjfNhJY
 */
 
 /*
