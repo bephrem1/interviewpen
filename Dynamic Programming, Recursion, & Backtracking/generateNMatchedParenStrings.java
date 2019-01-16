@@ -11,7 +11,7 @@
   This code passes all Leetcode test cases as of Jan. 13 2019
   Runtime: 2 ms, faster than 95.74% of Java online submissions for Generate Parentheses.
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=sz1qaKt0KGQ
 */
 
 public static List<String> generateParenthesis(int numPairs) {
