@@ -9,7 +9,7 @@
   This problem (for min stack) on Leetcode: https://leetcode.com/problems/min-stack/
   (This code is easily adaptable for the Leetcode question)
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=nGwn8_-6e7w
 
   * The code below is the most efficient solution with a best case O(1) space
   complexity and O(1) time complexity on the supported .max() operation.
