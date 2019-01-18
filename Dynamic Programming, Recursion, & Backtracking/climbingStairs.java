@@ -4,7 +4,7 @@
   An adaption of the Leetcode "Solution" section with many comments added
   for teaching purposes: https://leetcode.com/problems/climbing-stairs/solution/
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=NFJ3m9a1oJQ
 */
 
 /*
