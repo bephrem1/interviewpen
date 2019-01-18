@@ -121,16 +121,6 @@ class BottomUp {
   public int climbStairs(int n) {
 
     /*
-      1 distinct way to climb 1 if we can only take 1
-      or 2 steps.
-
-      We take 1 step.
-    */
-    if (n == 1) {
-      return 1;
-    }
-
-    /*
       In programming we all know we index off of 0. This is why
       we create an array of size n + 1. It is so we can just return
       dp[n] at the end instead of fumbling with dp[n - 1].
@@ -148,21 +138,20 @@ class BottomUp {
     int[] dp = new int[n + 1];
 
     /*
+      n = 0, the answer is 1. We can only take no steps.
+    */
+    dp[0] = 1;
+
+    /*
       n = 1, the answer is 1. We can only take 1 step.
     */
     dp[1] = 1;
 
     /*
-      n = 2, the answer is 2. We can take 2 1 steps or
-      1 2 step. (1 + 1 = 2) or (2 = 2)
-    */
-    dp[2] = 2;
-
-    /*
       The answer to the ith subproblem is the sum between the answer
       to the subproblems of climbing i - 1 stairs and i - 2 stairs
     */
-    for (int i = 3; i <= n; i++) {
+    for (int i = 2; i <= n; i++) {
       dp[i] = dp[i - 1] + dp[i - 2];
     }
 
