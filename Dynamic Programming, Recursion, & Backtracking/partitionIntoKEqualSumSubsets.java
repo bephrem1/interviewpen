@@ -7,7 +7,7 @@
   Revision by Benyam Ephrem (Jan. 9th 2019)
 
   This code passes all Leetcode test cases as of Jan. 9th 2019
-  Runtime: 11ms (graph distribution was unavaliable but this is fast for the backtracking approach)
+  Runtime: 10 ms, faster than 92.57% of Java online submissions for Partition to K Equal Sum Subsets.
 
   The video to explain this code is here: https://www.youtube.com/watch?v=qpgqhp_9d1s
 */
@@ -77,11 +77,13 @@ boolean canPartition(int iterationStart, int[] arr, boolean[] used, int k,
   }
 
   /*
-    Try all values from 'iterationStart' to the end of the array ONLY if they have
-    not been used up to this point in the recursion's path.
+    Try all values from 'iterationStart' to the end of the array ONLY if:
+    
+    1.) They have not been used up to this point in the recursion's path
+    2.) They do not overflow the current bucket we are filling
   */
   for (int i = iterationStart; i < arr.length; i++) {
-    if (!used[i]) {
+    if (!used[i] && inProgressBucketSum + arr[i] <= targetBucketSum) {
       used[i] = true;
       /*
         See if we can partition from this point with the item added

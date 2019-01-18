@@ -9,7 +9,7 @@
   This problem (for min stack) on Leetcode: https://leetcode.com/problems/min-stack/
   (This code is easily adaptable for the Leetcode question)
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=nGwn8_-6e7w
 
   * The code below is the most efficient solution with a best case O(1) space
   complexity and O(1) time complexity on the supported .max() operation.
@@ -74,7 +74,7 @@ public static class MaxStack {
       If the element that we popped was a max element we need to take
       action to update our max cache stack.
     */
-    if (poppedElement.equals(cachedMaxWithCount.peekFirst().max)){
+    if (poppedElement.equals(cachedMaxWithCount.peekFirst().max)) {
 
       /*
         Reduce the count of occurrences of the element at the top of the
@@ -86,7 +86,7 @@ public static class MaxStack {
         If there are no more of this max element then remove this entry from the
         max cache stack
       */
-      if (cachedMaxWithCount.peekFirst().count.equals(0)){
+      if (cachedMaxWithCount.peekFirst().count.equals(0)) {
         cachedMaxWithCount.removeFirst();
       }
     }
