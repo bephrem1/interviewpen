@@ -49,5 +49,3 @@ no affiliate links here
 My Comments: Cracking The Coding Interview is a good start but pales in comparison to how much Elements
 of Programming Interviews (EPI) will prepare you for the interview. Everything that I do has been inspired
 by this book. To date, I have read it nearly 5 times and skimmed it 4 times.
-
----
