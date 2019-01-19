@@ -34,15 +34,13 @@ If even one person gets an offer from my work my day is complete.
 YouTube: https://www.youtube.com/c/BackToBackSWE <br>
 Facebook: https://www.facebook.com/backtobackswe/
 
----
-
-Missing Code
+## Missing Code
 
 If I am missing code for any videos that you'd like to see, open a Github issue and I will make sure that I get to putting up a well commented code sample. (I know many of the beginning videos do not have code samples and need to go back and amend this)
 
----
+## Best Books For Prep
 
-The best books for preparing for the interview? (no affiliate links here)
+no affiliate links here
 
 <b>Bare Beginner:</b> https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850
 <b>Medium/Advanced:</b> https://www.amazon.com/Elements-Programming-Interviews-Java-Insiders/dp/1517671272
