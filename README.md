@@ -36,6 +36,12 @@ Facebook: https://www.facebook.com/backtobackswe/
 
 ---
 
+Missing Code
+
+If I am missing code for any videos that you'd like to see, open a Github issue and I will make sure that I get to putting up a well commented code sample. (I know many of the beginning videos do not have code samples and need to go back and amend this)
+
+---
+
 The best books for preparing for the interview? (no affiliate links here)
 
 <b>Bare Beginner:</b> https://www.amazon.com/Cracking-Coding-Interview-Programming-Questions/dp/0984782850
