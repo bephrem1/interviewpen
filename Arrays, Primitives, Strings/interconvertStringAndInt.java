@@ -31,13 +31,10 @@ public static String intToString(int inputInt) {
   */
   StringBuilder sb = new StringBuilder();
   do {
-
     int onesPlace = inputInt % 10;
-    char onesPlaceAsCharacter = (char) '0' + Math.abs(onesPlace);
-
-    sb.append(onesPlaceAsCharacter);
+    char onesPlaceAsChar = (char) ('0' + Math.abs(onesPlace));
+    sb.append(onesPlaceAsChar);
     inputInt /= 10;
-
   } while (inputInt != 0);
 
   if (isNegative) {
