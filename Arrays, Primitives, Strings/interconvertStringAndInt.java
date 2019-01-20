@@ -65,7 +65,7 @@ public static int stringToInt(String sb) {
     we begin converting at index 1, if we do not have a '-' then we can
     start decoding from index 0.
   */
-  for(int i = sb.charAt(0) == '-' ? 1 : 0; i < sb.length(); i++){
+  for (int i = sb.charAt(0) == '-' ? 1 : 0; i < sb.length(); i++) {
     final int digit = sb.charAt(i) - '0'; // Grab the character and convert to an int
     result *= 10; // Make room in the ones place
     result = result + digit; // Add it to the result
