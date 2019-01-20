@@ -10,7 +10,7 @@
   Note: This code shows the use of O(mn) space. This problem can be solved using
   only O(m) space. See the links above.
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=DJ4a7cmjZY0
 */
 
 public int change(int amount, int[] coins) {
