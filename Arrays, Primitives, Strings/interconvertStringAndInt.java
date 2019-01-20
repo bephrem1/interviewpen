@@ -16,11 +16,11 @@ public static String intToString(int inputInt) {
     we operate on it and take it to 0 during
     our truncation
    */
-	boolean isNegative = false;
+  boolean isNegative = false;
 
-	if (inputInt < 0) {
-		isNegative = true;
-	}
+  if (inputInt < 0) {
+    isNegative = true;
+  }
 
 	/*
 	  "Eat" away the string character by character:
@@ -29,20 +29,20 @@ public static String intToString(int inputInt) {
 	  2.) Append it to the target string
 	  3.) "Eat" away the ones place from the integer
 	 */
-	StringBuilder sb = new StringBuilder();
-	do {
+  StringBuilder sb = new StringBuilder();
+  do {
 
-	  int onesPlace = inputInt % 10;
-		char onesPlaceAsCharacter = (char) '0' + Math.abs(onesPlace);
+    int onesPlace = inputInt % 10;
+    char onesPlaceAsCharacter = (char) '0' + Math.abs(onesPlace);
 
-		sb.append(digitAsCharacter);
-		inputInt /= 10;
+    sb.append(digitAsCharacter);
+    inputInt /= 10;
 
-	) while (inputInt != 0);
+  ) while (inputInt != 0);
 
-	if (isNegative) {
-		sb.append('-'); // Adds the negative sign to the end
-	}
+  if (isNegative) {
+    sb.append('-'); // Adds the negative sign to the end
+  }
 
   /*
     By this point if the input was -123 then we will
@@ -50,12 +50,12 @@ public static String intToString(int inputInt) {
 
     Reversed we will get what we want, "-123"
    */
-	sb.reverse();
+  sb.reverse();
 
 	/*
 	  Finally, convert the StringBuilder object to a string
 	 */
-	return sb.toString();
+  return sb.toString();
 }
 
 public static int stringToInt(String sb) {
