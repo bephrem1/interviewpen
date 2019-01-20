@@ -127,7 +127,7 @@ private static boolean searchMazeHelper(List<List<Color>> maze, Coordinate curre
     /*
       The next item to possibly add to our path and search
     */
-    Coordinate next = new Coordinate(current.row + shift[®], current.col + shift[1]);
+    Coordinate next = new Coordinate(current.row + shift[0], current.col + shift[1]);
 
     /*
       Can this item be walked on?
