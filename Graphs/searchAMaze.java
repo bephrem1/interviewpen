@@ -6,7 +6,7 @@
   I have just added explanatory comments, reformatted the code, & changed
   variable names for understanding.
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=W9F8fDQj7Ok
 */
 
 /*
