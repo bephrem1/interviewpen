@@ -11,7 +11,7 @@
   This code passes all Leetcode test cases as of Jan. 13 2019
   Runtime: 2 ms, faster than 59.61% of Java online submissions for Balanced Binary Tree.
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=LU4fGD-fgJQ
 */
 
 /*
