@@ -7,7 +7,7 @@
 
   This code has mediocre style. Just take away the concepts and ignore the sloppiness from me.
 
-  The video to explain* this code is here: [a link will live here someday]
+  The video to explain* this code is here: https://www.youtube.com/watch?v=NheWPxGpoxQ
 */
 
 public static int secondLargest(int arr[]) { 
