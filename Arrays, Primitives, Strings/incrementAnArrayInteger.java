@@ -11,7 +11,7 @@
   This code passes all Leetcode test cases as of Jan. 13 2019
   Runtime: 0 ms, faster than 100.00% of Java online submissions for Plus One.
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=vA0t42qwKO0
 */
 
 public static int[] plusOne(int[] digits) {
