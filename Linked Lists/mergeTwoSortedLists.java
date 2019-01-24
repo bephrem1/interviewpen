@@ -8,7 +8,7 @@
 
   Merge Two Sorted Lists - LeetCode: https://leetcode.com/problems/merge-two-sorted-lists
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=GfRQvf7MB3k
 */
 
 /*
