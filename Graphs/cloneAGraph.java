@@ -20,7 +20,7 @@ public UndirectedGraphNode cloneGraph(UndirectedGraphNode start) {
   /*
     If the start node is null then we cannot do any cloning
   */
-  if(start == null) {
+  if (start == null) {
     return null;
   }
 
@@ -42,7 +42,7 @@ public UndirectedGraphNode cloneGraph(UndirectedGraphNode start) {
     The breadth first search continues until we have processed all vertices
     in the original graph. We know this is done when the queue is empty
   */
-  while(!queue.isEmpty()) {
+  while (!queue.isEmpty()) {
 
     /*
       We grab a node. We will express all of the edges coming off of this
