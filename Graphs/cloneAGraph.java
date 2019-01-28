@@ -12,7 +12,7 @@
   Runtime: 3 ms, faster than 76.03% of Java online submissions for Clone Graph.
   (we can't get much faster than this...)
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=vma9tCQUXk8
 */
 
 public UndirectedGraphNode cloneGraph(UndirectedGraphNode start) {
