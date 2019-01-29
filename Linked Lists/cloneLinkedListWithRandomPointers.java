@@ -6,7 +6,7 @@
     > Adding more clarifying comments
     > Moving code around to be more conventional
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=OvpKeraoxW0
 */
 
 /*
