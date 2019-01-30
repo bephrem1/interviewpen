@@ -139,7 +139,7 @@ class LinearTimeSolution {
 
         maxEndingHere + nums[i]
           1.) Let the item we are sitting at contribute to this best max we achieved
-          from index 0 to index i - 1.
+          ending at index i - 1.
 
         nums[i]
           2.) Just take the item we are sitting at's value.
