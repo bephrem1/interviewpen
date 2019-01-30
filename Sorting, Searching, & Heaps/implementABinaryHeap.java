@@ -8,6 +8,10 @@
   
   A Quick Min Heap Example Below For Understanding.
 
+  Only manually tested (no automated test suites were written)
+  so there may be tiny edge case bugs but it works for the most
+  part. If you find one just open a PR and let me know :)
+
   Array Form:
     [ 5, 7, 6, 10, 15, 17, 12 ]
 
@@ -24,7 +28,7 @@
     Right Child -> 2 * parentIndex + 2
 */
 
-class BinaryMinHeap {
+class MinHeap {
 
   private int capacity = 10;
   private int size;
@@ -34,7 +38,7 @@ class BinaryMinHeap {
     We could make a caller set the capacity but let's just
     keep it internally defaulting for now
   */
-  public BinaryMinHeap() {
+  public MinHeap() {
     heap = new int[capacity];
   }
 
@@ -138,7 +142,7 @@ class BinaryMinHeap {
 
         Otherwise, we need to do a swap down operation.
       */
-      if (items[index] < items[smallerChildIndex]) {
+      if (heap[index] < heap[smallerChildIndex]) {
         break;
       } else {
         swap(index, smallerChildIndex);
@@ -168,7 +172,7 @@ class BinaryMinHeap {
       While the item has a parent and the parent is larger than the item
       we stand at we swap them...our item beat the parent by being smaller
     */
-    while (hasParent(index) && parent(index) > items[index]) {
+    while (hasParent(index) && parent(index) > heap[index]) {
       swap(getParentIndex(index), index);
       index = getParentIndex(index);
     }
