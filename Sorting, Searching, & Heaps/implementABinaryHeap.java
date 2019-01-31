@@ -26,6 +26,8 @@
     Parent -> (childIndex - 1) / 2
     Left Child -> 2 * parentIndex + 1
     Right Child -> 2 * parentIndex + 2
+    
+  The video to explain this code is here: [a link will live here someday]
 */
 
 class MinHeap {
