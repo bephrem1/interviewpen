@@ -137,11 +137,11 @@ class LinearTimeSolution {
 
         We have 2 choices:
 
-        maxEndingHere + nums[i]
+        maxEndingHere + nums[i] (extend the previous subarray best whatever it was)
           1.) Let the item we are sitting at contribute to this best max we achieved
           ending at index i - 1.
 
-        nums[i]
+        nums[i] (start and end at this index)
           2.) Just take the item we are sitting at's value.
 
         The max of these 2 choices will be the best answer to the Max Contiguous
