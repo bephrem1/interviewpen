@@ -7,7 +7,7 @@
   as well as in O(1) space, but then they get trickier to implement
   but don't worry. If you can grasp these, you can grasp those.
   
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=BHB0B1jFKQc
 */
 
 private class TreeNode {
