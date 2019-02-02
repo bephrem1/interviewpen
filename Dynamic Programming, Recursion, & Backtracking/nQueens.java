@@ -166,8 +166,8 @@ private List<String> generateBoardFromPlacements(List<Integer> colPlacements, in
     /*
       Go through all columns in the row and populate the string.
 
-			If the column has a queen in it place a 'Q', otherwise place
-			a '.'
+      If the column has a queen in it place a 'Q', otherwise place
+      a '.'
     */
     for (int col = 0; col < n; col++) {
       if (col == colPlacements.get(row)) {
