@@ -71,7 +71,7 @@ private Rectangle maxSum(int matrix[][]) {
       We will reset the running row sums all to 0 since
       this is a new planting of the left bound
     */
-    for (int i = 0; i < rows; i++){
+    for (int i = 0; i < rows; i++) {
         runningRowSums[i] = 0;
     }
 
@@ -213,7 +213,7 @@ private KadaneResult kadane(int arr[]) {
   startIndex: start of Max Contiguous Subarray Sum region
   endIndex: end of Max Contiguous Subarray Sum region
 */
-private class KadaneResult{
+private class KadaneResult {
 
   int maxSum;
   int startIndex;
