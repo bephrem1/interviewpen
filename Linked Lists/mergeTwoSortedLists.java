@@ -1,12 +1,12 @@
 /*
+	Merge Two Sorted Lists - LeetCode: https://leetcode.com/problems/merge-two-sorted-lists
+	
   Authorship: ALL credit for the iterative code in this file goes to the
   authors of the book "Elements of Programming Interviews" by Adnan Aziz,
   Amit Prakash, and Tsung-Hsien Lee.
   
   I have just adapted the solution to pass on Leetcode, added explanatory
   comments, reformatted the code, & changed variable names for understanding.
-
-  Merge Two Sorted Lists - LeetCode: https://leetcode.com/problems/merge-two-sorted-lists
 
   The video to explain this code is here: https://www.youtube.com/watch?v=GfRQvf7MB3k
 */
