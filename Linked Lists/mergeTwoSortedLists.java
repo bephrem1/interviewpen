@@ -1,6 +1,6 @@
 /*
-	Merge Two Sorted Lists - LeetCode: https://leetcode.com/problems/merge-two-sorted-lists
-	
+  Merge Two Sorted Lists - LeetCode: https://leetcode.com/problems/merge-two-sorted-lists
+
   Authorship: ALL credit for the iterative code in this file goes to the
   authors of the book "Elements of Programming Interviews" by Adnan Aziz,
   Amit Prakash, and Tsung-Hsien Lee.
