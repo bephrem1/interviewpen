@@ -1,5 +1,7 @@
 /*
   Bubble Sort. Hey.
+  
+  The video to explain this code: https://www.youtube.com/watch?v=euPlXW7dnlI
 */
 
 private static void bubbleSort(int arr[]) {
