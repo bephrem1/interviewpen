@@ -8,6 +8,8 @@
 
   When I say "position" I mean indexing off of 1.
   When I say "index" I mean indexing off of 0.
+  
+  The video to explain this code: [a link will live here someday]
 */
 
 /*
