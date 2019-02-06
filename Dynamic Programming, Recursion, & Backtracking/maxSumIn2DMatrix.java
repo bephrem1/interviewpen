@@ -16,7 +16,7 @@
   vertical array if we choose the top bound of topBorderIndex and the lower bound
   of bottomBorderIndex.
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=-FgseNO-6Gk
 */
 
 /*
