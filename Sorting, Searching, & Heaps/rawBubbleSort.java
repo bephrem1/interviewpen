@@ -1,5 +1,6 @@
 /*
-  Bubble Sort. Hey.
+  This is Bubble Sort with the worst case still
+	being O(n^2).
 */
 
 private static void bubbleSort(int arr[]) {
