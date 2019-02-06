@@ -1,9 +1,12 @@
 /*
   This is Bubble Sort with the worst case still
   being O(n^2).
+
+  When I say "position" I mean indexing off of 1.
+  When I say "index" I mean indexing off of 0.
 */
 
-private static void bubbleSort(int arr[]) {
+private void bubbleSort(int arr[]) {
 
   int n = arr.length;
 
@@ -35,7 +38,7 @@ private static void bubbleSort(int arr[]) {
 
 }
 
-private static void swap(int arr[], int first, int second) {
+private void swap(int arr[], int first, int second) {
   int temp = arr[first];
   arr[first] = arr[second];
   arr[second] = temp;
