@@ -1,5 +1,5 @@
 /*
-  This is Bubble Sort with the worst case still
+  This is Bubble Sort with the best case still
   being O(n^2).
 */
 
