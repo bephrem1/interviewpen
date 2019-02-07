@@ -34,6 +34,12 @@ If even one person gets an offer from my work my day is complete.
 YouTube: https://www.youtube.com/c/BackToBackSWE <br>
 Facebook: https://www.facebook.com/backtobackswe/
 
+## Mistakes
+
+I'm not perfect. I watch finished videos 2 times over. I read and test all code samples. But I may make an off by 1 error in the explanatory comments.
+
+If you see a mistake anywhere just let me know by opening an issue.
+
 ## Best Books For Prep
 
 no affiliate links here
