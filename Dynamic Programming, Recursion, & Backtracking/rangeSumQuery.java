@@ -5,7 +5,7 @@
   Runtime: 66 ms, faster than 96.82% of Java online submissions for Range Sum Query - Immutable.
   Memory Usage: 31.2 MB, less than 88.74% of Java online submissions for Range Sum Query - Immutable.
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=ZMOFmHBVEcg
 */
 
 class NumArray {
