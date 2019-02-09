@@ -1,7 +1,7 @@
 /*
-  Insertions Sort.
+  Insertion Sort.
 
-  The video to explain this code is here: 
+  The video to explain this code is here: https://www.youtube.com/watch?v=ufIET8dMnus
 */
 
 private void insertionSort(int arr[]) {
