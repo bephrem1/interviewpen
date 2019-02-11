@@ -17,15 +17,12 @@ class MyQueue {
   private Stack<Integer> pushStack;
   private Stack<Integer> popStack;
 
-  int queueSize;
-
   /*
     Initialize the 2 stacks and the size of the queue
   */
   public MyQueue() {
     pushStack = new Stack<>();
     popStack = new Stack<>();
-    queueSize = 0; // ints in java are 0 by default but just being clear
   }
   
   /*
@@ -34,7 +31,6 @@ class MyQueue {
   */
   public void push(int item) {
     pushStack.push(item);
-    queueSize++;
   }
   
   /*
@@ -63,7 +59,6 @@ class MyQueue {
       -1 would be misleading since that is a valid return value.
     */
     if (!popStack.isEmpty()) {
-      queueSize--;
       return popStack.pop();
     }
 
@@ -101,7 +96,7 @@ class MyQueue {
     Is the queue empty?
   */
   public boolean empty() {
-    return queueSize == 0;
+    return pushStack.isEmpty() && popStack.isEmpty();
   }
 
   private void ensureThereAreItemsInPopStack() {
