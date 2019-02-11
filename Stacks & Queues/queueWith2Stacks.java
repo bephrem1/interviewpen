@@ -9,7 +9,7 @@
   Runtime: 54 ms, faster than 95.59% of Java online submissions for Implement Queue using Stacks.
   Memory Usage: 25.7 MB, less than 81.58% of Java online submissions for Implement Queue using Stacks.
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=Wg8IiY1LbII
 */
 
 class MyQueue {
