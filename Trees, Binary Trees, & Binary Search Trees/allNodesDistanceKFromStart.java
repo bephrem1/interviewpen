@@ -5,7 +5,7 @@
   Runtime: 3 ms, faster than 64.42% of Java online submissions for All Nodes Distance K in Binary Tree.
   (can't get much faster than that. Asymptotically this is identical to anything even remotely faster)
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=nPtARJ2cYrg
 */
 
 /**
