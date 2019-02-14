@@ -2,7 +2,7 @@
   Longest Common Subsequence | DP-4 - GeeksforGeeks:
   https://www.geeksforgeeks.org/longest-common-subsequence-dp-4/
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=ASoaQq66foQ
 */
 
 /*
