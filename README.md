@@ -27,6 +27,8 @@ And that is pretty much it. These are the topics you need to know well to pass.
 The channel's goal is to contribute to the community of people bridging
 these topics to help engineers excel in the interview.
 
+It has nothing to do with me. I am just here to communicate the ideas.
+
 I am only a humble teacher, I am not perfect.
 
 If even one person gets an offer from my work my day is complete.
