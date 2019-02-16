@@ -228,9 +228,16 @@ class BottomUp {
 }
 
 /*
-  This code passes all Leetcode test cases as of Feb. 14 2019
-  Runtime:
+  Other Solutions: (that you'd probably not get to in a 45 minute interview)
+
+  1.) Dynamic Programming with Binary Search
+  Time Complexity: O( totalEggs * ( totalFloors * log( totalFloors ) ) )
+
+  2.) Dynamic Programming with Optimality Criterion...whatever that is
+  Time Complexity: O( totalEggs * totalFloors )
+
+  3.) The Mathematical Approach...k
+  Time Complexity: O( totalEggs * log( totalFloors ) )
+
+  I'd probably explain these wrong. I think...
 */
-class TopDownWithBinarySearch {
-  
-}
