@@ -8,7 +8,7 @@
   The video to explain this code: https://www.youtube.com/watch?v=euPlXW7dnlI
 */
 
-private void bubbleSort(int arr[]) {
+private void bubbleSort(int[] arr) {
 
   int n = arr.length;
 
@@ -40,7 +40,7 @@ private void bubbleSort(int arr[]) {
 
 }
 
-private void swap(int arr[], int first, int second) {
+private void swap(int[] arr, int first, int second) {
   int temp = arr[first];
   arr[first] = arr[second];
   arr[second] = temp;
