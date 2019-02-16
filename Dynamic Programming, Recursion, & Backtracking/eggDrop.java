@@ -101,6 +101,8 @@ class TopDown {
   /*
     Initialize all subproblems that need to be solved. This does not change asymptotic
     complexity of the solution since the work stays within our upper bound.
+
+		Not sure if we really need to do this...eh...whatever you get the point
   */
   private void initializeCache(int totalEggs, int totalFloors, int[][] cache) {
     for (int eggs = 2; eggs <= totalEggs; eggs++) {
