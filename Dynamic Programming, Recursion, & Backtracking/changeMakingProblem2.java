@@ -46,7 +46,7 @@ public int change(int amount, int[] coins) {
         sub problem target amount)
       */
       int withoutThisCoin = dp[i-1][j];
-      int withThisCoin = currentCoinValue <= j ? dp[i][j] - currentCoinValue] : 0;
+      int withThisCoin = currentCoinValue <= j ? dp[i][j - currentCoinValue] : 0;
 
       dp[i][j] = withoutThisCoin + withThisCoin;
     }
