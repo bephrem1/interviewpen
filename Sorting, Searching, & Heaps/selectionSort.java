@@ -1,7 +1,7 @@
 /*
   Selection Sort. Hey there.
 
-  The video to explain this code is here: [a link to a video will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=TNRRoYCzlFw
 */
 
 public void selectionSort(int[] arr) {
