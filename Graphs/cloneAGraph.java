@@ -15,6 +15,15 @@
   The video to explain this code is here: https://www.youtube.com/watch?v=vma9tCQUXk8
 */
 
+/**
+ * Definition for an undirected graph node.
+ * class UndirectedGraphNode {
+ *     int label;
+ *     List<UndirectedGraphNode> neighbors;
+ *     UndirectedGraphNode(int x) { label = x; neighbors = new ArrayList<UndirectedGraphNode>(); }
+ * };
+ */
+
 public UndirectedGraphNode cloneGraph(UndirectedGraphNode start) {
 
   /*
