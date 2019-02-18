@@ -2,7 +2,7 @@
   Super Egg Drop - LeetCode: https://leetcode.com/problems/super-egg-drop
   Egg Dropping Puzzle | DP-11 - GeeksforGeeks: https://www.geeksforgeeks.org/egg-dropping-puzzle-dp-11/
 
-  The video to explain this code is here: [a link to a video will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=iOaRjDT0vjc
 */
 
 /*
