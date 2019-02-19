@@ -36,50 +36,16 @@ public ListNode sortList(ListNode head) {
   }
 
   /*
-    Look below, you will see how we use each of these
+    Abstracting out finding the middle node
   */
-  ListNode prev = null;
-  ListNode slow = head;
-  ListNode fast = head;
-
-  /*
-    slow pointer, 1 hop per iteration
-    fast pointer, 2 hops per iteration
-
-    When 'fast' reaches the last element or runs
-    over the list the 'slow' pointer will point
-    to the middle of the list
-  */
-  while (fast != null && fast.next != null) {
-
-    /*
-      Keep prev 1 behind where slow will be. We
-      want this for later
-    */
-    prev = slow;
-
-    /*
-      Move the slow and fast pointers
-    */
-    slow = slow.next;
-    fast = fast.next.next;
-  }
-
-  /*
-    Cut off the end of the first half list so it
-    is no longer connected in memory to the right
-    half list head
-
-    We kept track of prev to be able to do this cutoff
-  */
-  prev.next = null;
+  ListNode mid = getMiddleAndSplitInHalf(head);
 
   /*
     Sort the left. Sort the right. This is recursive splitting
     and handing responsibility off
   */
   ListNode leftHalf = sortList(head);
-  ListNode rightHalf = sortList(slow);
+  ListNode rightHalf = sortList(mid);
 
   /*
     Merge the sorted left half and sorted right half
@@ -90,7 +56,7 @@ public ListNode sortList(ListNode head) {
 /*
   The merge subroutine
 */
-ListNode merge(ListNode l1Pointer, ListNode l2Pointer) {
+private ListNode merge(ListNode l1Pointer, ListNode l2Pointer) {
 
   /*
     You will see how we use these below
@@ -143,4 +109,54 @@ ListNode merge(ListNode l1Pointer, ListNode l2Pointer) {
     list was in to start
   */
   return dummyHead.next;
+}
+
+/*
+  Get the middle node and split the linked list in half
+*/
+private ListNode getMiddleAndSplitInHalf(ListNode head) {
+
+  /*
+    Look below, you will see how we use each of these
+  */
+  ListNode prev = null;
+  ListNode slow = head;
+  ListNode fast = head;
+
+  /*
+    slow pointer, 1 hop per iteration
+    fast pointer, 2 hops per iteration
+
+    When 'fast' reaches the last element or runs
+    over the list the 'slow' pointer will point
+    to the middle of the list
+  */
+  while (fast != null && fast.next != null) {
+
+    /*
+      Keep prev 1 behind where slow will be. We
+      want this for later
+    */
+    prev = slow;
+
+    /*
+      Move the slow and fast pointers
+    */
+    slow = slow.next;
+    fast = fast.next.next;
+  }
+
+  /*
+    Cut off the end of the first half list so it
+    is no longer connected in memory to the right
+    half list head
+
+    We kept track of prev to be able to do this cutoff
+  */
+  prev.next = null;
+
+  /*
+    'slow' sits at the middle of the list
+  */
+  return slow;
 }
