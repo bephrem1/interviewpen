@@ -1,7 +1,7 @@
 /**
   Minimum Window Substring - LeetCode: https://leetcode.com/problems/minimum-window-substring/
 
-  @author Benyam Ephrem
+  @author Benyam Ephrem (and I referenced the Leetcode solution for the optimal)
 
   In the optimal solution I nest if statements and have redundant boolean values...I
   know. This code is for learning purposes. My goal is for someone who reads this to
