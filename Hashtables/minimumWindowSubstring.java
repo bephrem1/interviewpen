@@ -7,7 +7,7 @@
   know. This code is for learning purposes. My goal is for someone who reads this to
   understand very quickly so that style can be adjusted to the programmer's desires.
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=eS6PZLjoaq8
 */
 
 /*
