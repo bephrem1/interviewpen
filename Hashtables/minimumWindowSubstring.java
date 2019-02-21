@@ -1,5 +1,7 @@
-/*
+/**
   Minimum Window Substring - LeetCode: https://leetcode.com/problems/minimum-window-substring/
+
+  @author Benyam Ephrem
 
   The video to explain this code is here: [a link will live here someday]
 */
@@ -59,16 +61,66 @@ public String minWindow(String searchString, String t) {
 private boolean stringContainsAllCharacters(String searchString, String t) {
 
   /*
-    For each character in t, ensure that it exists in the 'searchString'
+  Build a mapping to put all of t's characters inside
   */
-  for (char c : t.toCharArray()) {
-    if (searchString.indexOf(c) == -1) {
-      return false;
-    }
+  Map<Character, Integer> requiredCharacters = new HashMap<Character, Integer>();
+
+  /*
+    Iterate over every character in t
+  */
+  for (int i = 0; i < t.length(); i++) {
+
+    /*
+      Get the current character from the hashtable. If it exists we will get the
+      current occurrence count. If it doesn't exist we will get 0 (the default).
+    */
+    int occurrencesOfCharacter = requiredCharacters.getOrDefault(t.charAt(i), 0);
+
+    /*
+      Increment the occurrences of the character and update the mapping
+    */
+    requiredCharacters.put(t.charAt(i), occurrencesOfCharacter + 1);
+
   }
 
-  return true;
+  /*
+    Go over the search string and eliminate characters from the hashtable
+  */
+  for (int i = 0; i < searchString.length(); i++) {
+
+    // Extract the current character
+    char curChar = searchString.charAt(i);
+
+    // Is there a match to the required characters?
+    if (requiredCharacters.containsKey(curChar)) {
+
+      // Calculate what the new occurrence count will be
+      int newOccurrenceCount = requiredCharacters.get(curChar) - 1;
+
+      /*
+        If we have satisfied all of the characters for this character,
+        remove the key from the hashtable.
+
+        Otherwise, just update the mapping with 1 less occurrence to
+        satisfy for
+      */
+      if (newOccurrenceCount == 0) {
+        requiredCharacters.remove(curChar);
+      } else {
+        requiredCharacters.put(curChar, newOccurrenceCount);
+      }
+
+    }
+
+  }
+
+  /*
+    If we satisfied all characters the the required characters hashtable
+    will be empty
+  */
+  return requiredCharacters.isEmpty();
 }
+
 
 /*
   Approach 2:
