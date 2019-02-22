@@ -92,6 +92,8 @@ public int getSum(int a, int b) {
   1101
   ----
   0101
+  
+  Notice how this ONLY happens at positions that will need a carry.
 
 
   '^' the XOR (exclusive or) operator, either needs to be true, BOTH CANNOT
