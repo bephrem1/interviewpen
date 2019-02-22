@@ -1,6 +1,10 @@
 /*
   Sum of Two Integers - LeetCode: https://leetcode.com/problems/sum-of-two-integers/
 
+  This code passes all Leetcode test cases as of Feb. 21 2019
+  Runtime: 0 ms, faster than 100.00% of Java online submissions for Sum of Two Integers.
+  Memory Usage: 34.4 MB, less than 44.03% of Java online submissions for Sum of Two Integers.
+
   The video to explain this code is here: [a link will live here someday]
 */
 
