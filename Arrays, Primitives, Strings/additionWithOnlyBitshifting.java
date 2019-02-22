@@ -169,7 +169,7 @@ public int getSum(int a, int b) {
   << the carry [we do this since carries must be applied to 1 position to the left]
   0001
   ----
-  0010    (in the next iteration...b will hold this...and a will be added against it using '^'...which
+  0010    (in the next iteration...b will hold this...and it will be added against 'a' using '^'...which
            makes total sense. The carry we recorded before should be moved 1 left so it can simply be
            added...then more carry's will pop up...and so on until there are no carries left and we are
            done with the addition.)
