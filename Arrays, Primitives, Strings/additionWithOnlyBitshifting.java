@@ -5,7 +5,7 @@
   Runtime: 0 ms, faster than 100.00% of Java online submissions for Sum of Two Integers.
   Memory Usage: 34.4 MB, less than 44.03% of Java online submissions for Sum of Two Integers.
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=qq64FrA2UXQ
 */
 
 /*
