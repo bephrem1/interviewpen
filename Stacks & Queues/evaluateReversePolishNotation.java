@@ -4,7 +4,7 @@
   This code passes all Leetcode test cases as of Feb. 23 2019
   Runtime: 5 ms, faster than 97.02% of Java online submissions for Evaluate Reverse Polish Notation.
 
-  The video to explain this code is here: [a link to a video will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=qN8LPIcY6K4
 */
 
 /*
