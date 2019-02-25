@@ -5,7 +5,7 @@
   Runtime: 5 ms, faster than 97.02% of Java online submissions for Evaluate Reverse Polish Notation.
   Memory Usage: 36.3 MB, less than 63.83% of Java online submissions for Evaluate Reverse Polish Notation.
 
-  The video to explain this code is here: [a link to a video will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=qN8LPIcY6K4
 */
 
 /*
