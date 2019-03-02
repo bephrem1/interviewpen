@@ -24,7 +24,7 @@ private static final char EMPTY_ENTRY = '.';
   Driver function to kick off the recursion
 */
 public static boolean solveSudoku(char[][] board){
-  return solveSudokuCell(0 , 0, board);
+  return solveSudokuCell(0, 0, board);
 }
 
 /*
