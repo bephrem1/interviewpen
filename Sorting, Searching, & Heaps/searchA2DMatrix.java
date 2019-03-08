@@ -224,5 +224,5 @@ public boolean searchMatrix(int[][] matrix, int target) {
 
 /*
   There is an even faster approach addressed in "Cracking The Coding Interview" that operates
-  even faster. It is lengthy. For further investigation it is problem ___ in chapter ___.
+  even faster. It is lengthy. For further investigation it is problem 10.9 in chapter 10.
 */
