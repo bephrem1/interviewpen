@@ -11,7 +11,7 @@
   > There are no guarantees that the first item of any row or column relates to the
   last item in the previous row or column
 
-  The video to explain this code is here: [a link to a video will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=FOa55B9Ikfg
 */
 
 /***********************************************
