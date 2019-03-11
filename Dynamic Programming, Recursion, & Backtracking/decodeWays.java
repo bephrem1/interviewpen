@@ -18,7 +18,7 @@ public int numDecodings(String s) {
   /*
     We will cache the answers to our subproblems
   */
-  int[] previousAnswers = new int[s.length() + 1];
+  int[] previousAnswers = new int[s.length()];
   Arrays.fill(previousAnswers, -1);
 
   return numDecodings(s, 0, previousAnswers);
