@@ -7,8 +7,9 @@
   for teaching purposes and it is generally a sloppy example but gets the point
   across
 
-  This code passes all Leetcode test cases as of Jan. 11 2019
-  Runtime: 5 ms, faster than 51.10% of Java online submissions for Decode Ways.
+  This code passes all Leetcode test cases as of Mar. 10 2019
+  Runtime: 1 ms, faster than 87.88% of Java online submissions for Decode Ways.
+	Memory Usage: 34.4 MB, less than 77.38% of Java online submissions for Decode Ways.
 
   The video to explain this code is here: https://www.youtube.com/watch?v=YcJTyrG3bZs
 */
