@@ -1,12 +1,12 @@
 /*
-  Quicksort. Picking the pivotFinalRestingPosition is 'pivotal' to the
+  Quicksort. Picking the pivot is 'pivotal' to the
   algorithm's performance ;)
 
   This version picks the last item in the partition space
-  as the pivotFinalRestingPosition everytime, there are many other ways to choose
-  a pivotFinalRestingPosition item.
+  as the pivot everytime, there are many other ways to choose
+  a pivot item.
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=uXBnyYuwPe8
 */
 
 /*
