@@ -5,7 +5,8 @@
   https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree
 
   This code passes all Leetcode test cases as of Jan. 1st 2019
-  Runtime: 13 ms, faster than 91.14% of Java online submissions for Lowest Common Ancestor of a Binary Tree.
+  Runtime: 5 ms, faster than 100.00% of Java online submissions for Lowest Common Ancestor of a Binary Tree.
+  Memory Usage: 33.9 MB, less than 68.78% of Java online submissions for Lowest Common Ancestor of a Binary Tree.
 
   The video to explain this code is here: [a link will live here someday]
 */
