@@ -118,6 +118,8 @@ class TopDown {
   This code passes all Leetcode test cases as of Feb. 14 2019
   Runtime*: 11339 ms, faster than 1.11% of Java online submissions for Super Egg Drop.
   Memory Usage: 40.4 MB, less than 100.00% of Java online submissions for Super Egg Drop.
+  
+  This code gets Time Limit Exceeded as of April 4 2019. :*(
 
   *Note: Leetcode offers solutions that are whole classes faster in terms of asymptotic
   complexity so do not be worried by this speed. The fastest appraoches are the most
