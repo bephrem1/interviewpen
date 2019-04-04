@@ -44,6 +44,10 @@ Again, I'm not perfect. I watch finished videos 2 times over. I read and test al
 
 If you see a mistake anywhere just let me know by opening an issue.
 
+## Outdated Code
+
+Sometimes Leetcode function signatures change or the names on fields of objects change breaking the code. If you see this then just open an issue or PR if you want to fix it.
+
 ## Best Books For Prep
 
 no affiliate links here
