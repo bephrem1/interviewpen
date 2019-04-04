@@ -8,7 +8,7 @@
   Runtime: 5 ms, faster than 100.00% of Java online submissions for Lowest Common Ancestor of a Binary Tree.
   Memory Usage: 33.9 MB, less than 68.78% of Java online submissions for Lowest Common Ancestor of a Binary Tree.
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=py3R23aAPCA
 */
 
 /*
