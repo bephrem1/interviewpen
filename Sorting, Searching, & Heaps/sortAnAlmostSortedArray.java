@@ -6,7 +6,7 @@
   I haven't written automated tests for this code so no guarantees. But it has been
   manually tested thoroughly.
 
-  The video to explain this code: [a video link will live here someday]
+  The video to explain this code: https://www.youtube.com/watch?v=yQ84lk-EXTQ
 */
 
 public void sortNearlySortedArray(int[] arr, int k) {
