@@ -1,7 +1,7 @@
 /*
   Counting Sort.
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=1mh2vilbZMg
 */
 
 public int[] countingSort(int[] arr, int k) {
