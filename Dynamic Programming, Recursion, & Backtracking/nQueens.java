@@ -14,7 +14,7 @@
 
   *Using a char array will be faster than using a Strings
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: [https://www.youtube.com/watch?v=wGbuCyNpxIg&feature=youtu.be]
 */
 
 public List<List<String>> solveNQueens(int n) {
