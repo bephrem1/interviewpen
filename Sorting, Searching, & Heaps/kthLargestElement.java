@@ -8,7 +8,7 @@
   This code passes all Leetcode test cases as of April 18 2019
   Runtime: 1 ms, faster than 99.86% of Java online submissions for Kth Largest Element in an Array
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=hGK_5n81drs
 */
 
 /*
