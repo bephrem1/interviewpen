@@ -6,7 +6,7 @@
   Runtime: 12 ms, faster than 62.25% of Java online submissions for Serialize and Deserialize Binary Tree.
   Memory Usage: 39.4 MB, less than 71.37% of Java online submissions for Serialize and Deserialize Binary Tree.
 
-  The video to explain this code is here: [a link will live here someday]
+  The video to explain this code is here: https://www.youtube.com/watch?v=suj1ro8TIVY
 */
 
 public class Codec {
