@@ -22,7 +22,7 @@ public class CoinChangeTopDown {
       return 0;
     }
 
-    return coinChange(coins, amount, new int[amount]);
+    return coinChange(coins, amount, new int[amount + 1]);
   }
 
   private int coinChange(int[] coins, int remainder, int[] dp) {
