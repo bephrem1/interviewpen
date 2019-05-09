@@ -44,8 +44,8 @@ public class CoinChangeTopDown {
     }
 
     // We already have an answer cached. Return it.
-    if (dp[remainder - 1] != 0) {
-      return dp[remainder - 1];
+    if (dp[remainder] != 0) {
+      return dp[remainder];
     }
 
     /*
@@ -75,10 +75,10 @@ public class CoinChangeTopDown {
       sub problem answer is just arbitrarily made to be -1, otherwise
       the sub problem's answer is "minimum"
     */
-    dp[remainder - 1] = (minimum == Integer.MAX_VALUE) ? -1 : minimum;
+    dp[remainder] = (minimum == Integer.MAX_VALUE) ? -1 : minimum;
 
     // Return the sub problem's answer
-    return dp[remainder - 1];
+    return dp[remainder];
   }
 
 }
