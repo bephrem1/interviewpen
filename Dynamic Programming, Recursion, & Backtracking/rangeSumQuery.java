@@ -19,7 +19,9 @@ class NumArray {
       We do nums.length + 1 for a reason, see below.
     */
     runningSumCache = new int[nums.length + 1];
-
+    
+    //Initializing the first index in the cache to 0 as we are using cache size of nums.length+1 (pushing the array ahead by 1 place)
+    runningSumCache[0] = 0;
     /*
       Populate the running sum cache. This is wha this looks like:
 
