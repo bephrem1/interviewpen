@@ -141,16 +141,22 @@ class LRUCache {
       Remove the given node from the doubly linked list
     */
     private void removeNode(DNode node){
-
-      // Grab reference to the prev and next of the node
+      /* you dont need 
       DNode savedPrev = node.prev;
       DNode savedNext = node.next;
+      
+      you can just do it like this , since you dont change node.next & node.prev
+      unless you call addnode(node)
+      
+      but maybe im just stupid :^)
+      */
+      // Grab reference to the prev and next of the node
 
       // Cut out going forwards
-      savedPrev.next = savedNext;
+      node.prev.next = node.next;
 
       // Cut out going backards
-      savedNext.prev = savedPrev;
+      node.next.prev = node.prev;
     }
 
     /*
