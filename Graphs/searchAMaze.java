@@ -167,7 +167,7 @@ private static boolean searchMazeHelper(List<List<Color>> maze, Coordinate curre
   Validates a given cell, it ensures it is in the maze and is white (can
   be "walked on")
 */
-private static boolean isWalkable(Coordinate current, List<ListcColor>> maze) {
+private static boolean isWalkable(Coordinate current, List<List<Color>> maze) {
   return current.row >= 0 && current.row < maze.size() &&
          current.col >= 0 && current.col < maze.get(current.row).size() &&
          maze.get(current.row).get(current.col) == Color.WHITE;
