@@ -35,8 +35,7 @@ I am only a humble teacher, I am not perfect.
 
 If even one person gets an offer from my work my day is complete.
 
-<b>The Big O Guide:</b> https://thebigoguide.com <br>
-
+<b>Join our class:</b> https://codinginterviewclass.com <br>
 <b>YouTube:</b> https://www.youtube.com/c/BackToBackSWE <br>
 <b>Facebook:</b> https://www.facebook.com/backtobackswe/
 
