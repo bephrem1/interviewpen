@@ -113,7 +113,7 @@ private static boolean searchMazeHelper(List<List<Color>> maze, Coordinate curre
     {0 , 1}, // going right
     {1, 0}, // going down
     {0, -1}, // going left
-    {-1, 0} // going up
+    {-1, 0} // going up`
   };
 
   /*
