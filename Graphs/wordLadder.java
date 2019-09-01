@@ -38,10 +38,10 @@ class SolutionWithRawSimulation {
           chars[i] = character;
           
           // Rebuild the string, we now have a string 1 'transformation' away
-          String word = new String(chars);
+          String transformedWord = new String(chars);
           
           // If this word is a match for the end then we have found a path
-          if (word.equals(endWord)) {
+          if (transformedWord.equals(endWord)) {
             return currentLevel + 1;
           }
           
@@ -49,9 +49,9 @@ class SolutionWithRawSimulation {
             If the word is in the 'wordList' and has not been visited, then
             add it to the queue to eventually be searched
           */
-          if (wordList.contains(word) && !visited.contains(word)) {
-            queue.add(word);
-            visited.add(word);
+          if (wordList.contains(transformedWord) && !visited.contains(transformedWord)) {
+            queue.add(transformedWord);
+            visited.add(transformedWord);
           }
         }
       }
