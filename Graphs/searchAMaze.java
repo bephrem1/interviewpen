@@ -111,9 +111,9 @@ private static boolean searchMazeHelper(List<List<Color>> maze, Coordinate curre
   */
   final int[][] SHIFTS = {
     {0 , 1}, // going right
-    {1, 0}, // going up
+    {1, 0}, // going down
     {0, -1}, // going left
-    {-1, 0} // going down
+    {-1, 0} // going up
   };
 
   /*
