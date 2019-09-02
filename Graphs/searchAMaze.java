@@ -1,5 +1,5 @@
 /*
-  Authorship: ALL credit for the code in this file goes to the authors of the
+  Authorship: All credit for the code in this file goes to the authors of the
   book "Elements of Programming Interviews" by Adnan Aziz, Amit Prakash, and
   Tsung-Hsien Lee.
   
@@ -79,7 +79,7 @@ public static List<Coordinate> searchMaze(List<List<Color>> maze,
     If we do not find a path then remove the start node we added to the
     path and return an empty list down below
   */
-  if (!searchMazeHelper(maze, start, end, path)) {
+  if (!hasPathToEnd(maze, start, end, path)) {
     path.remove(path.size() - 1);
   }
 
@@ -93,10 +93,14 @@ public static List<Coordinate> searchMaze(List<List<Color>> maze,
 /*
   A standard DFS for the path that we want to find.
 */
-private static boolean searchMazeHelper(List<List<Color>> maze, Coordinate current,
-                                        Coordinate end, List<Coordinate> path) {
+private static boolean hasPathToEnd(
+  List<List<Color>> maze,
+  Coordinate node,
+  Coordinate end,
+  List<Coordinate> path
+) {
 
-  if (current.equals(end)) {
+  if (node.equals(end)) {
     return true;
   }
 
@@ -127,12 +131,12 @@ private static boolean searchMazeHelper(List<List<Color>> maze, Coordinate curre
     /*
       The next item to possibly add to our path and search
     */
-    Coordinate next = new Coordinate(current.row + shift[0], current.col + shift[1]);
+    Coordinate next = new Coordinate(node.row + shift[0], node.col + shift[1]);
 
     /*
       Can this item be walked on?
     */
-    if (isWalkable(next , maze)) {
+    if (canTraverse(next , maze)) {
 
       // Yes. Set it to black and add it to the path
       maze.get(next.row).set(next.col, Color.BLACK);
@@ -142,7 +146,7 @@ private static boolean searchMazeHelper(List<List<Color>> maze, Coordinate curre
         Can we finish a path from here now, recurse and find out. If we can
         we will bubble up the result and this Coordinate will be in the path.
       */
-      if (searchMazeHelper(maze, next, end, path)) {
+      if (hasPathToEnd(maze, next, end, path)) {
         return true;
       }
 
@@ -157,7 +161,7 @@ private static boolean searchMazeHelper(List<List<Color>> maze, Coordinate curre
   }
 
   /*
-    No 'next' Coordinates worked from this 'current' Coordinate. Return false to our
+    No 'next' Coordinates worked from this Coordinate. Return false to our
     caller. Path not possible, caller will have to keep searching.
   */
   return false;
@@ -167,8 +171,8 @@ private static boolean searchMazeHelper(List<List<Color>> maze, Coordinate curre
   Validates a given cell, it ensures it is in the maze and is white (can
   be "walked on")
 */
-private static boolean isWalkable(Coordinate current, List<List<Color>> maze) {
-  return current.row >= 0 && current.row < maze.size() &&
-         current.col >= 0 && current.col < maze.get(current.row).size() &&
-         maze.get(current.row).get(current.col) == Color.WHITE;
+private static boolean canTraverse(Coordinate node, List<List<Color>> maze) {
+  return node.row >= 0 && node.row < maze.size() &&
+         node.col >= 0 && node.col < maze.get(node.row).size() &&
+         maze.get(node.row).get(node.col) == Color.WHITE;
 }
