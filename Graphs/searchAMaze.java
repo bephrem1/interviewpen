@@ -49,7 +49,7 @@ public static class Coordinate {
 
   @Override
   public int hashCode() {
-    return Objects.hash(row , col);
+    return Objects.hash(row, col);
   }
 
 }
