@@ -49,7 +49,7 @@ public static class Coordinate {
 
   @Override
   public int hashCode() {
-    return Objects.hash(row , col);
+    return Objects.hash(row, col);
   }
 
 }
@@ -67,7 +67,7 @@ public static List<Coordinate> searchMaze(List<List<Color>> maze,
   List<Coordinate> path = new ArrayList<>();
 
   /*
-    Flip the item at start'shift position to black. We will start the search
+    Flip the item start position to black. We will start the search
     from here.
     
     Add the coordinate to the start of the path. It is our literal start
