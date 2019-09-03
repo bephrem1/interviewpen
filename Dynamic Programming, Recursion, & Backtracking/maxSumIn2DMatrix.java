@@ -76,7 +76,7 @@ private Rectangle maxSum(int matrix[][]) {
     }
 
     /*
-      For each left bound, we will not try all of the right bounds
+      For each left bound, we will try all of the right bounds
       starting at the left bound we are planted at.
     */
     for (int right = left; right < cols; right++) {
