@@ -79,7 +79,7 @@ class Solution {
         
         Coordinate next = new Coordinate(newRow, newCol, image[newRow][newCol]);
 
-        if (!visited.contains(next) && image[next.row][next.col] == regionOriginalValue) {
+        if (!visited.contains(next) && next.pixelValue == regionOriginalValue) {
           queue.add(next);
           visited.add(next);
         }
