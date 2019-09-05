@@ -1,84 +1,74 @@
 /*
   Palindrome Partitioning - LeetCode: https://leetcode.com/problems/palindrome-partitioning/
 
-  An adaption of the answer from user "UpTheHell" on Leetcode.
-  Link: https://leetcode.com/problems/palindrome-partitioning/discuss/41963/Java%3A-Backtracking-solution.
-
-  Revision by Benyam Ephrem (Jan. 7th 2019)
-    > Spacing and naming fixes
-    > Tiny style changes
-
-  This code passes all Leetcode test cases as of Jan. 7th 2019
-  Runtime: 7 ms, faster than 38.34% of Java online submissions for Palindrome Partitioning.
-
-  The video to explain this code is here: https://www.youtube.com/watch?v=4ykBXGbonlA
+  This code passes all Leetcode test cases as of Sept. 5th 2019
+  Runtime: 2 ms, faster than 97.25% of Java online submissions for Palindrome Partitioning.
 */
 
 public List<List<String>> partition(String s) {
-  List<List<String>> validDecompositions = new ArrayList();
-  List<String> decompInProgress = new ArrayList<String>();
-  decomposeString(s, 0, decompInProgress, validDecompositions); // Kick off the recursion
-  return validDecompositions;
+  List<List<String>> decompositions = new ArrayList();
+  decomposeString(0, s, new ArrayList<>(), decompositions);
+  return decompositions;
 }
 
-/*
-  1.) Take all palindrome snippets from where we are
-  2.) Recurse on them
-  3.) When base case is hit, we add the answer and backtrack to keep going
-*/
-private void decomposeString(String s, int buildPointer, List<String> decompInProgress,
-                List<List<String>> validDecompositions){
+private void decomposeString(
+  int workingIndex,
+  String s,
+  List<String> partialDecomposition,
+  List<List<String>> decompositions
+) {
+  /*
+    If we have decomposed the whole string then reap the
+    'partialDecomposition', it is now complete.
+  */
+  if (workingIndex == s.length()) {
+    decompositions.add(new ArrayList<>(partialDecomposition));
+    return;
+  }
 
-  if(buildPointer == s.length()) {
-    validDecompositions.add(new ArrayList<>(decompInProgress)); // deep copy the list. this is key.
-  } else {
-
+  /*
+    Take every snippet take from the 'workingIndex' to the end of the
+    string. This is out 'possibility space' that we can recurse into.
+  */
+  for (int i = workingIndex; i < s.length(); i++) {
     /*
-      Check ever snippet take from the buildPointer to the end of the
-      string.
+      Only recurse if the snippet from 'workingIndex' (inclusive) to
+      s.length() (inclusive) is a palindrome
     */
-    for(int i = buildPointer; i < s.length(); i++){
+    if (isPalindrome(workingIndex, i, s)) {
+
+      // 1.) Choose - Take the snippet & add it to our decomposition 'path'
+      String palindromicSnippet = s.substring(workingIndex, i + 1);
+      partialDecomposition.add(palindromicSnippet);
 
       /*
-        Only recurse if the snippet we COULD take is a palindrome
+        2.) Explore - Recurse and advance progress 1 past right bound of 
+        the 'palindromicSnippet' which is 'i + 1'
       */
-      if(isPalindrome(s, buildPointer, i)){
+      decomposeString(i + 1, s, partialDecomposition, decompositions);
 
-        /*
-          Take the snippet now that we know it will be palindromic.
-          WATCH OUT FOR OFF BY 1! We add 1 to i for the upper bound
-          since substring() in the Java API EXCLUDES the right bound.
-        */
-        String palindromicSnippet = s.substring(buildPointer, i + 1);
-
-        // Add the snippet to our decomposition that we are working on
-        decompInProgress.add(palindromicSnippet);
-
-        // Recurse and advance progress
-        decomposeString(s, i + 1, decompInProgress,validDecompositions);
-
-        /*
-          We are done searching, remove the snippet from our progress. Next
-          loop iteration continues our progress in this stack frame
-        */
-        decompInProgress.remove(decompInProgress.size() - 1);
-      }
-
+      /*
+        3.) Unchoose - We are done searching, remove the snippet from our
+        'path'. Next loop iteration will try another snippet in this stack
+        frame.
+      */
+      partialDecomposition.remove(partialDecomposition.size() - 1);
     }
-
   }
 }
 
 /*
-  Helper. Just checks if the region from low (inclusive) to
-  high (inclusive) is a palindrome.
+  Checks if the region from left (inclusive) to right (inclusive) is
+  a palindromic.
 */
-public boolean isPalindrome(String s, int low, int high){
-
-  while(low < high) {
-    if(s.charAt(low++) != s.charAt(high--)) {
+public boolean isPalindrome(int left, int right, String s) {
+  while (left < right) {
+    if (s.charAt(left) != s.charAt(right)) {
       return false;
     }
+
+    left++;
+    right--;
   }
 
   return true;
