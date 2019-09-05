@@ -41,6 +41,9 @@ private static void exploreCombinations(
     
     If we choose 3 as the first item, then the possible items that
     can be placed in the next slot will be from 4...n.
+    
+    This mirrors the reduction of decision space we see in the 'permutations'
+    problem.
 
     Thus, in each stack frame we loop from a number called 'offset' to
     n (because our decision space is i...n, if I choose i, the next recursive
