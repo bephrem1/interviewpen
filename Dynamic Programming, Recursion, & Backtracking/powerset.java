@@ -3,7 +3,6 @@
 
   This code passes all Leetcode test cases as of Sept. 5th 2019
   Runtime: 0 ms, faster than 100.00% of Java online submissions for Subsets.
-  k.
 */
 
 public List<List<Integer>> subsets(int[] inputSet) {
