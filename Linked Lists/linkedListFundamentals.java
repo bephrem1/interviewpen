@@ -37,6 +37,22 @@ public class LinkedListFundamentals {
     System.out.println("New list head value: " + newListHead.value);
     System.out.println("Are the 2 list head's equivalent in memory?: " + (a == newListHead));
     newline();
+
+    System.out.println("reverseLinkedListIterative");
+    ListNode reversedListHead1 = reverseLinkedListIterative(head);
+    printListIterative(reversedListHead1);
+    newline();
+
+    /*
+      Restore the original list by reversing again...it is sitting reversed
+      in memory...we have to restore it
+    */
+    reverseLinkedListIterative(reversedListHead1);
+
+    System.out.println("reverseLinkedListRecursive");
+    ListNode reversedListHead2 = reverseLinkedListRecursive(head);
+    printListIterative(reversedListHead2);
+    newline();
   }
 
   private static void printListIterative(ListNode head) {
@@ -153,6 +169,78 @@ public class LinkedListFundamentals {
 
     // "Cut off" the dummy head just leaving the pure new list created
     return newListHead.next;
+  }
+
+  private static ListNode reverseLinkedListIterative(ListNode head) {
+    /*
+      Common pattern. We keep 2 pointers, 1 to the previous element and 1
+      to the current element
+    */
+    ListNode prev = null;
+    ListNode curr = head;
+
+    while (curr != null) {
+      /*
+        Another common pattern - preserve the pointer to the next node in
+        the list since we will overwrite this value later.
+
+        Literally preserving the pointer to the next object in memory that
+        we want to visit...in a reference variable.
+      */
+      ListNode preservedNextNode = curr.next;
+
+      curr.next = prev;
+
+      prev = curr;
+      curr = preservedNextNode;
+    }
+
+    /*
+      Useless pointer to rename things to make it clear what is happening,
+      prev is pointing to the last element when the above iteration ends.
+
+      That is the head of the new reversed linked list.
+    */
+    ListNode reversedLinkedListHead = prev;
+
+    return reversedLinkedListHead;
+  }
+
+  private static ListNode reverseLinkedListRecursive(ListNode me) {
+    if (me == null || me.next == null) {
+      return me;
+    }
+
+    /*
+      We need to preserve the reference to the last node in the original
+      linked list since it will be the head of the new reversed linked list.
+
+      We "bubble" that value up in our calls to the root caller by recursing
+      deep first to get reference to the last node (and in the process creating
+      n stack frames on the call stack, each with reference to a node)
+    */
+    ListNode headOfReversedList = reverseLinkedListRecursive(me.next);
+    
+    /*
+      When the base case is hit, we will be here:
+
+      O -> O -> O -> O -> O -> O -> O -> x
+                               ^
+                               me
+      
+      In that frame we will have reference to a node 1 before
+      the end of the linked list. We point the node 'nodeToMyRight'
+      to 'me'.
+
+      Then we cut off 'me's next because 'me' may be the last node in
+      the reversed linked list
+    */
+    ListNode nodeToMyRight = me.next;
+    nodeToMyRight.next = me;
+    me.next = null;
+
+    // We continue "bubbling up" reference to the tail node up and up and up
+    return headOfReversedList;
   }
 
   /*
