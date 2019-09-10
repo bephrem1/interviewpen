@@ -15,7 +15,7 @@ public ListNode mergeKLists(ListNode[] lists) {
   if (lists == null || lists.length == 0) {
     return null;
   }
-  
+
   /*
     Use the built-in PriorityQueue library, pass a Comparator to make poll() return
     the smallest item instead of the largest item (default is the largest/highest)
