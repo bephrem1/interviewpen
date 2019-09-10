@@ -61,6 +61,11 @@ public class LinkedListFundamentals {
     ListNode middle = getMiddleNodeReference(head);
     System.out.println("Middle node value: " + middle.value);
     newline();
+
+    System.out.println("getKthToLastNodeReference");
+    ListNode kthToLast = getKthToLastNodeReference(head, 3);
+    System.out.println("3rd To Last Node Value: " + kthToLast.value);
+    newline();
   }
 
   private static void printListIterative(ListNode head) {
@@ -294,6 +299,62 @@ public class LinkedListFundamentals {
     ListNode middleNode = slow;
 
     return middleNode;
+  }
+
+  // k = 1 is the last node
+  private static ListNode getKthToLastNodeReference(ListNode head, int k) {
+    ListNode leftOfWindow = head;
+    ListNode rightOfWindow = head;
+
+    /*
+      Move the right of the window so that the gap between the 2 references is length 'k'
+
+      Imagine k = 3, we want:
+      O -> O -> O -> O -> O -> O -> x
+                     ^
+
+      We do:
+      O -> O -> O -> O -> O -> O -> x
+      l
+      r
+
+      O -> O -> O -> O -> O -> O -> x
+      l
+                     r
+    */
+    for (int i = 0; i < k; i++) {
+      rightOfWindow = rightOfWindow.next;
+    }
+
+    /*
+      Now we do:
+      O -> O -> O -> O -> O -> O -> x
+      l
+                     r
+
+      O -> O -> O -> O -> O -> O -> x
+           l
+                          r
+
+      O -> O -> O -> O -> O -> O -> x
+                l
+                               r
+
+      O -> O -> O -> O -> O -> O -> x
+                     l
+                                    r
+
+      And we have found the kth to last node
+    */
+    while (rightOfWindow != null) {
+      leftOfWindow = leftOfWindow.next;
+      rightOfWindow = rightOfWindow.next;
+    }
+
+    // Useless pointer to rename for teaching purposes
+    ListNode kthToLastNode = leftOfWindow;
+
+    return kthToLastNode;
   }
 
   /*
