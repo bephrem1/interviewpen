@@ -53,6 +53,14 @@ public class LinkedListFundamentals {
     ListNode reversedListHead2 = reverseLinkedListRecursive(head);
     printListIterative(reversedListHead2);
     newline();
+
+    // Restore
+    reverseLinkedListIterative(reversedListHead2);
+
+    System.out.println("getMiddleNodeReference");
+    ListNode middle = getMiddleNodeReference(head);
+    System.out.println("Middle node value: " + middle.value);
+    newline();
   }
 
   private static void printListIterative(ListNode head) {
@@ -241,6 +249,51 @@ public class LinkedListFundamentals {
 
     // We continue "bubbling up" reference to the tail node up and up and up
     return headOfReversedList;
+  }
+
+  private static ListNode getMiddleNodeReference(ListNode head) {
+    ListNode slow = head;
+    ListNode fast = head;
+    
+    /*
+      Even
+      O -> O -> O -> O -> O -> O -> x
+      ^
+      ^
+
+      O -> O -> O -> O -> O -> O -> x
+           ^
+                ^
+
+      O -> O -> O -> O -> O -> O -> x
+                     ^
+                                    ^
+
+      Odd
+      O -> O -> O -> O -> O -> x
+      ^
+      ^
+
+      O -> O -> O -> O -> O -> x
+           ^
+                ^
+
+      O -> O -> O -> O -> O -> x
+                ^
+                          ^
+      
+      Keep going until 'fast' is null or 'fast.next' is null.
+      Then return the reference;
+    */
+    while (fast != null && fast.next != null) {
+      slow = slow.next;
+      fast = fast.next.next;
+    }
+
+    // Useless pointer to rename for teaching purposes
+    ListNode middleNode = slow;
+
+    return middleNode;
   }
 
   /*
