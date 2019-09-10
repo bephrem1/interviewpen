@@ -1,30 +1,27 @@
 /*
   Longest Increasing Subsequence - LeetCode: https://leetcode.com/problems/longest-increasing-subsequence
 
-  This code passes all Leetcode test cases as of Jan. 6 2019
-  Runtime: 23 ms*, faster than 29.91% of Java online submissions for Longest Increasing Subsequence.
+  This code passes all Leetcode test cases as of Sept. 10 2019
+  Runtime: 8 ms, faster than 62.34% of Java online submissions for Longest Increasing Subsequence.
 
-  * Note: There is a O(n * log(n)) solution to this problem. But I cover this methods because it is
-  more practical that one would come up with this approach in a real interview.
-
-  The video to explain this code is here: https://www.youtube.com/watch?v=fV-TF4OvZpk
-
-  PS: The only difference between LIS and LNDS (Longest Non-Decreasing Subsequence) is ONE CHANGE.
+  PS: The only difference between LIS and LNDS (Longest Non-Decreasing Subsequence) is one change.
   We change "nums[i] > nums[j]" to "nums[i] >= nums[j]". We basically just change the conditions that
   allow us to consider an item for lengthening any longest subsequence already found.
 */
 
 public int lengthOfLIS(int[] nums) {
-  
-  /*
-    Leetcode throws empty states at us in test cases. We can check
-    them here or at return with a ternary operator. Either.
-  */
+  // Make Leetcode happy
   if (nums.length == 0) {
     return 0;
   }
 
-  // Array to store our subproblems, default answer is 1
+  /*
+    Array to store our subproblems, default answer is 1. A single
+    item is neither increasing or decreasing, kind of a middle ground.
+
+    Each index records the answer to "what is the longest increasing
+    subsequence ending at index i of the original array?"
+  */
   int[] maxLength = new int[nums.length];
   Arrays.fill(maxLength , 1);
 
@@ -32,51 +29,35 @@ public int lengthOfLIS(int[] nums) {
   int maximumSoFar = 1;
   
   /*
-    Solve the LIS subproblem for each snippet
-    of the array ending between 1, 2, 3, ... and
-    so on until nums.length - 1 (inclusive)
-    
-    Ex:
-    
-    [-2, 1, 2, 3]
-    
-    [-2] from index 0 to index 0
-    [-2, 1] from index 0 to index 1
-    [-2, 1, 2] from index 0 to index 2
-    [-2, 1, 2, 3] from index 0 to index 3
-    
-    Our answer is the maximum LNDS found between
-    all subproblems we solve along the way.
+    Test every possible end index of a longest increasing subsequence
   */
   for (int i = 1; i < nums.length; i++) {
 
     /*
-      At each snippet previous to the present subproblem, we
-      see if we can append the item at nums[i].
-      
-      If we can we see which is greater between:
+      We aim to see if we can append the item at nums[i]
+      to extend the Longest Increasing Subsequence achieved
+      from index 0...j (which is what the cache records)
 
-      maxLength[i]: The best answer so far for the snippet
-      from 0 to i (includes both boundaries)
+      We want to solve for maxLength[i] if the value at 'i'
+      beats 'j'. If we can we see which is greater between
+      these then we have our answer:
 
-      and
+      1.) maxLength[i]: The best answer so far for the LIS from 0...i
 
-      maxLength[j] + 1): We append this item to the LIS found
-      from 0 to j (includes both boundaries). maxLength[j] has
-      the LIS for this snippet. We add 1 because we extend the
-      sequence by one item. The item we are solving the subproblem
-      for.
+      2.) maxLength[j] + 1: The value of maxLength[j] is the length
+      of the LIS from 0...j, we conceptually "append" this item to
+      that LIS by adding 1 to that subproblem answer, yielding a
+      potentially new answer for LIS[0..i]
     */
     for (int j = 0; j < i; j++){
       if (nums[i] > nums[j]) {
         maxLength[i] = Math.max(maxLength[i], maxLength[j] + 1);
       }
     }
-    
+
     /*
-      We now have an answer for the subproblem going from
-      0 to i (inclusive). Compete it against the LIS found
-      so far
+      We now have an answer for LIS[0...i]. Compete it against the
+      best LIS length found so far.
     */
     maximumSoFar = Math.max(maximumSoFar, maxLength[i]);
   }
