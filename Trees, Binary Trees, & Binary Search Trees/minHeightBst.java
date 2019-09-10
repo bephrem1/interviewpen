@@ -6,10 +6,10 @@
 */
 
 public TreeNode sortedArrayToBST(int[] nums) {
-  return buildMinHeighTree(nums, 0, nums.length);
+  return buildMinHeighBST(nums, 0, nums.length);
 }
 
-private TreeNode buildMinHeighTree(int[] nums, int left, int right) {
+private TreeNode buildMinHeighBST(int[] nums, int left, int right) {
   if (left >= right) {
     return null;
   }
@@ -26,8 +26,8 @@ private TreeNode buildMinHeighTree(int[] nums, int left, int right) {
     Each call will root the tree built at the "most balanced" node, which is
     the middle of the sorted sub-section (between left & right)
   */
-  newNode.left = buildMinHeighTree(nums, left, middleIndex);
-  newNode.right = buildMinHeighTree(nums, middleIndex + 1, right);
+  newNode.left = buildMinHeighBST(nums, left, middleIndex);
+  newNode.right = buildMinHeighBST(nums, middleIndex + 1, right);
 
   return newNode;
 }
