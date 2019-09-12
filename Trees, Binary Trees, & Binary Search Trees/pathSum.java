@@ -202,9 +202,7 @@ class PathSumIIILinear {
     int totalPathsWithThisPathsSum = prefixSumToTotalPrefixes.getOrDefault(rootToNodeSum, 0);
     prefixSumToTotalPrefixes.put(rootToNodeSum, totalPathsWithThisPathsSum + 1);
 
-    /*
-      Investigate the total paths that can be completed in this node's left & right subtrees
-    */
+    // Investigate the total paths that can be completed in this node's left & right subtrees
     int totalCompletedPathsInThisSubtree =
       totalPathsUpToThisNode +
       findPathSum(node.left, rootToNodeSum, target, prefixSumToTotalPrefixes) +
