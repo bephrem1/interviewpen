@@ -196,7 +196,7 @@ class PathSumIIILinear {
       the target sum?
     */
     int amountToCompensateFor = rootToNodeSum - target;
-    int totalPathsUpToThisNode = prefixSumToTotalPrefixes.getOrDefault(amountToCompensateFor, 0);
+    int totalPathsEndingAtThisNode = prefixSumToTotalPrefixes.getOrDefault(amountToCompensateFor, 0);
 
     // Update the 'prefixSumToTotalPrefixes' with this root to node path itself
     int totalPathsWithThisPathsSum = prefixSumToTotalPrefixes.getOrDefault(rootToNodeSum, 0);
@@ -204,7 +204,7 @@ class PathSumIIILinear {
 
     // Investigate the total paths that can be completed in this node's left & right subtrees
     int totalCompletedPathsInThisSubtree =
-      totalPathsUpToThisNode +
+      totalPathsEndingAtThisNode +
       findPathSum(node.left, rootToNodeSum, target, prefixSumToTotalPrefixes) +
       findPathSum(node.right, rootToNodeSum, target, prefixSumToTotalPrefixes);
 
