@@ -22,8 +22,6 @@ public List<List<Integer>> threeSum(int[] A) {
 }
 
 private void findTwoSum(int rootIndex, int[] A, Set<List<Integer>> allThreeSums) {
-  Arrays.sort(A); // Sorting array of integers will take O(n) time via Bucket Sort or Radix Sort
-
   int left = rootIndex + 1;
   int right = A.length - 1;
 
