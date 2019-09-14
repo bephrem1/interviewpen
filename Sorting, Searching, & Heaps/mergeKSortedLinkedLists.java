@@ -37,9 +37,7 @@ public ListNode mergeKLists(ListNode[] lists) {
     }
   });
 
-  /*
-    Initialize the variables we need to begin building the sorted list
-  */
+  // Initialize the variables we need to begin building the sorted list
   ListNode mergedListDummyHead = new ListNode(0);
   ListNode mergedListTail = mergedListDummyHead;
   
