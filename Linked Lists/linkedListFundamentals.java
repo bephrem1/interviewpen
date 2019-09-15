@@ -235,7 +235,8 @@ public class LinkedListFundamentals {
     ListNode headOfReversedList = reverseLinkedListRecursive(me.next);
     
     /*
-      When the base case is hit, we will be here:
+      When the base case is hit & returns, we will return to here.
+      1 node before the final node in the list:
 
       O -> O -> O -> O -> O -> O -> O -> x
                                ^
