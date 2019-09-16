@@ -2,7 +2,8 @@
 
 An initiative to empower the software engineer to excel in the interview.
 
-Our Vision: https://backtobackswe.com/our-vision
+<b>Join our class:</b> https://codinginterviewclass.com <br>
+<b>YouTube:</b> https://www.youtube.com/c/BackToBackSWE <br>
 
 <b>The Exhaustive Topics A Software Engineer Needs To Know To Pass A Big N Interview:</b>
 - Fundamentals of Computer Systems (just a general knowing how computers store information etc.)
@@ -35,19 +36,37 @@ I am only a humble teacher, I am not perfect.
 
 If even one person gets an offer from my work my day is complete.
 
-<b>Join our class:</b> https://codinginterviewclass.com <br>
-<b>YouTube:</b> https://www.youtube.com/c/BackToBackSWE <br>
-<b>Facebook:</b> https://www.facebook.com/backtobackswe/
+## Contributing
+I'd love any contributions from people to this repo. I just restructured it so that solutions in multiple languages can be added for a single problem.
+
+Just make sure that you follow the style conventions of your respective language.
+
+### Must Haves:
+- The code has to pass all test cases (if from Leetcode or any other site). It'd even be helpful if in the code you notate what date all tests passed so readers can know when a file needs updating (if tests fail all of a sudden or if a Leetcode structure changed and nothing compiles)
+
+#### Small nitpicks:
+
+| | ![no](https://i.ibb.co/znyRxBs/Screen-Shot-2019-09-15-at-10-53-44-PM.png) | ![yes](https://i.ibb.co/sRcxycg/Screen-Shot-2019-09-15-at-10-53-48-PM.png) | ![what?](https://i.ibb.co/M7QqqDC/Screen-Shot-2019-09-15-at-11-06-02-PM.png) |
+| --- | :-------------: |:-------------:| --- |
+| | ❌ | ✅ | Why? |
+| Name Variables Obnoxiously Clear | `int tlor`      | `int topLeftOfRectangle` | People are learning unfamiliar concepts. The clearer the variables, the faster others can learn. You may get it, but the aim is to allow a 5 year old to understand. |
+| Give Code Breathing Room | `if(x+3*4){`| `if (x + 3 * 4) {`      | Just general etiquette. |
+| Use The Ternary Operator Sparingly | ...| ...      | Nested ternarys to save lines hurts readability. The ternary is just syntactic sugar & will be transformed into if-elses by compilers.  |
+| No One Liners. Ever. | ... |    ...   | Please. |
+
+#### Other Smaller Rules:
+- Less lines of code is not always better. This is close to the ternary rule above, but generally syntax shortcuts will not change what a program ultimately is transformed to. *Balance understandabiltiy & brevity.*
+- I like comments in teaching code. **This code is meant to instruct** and is not part of a huge codebase, so it is fine to go heavy on comments. Each file is disjoint, static, & ages individually, so stale comments are less of a worry. I do it a bit too much in older samples, but I think you can find the balance.
 
 ## Mistakes
 
 Again, I'm not perfect. I watch finished videos 2 times over. I read and test all code samples. But I still make errors.
 
-If you see a mistake anywhere just let me know by opening an issue.
+If you see a mistake anywhere just open a pr & I'll merge it in.
 
 ## Outdated Code
 
-Sometimes Leetcode function signatures change or the names on fields of objects change breaking the code. If you see this then just open an issue or PR if you want to fix it.
+Sometimes Leetcode function signatures change or the names on fields of objects change breaking the code. If you see this then just open an issue or pr if you want to fix it.
 
 ## Best Books For Prep
 
