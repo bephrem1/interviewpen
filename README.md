@@ -43,6 +43,7 @@ Just make sure that you follow the style conventions of your respective language
 
 ### Must Haves:
 - The code has to pass all test cases (if from Leetcode or any other site). It'd even be helpful if in the code you notate what date all tests passed so readers can know when a file needs updating (if tests fail all of a sudden or if a Leetcode structure changed and nothing compiles)
+- If the problem doesn't have an "origin website" that has test cases, make a small driver function that can call the solution code with example inputs so others can test and play with the code.
 
 #### Small nitpicks:
 
@@ -60,7 +61,7 @@ Just make sure that you follow the style conventions of your respective language
 
 ## Mistakes
 
-Again, I'm not perfect. I watch finished videos 2 times over. I read and test all code samples. But I still make errors.
+I'm not perfect. I watch finished videos 2 times over. I read and test all code samples. But I still make errors.
 
 If you see a mistake anywhere just open a pr & I'll merge it in.
 
