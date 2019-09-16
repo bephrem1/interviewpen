@@ -8,7 +8,7 @@
 
   If building 'b' is anywhere to the right of building 'a', and
   building 'a' is >= in height to building 'b', then building 'b'
-  cannot see thensunset.
+  cannot see the sunset.
 
   Calculate the buildings that have a sunset view from right to left.
 */
