@@ -1,15 +1,6 @@
 /*
-  Authorship: ALL credit for the code in this file goes to the authors of the
-  book "Elements of Programming Interviews" by Adnan Aziz, Amit Prakash, and
-  Tsung-Hsien Lee.
-  
-  I have just adapted the code to pass on Leetcode, added explanatory comments,
-  reformatted the code, & changed variable names for understanding.
-
   Plus One - LeetCode: https://leetcode.com/problems/plus-one/
-
   This code passes all Leetcode test cases as of Jan. 13 2019
-  Runtime: 0 ms, faster than 100.00% of Java online submissions for Plus One.
 
   The video to explain this code is here: https://www.youtube.com/watch?v=vA0t42qwKO0
 */

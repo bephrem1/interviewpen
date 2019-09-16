@@ -1,8 +1,6 @@
 /*
   3 Sum - Leetcode: https://leetcode.com/problems/3sum/
-
   This code passes all Leetcode test cases as of Sept. 12 2019
-  Runtime*: 194 ms, faster than 21.45% of Java online submissions for 3Sum.
   
   *using a Set to enforce uniqueness slows us down by about 160ms, but makes
   the explanation clearer

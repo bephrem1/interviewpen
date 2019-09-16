@@ -5,8 +5,6 @@
   Thanks to GeeksForGeeks for this code sample. I just cleaned it up
   and added explanatory comments: https://www.geeksforgeeks.org/find-second-largest-element-array/
 
-  This code has mediocre style. Just take away the concepts and ignore the sloppiness from me.
-
   The video to explain* this code is here: https://www.youtube.com/watch?v=NheWPxGpoxQ
 */
 

@@ -1,11 +1,6 @@
 /*
   Next Permutation - LeetCode: https://leetcode.com/problems/next-permutation
-
-  All credit for code goes to the Leetcode solution writer:
-  https://leetcode.com/problems/next-permutation/solution/
-
   This code passes all Leetcode test cases as of Jan. 13 2019
-  Runtime: 15 ms, faster than 77.82% of Java online submissions for Next Permutation.
 
   Note: This code will make no sense at all if you do not see the intuition behind
   why we do what we do (explained in the video). We will just be memorizing random
