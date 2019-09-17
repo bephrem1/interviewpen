@@ -47,7 +47,6 @@ public class ImplementAMinHeap {
     }
   }
 
-
   private static class MinHeap {
     private int capacity = 5;
     private int heap[];
