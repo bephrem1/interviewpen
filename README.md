@@ -51,7 +51,7 @@ Just make sure that you follow the style conventions of your respective language
 | --- | :-------------: |:-------------:| --- |
 | | ❌ | ✅ | Why? |
 | Name Variables Obnoxiously Clear | `int tlor`      | `int topLeftOfRectangle` | People are learning unfamiliar concepts. The clearer the variables, the faster others can learn. You may get it, but the aim is to allow a 5 year old to understand. |
-| Give Code Breathing Room | `if(x+3*4){`| `if (x + 3 * 4) {`      | Just general etiquette. |
+| Give Code Breathing Room | `if(x+3*4){`| `if (x + 3 * 4) {`      | For readability, unless the language style dictates it or it helps communicate some nuance that is less clear with spacing. |
 | Use The Ternary Operator Sparingly | ...| ...      | Nested ternarys to save lines hurts readability. The ternary is just syntactic sugar & will be transformed into if-elses by compilers.  |
 | No One Liners. Ever. | ... |    ...   | Please. |
 
