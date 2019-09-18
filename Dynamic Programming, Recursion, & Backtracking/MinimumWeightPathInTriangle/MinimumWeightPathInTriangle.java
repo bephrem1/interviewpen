@@ -1,8 +1,6 @@
 /*
   Triangle - LeetCode: https://leetcode.com/problems/triangle/
-
-  This code passes all Leetcode test cases as of Sept. 10 2019
-  Runtime: 2 ms, faster than 82.40% of Java online submissions for Triangle.
+  This code passes all Leetcode test cases as of Sept. 17 2019
 */
 
 public int minimumTotal(List<List<Integer>> triangle) {
@@ -46,10 +44,11 @@ public int minimumTotal(List<List<Integer>> triangle) {
     destructive operations. It won't hurt us, we just read from index
     0 at the end anyway. No operations get in the way of each other.
   */
-  int[] dpLayerCache = new int[totalLayers + 1];
+  int[] dpLayerCache = new int[totalLayers];
+  initializeCacheWithLastLayer(dpLayerCache, triangle.get(triangle.size() - 1));
 
   // Start from the 2nd to last layer
-  for (int i = totalLayers - 1; i >= 0; i--) {
+  for (int i = totalLayers - 2; i >= 0; i--) {
     List<Integer> currentLayer = triangle.get(i);
 
     // Iterate over each item in row 'i'
@@ -65,4 +64,10 @@ public int minimumTotal(List<List<Integer>> triangle) {
   }
 
   return dpLayerCache[0];
+}
+
+private void initializeCacheWithLastLayer(int[] cache, List<Integer> lastRow) {
+  for (int i = 0; i < cache.length; i++) {
+    cache[i] = lastRow.get(i);
+  }
 }
