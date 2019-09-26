@@ -86,6 +86,7 @@ class Trie {
     boolean endsWord;
 
     public TrieNode(char character) {
+      this.character = character;
       adjacents = new TrieNode[ALPHABET_SIZE];
       endsWord = false;
     }

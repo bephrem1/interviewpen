@@ -41,24 +41,6 @@ I'd love any contributions from people to this repo. I just restructured it so t
 
 Just make sure that you follow the style conventions of your respective language.
 
-### Must Haves:
-- The code has to pass all test cases (if from Leetcode or any other site). It'd even be helpful if in the code you notate what date all tests passed so readers can know when a file needs updating (if tests fail all of a sudden or if a Leetcode structure changed and nothing compiles)
-- If the problem doesn't have an "origin website" that has test cases, make a small driver function that can call the solution code with example inputs so others can test and play with the code.
-
-#### Small nitpicks:
-
-| | ![no](https://i.ibb.co/znyRxBs/Screen-Shot-2019-09-15-at-10-53-44-PM.png) | ![yes](https://i.ibb.co/sRcxycg/Screen-Shot-2019-09-15-at-10-53-48-PM.png) | ![what?](https://i.ibb.co/M7QqqDC/Screen-Shot-2019-09-15-at-11-06-02-PM.png) |
-| --- | :-------------: |:-------------:| --- |
-| | ❌ | ✅ | Why? |
-| Name Variables Obnoxiously Clear | `int tlor`      | `int topLeftOfRectangle` | People are learning unfamiliar concepts. The clearer the variables, the faster others can learn. You may get it, but the aim is to allow a 5 year old to understand. |
-| Give Code Breathing Room | `if(x+3*4){`| `if (x + 3 * 4) {`      | For readability, unless the language style dictates it or it helps communicate some nuance that is less clear with spacing. |
-| Use The Ternary Operator Sparingly | ...| ...      | Nested ternarys to save lines hurts readability. The ternary is just syntactic sugar & will be transformed into if-elses by compilers.  |
-| No One Liners. Ever. | ... |    ...   | Please. |
-
-#### Other Smaller Rules:
-- Less lines of code is not always better. This is close to the ternary rule above, but generally syntax shortcuts will not change what a program ultimately is transformed to. *Balance understandabiltiy & brevity.*
-- I like comments in teaching code. **This code is meant to instruct** and is not part of a huge codebase, so it is fine to go heavy on comments. Each file is disjoint, static, & ages individually, so stale comments are less of a worry. I do it a bit too much in older samples, but I think you can find the balance.
-
 ## Mistakes
 
 I'm not perfect. I watch finished videos 2 times over. I read and test all code samples. But I still make errors.

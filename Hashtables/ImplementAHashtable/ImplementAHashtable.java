@@ -138,6 +138,7 @@ public class ImplementAHashtable {
 
     private Entry<K, V> getReferenceIfKeyExists(Entry<K, V> head, K key) {
       Entry<K, V> curr = head;
+
       while (curr != null) {
         if (curr.key.equals(key)) {
           return curr;
