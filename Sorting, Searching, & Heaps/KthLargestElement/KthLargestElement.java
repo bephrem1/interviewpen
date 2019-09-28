@@ -28,20 +28,12 @@ public int findKthLargest(int[] arr, int k) {
   int left = 0;
   int right = n - 1;
 
-  /*
-    A Random object we will use later repeatedly to choose random pivots
-  */
+  // A Random object we will use later repeatedly to choose random pivots
   Random rand = new Random(0);
 
-  /*
-    While the bounds stay valid continue doing directed partitioning
-  */
+  // While the bounds stay valid continue doing directed partitioning
   while (left <= right) {
-
-    /*
-      Pick a random pivot. Bounds are [left, right].
-    */
-    int choosenPivotIndex = rand.nextInt(right - left + 1) + left;
+    int choosenPivotIndex = rand.nextInt(right - left + 1) + left; // Pick a random pivot. Bounds are [left, right].
 
     /*
       Execute the actual partitioning and get back the final positition
@@ -49,9 +41,7 @@ public int findKthLargest(int[] arr, int k) {
     */
     int finalIndexOfChoosenPivot = partition(arr, left, right, choosenPivotIndex);
 
-    /*
-      What does the 'finalIndexOfChoosenPivot' tell us?
-    */
+    // What does the 'finalIndexOfChoosenPivot' tell us?
     if (finalIndexOfChoosenPivot == n - k) {
 
       /*
