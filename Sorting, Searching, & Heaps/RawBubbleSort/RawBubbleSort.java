@@ -1,47 +1,30 @@
 /*
-  This is Bubble Sort with the best case still
-  being O(n^2).
-
-  When I say "position" I mean indexing off of 1.
-  When I say "index" I mean indexing off of 0.
-  
-  The video to explain this code: https://www.youtube.com/watch?v=euPlXW7dnlI
+  Bubble sort
 */
+import java.util.*;
 
-private void bubbleSort(int[] arr) {
+public class RawBubbleSort {
+  public static void main(String args[]) {
+    int[] numbers = new int[]{ 1, -40, 4, 5, 8, 3, 4, 1, 4, 5, 100, -12 };
+    bubbleSort(numbers);
+    System.out.println(Arrays.toString(numbers));
+  }
 
-  int n = arr.length;
+  private static void bubbleSort(int[] arr) {
+    int lastIndex = arr.length - 1;
 
-  for (int i = n; i >= 2; i--) {
-    for (int j = 1; j <= i - 1; j++) {
-
-      /*
-        Adjust back to indexing off of 0 so we
-        don't out of bounds.
-
-        Tried keeping this similar to the example
-        discussed, but here we must index back from
-        0.
-
-        Off of 1:
-          arr[j] > arr[j + 1]
-            swap(arr, j, j + 1);
-
-        Off of 0:
-          arr[j - 1] > arr[j]
-            swap(arr, j - 1, j);
-      */
-      if (arr[j - 1] > arr[j]) {
-        swap(arr, j - 1, j);
+    for (int i = lastIndex; i >= 1; i--) {
+      for (int j = 1; j <= i; j++) {
+        if (arr[j - 1] > arr[j]) {
+          swap(arr, j - 1, j);
+        }
       }
-
     }
   }
 
-}
-
-private void swap(int[] arr, int first, int second) {
-  int temp = arr[first];
-  arr[first] = arr[second];
-  arr[second] = temp;
+  private static void swap(int[] arr, int first, int second) {
+    int temp = arr[first];
+    arr[first] = arr[second];
+    arr[second] = temp;
+  }
 }
