@@ -10,6 +10,10 @@ public class KSmallestElements {
   }
 
   private static List<Integer> kSmallestElements(int[] elements, int k) {
+    /*
+      If we want the k smallest items, we don't care for large items. So max heap.
+      If we want the k largest items, we don't care for small items. So min heap.
+    */
     PriorityQueue<Integer> maxHeap = new PriorityQueue<>(k, Collections.reverseOrder());
 
     for (int element: elements) {
