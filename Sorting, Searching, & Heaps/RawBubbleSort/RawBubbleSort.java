@@ -1,5 +1,5 @@
 /*
-  Bubble sort
+  Bubble Sort
 */
 import java.util.*;
 

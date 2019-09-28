@@ -3,7 +3,7 @@
 */
 import java.util.*;
 
-public class RawBubbleSort {
+public class InsertionSort {
   public static void main(String args[]) {
     int[] numbers = new int[]{ 1, -40, 4, 5, 8, 3, 4, 1, 4, 5, 100, -12 };
     insertionSort(numbers);
