@@ -18,6 +18,20 @@ public class DirectoryAccess {
       new String[]{ "H", "F" }
     ));
 
+    /*
+      A
+      |
+      -- B
+         | -- F
+         |    | -- G
+         |    | -- H
+         |
+         |
+         C
+         | -- D
+         | -- E
+    */
+
     Map<String, String> nodeToParent = precomputeParentMapping(folders);
 
     String[] folderNames = new String[]{ "A", "B", "C", "D", "E", "F", "G", "H" };
