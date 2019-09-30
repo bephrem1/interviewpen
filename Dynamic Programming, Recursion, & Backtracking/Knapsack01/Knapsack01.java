@@ -26,31 +26,31 @@ public class Knapsack01 {
     newline();
   }
 
-  private static int knapsackBottomUp(int[] values, int[] weights, int maxWeight, int[][] cache) {
+  private static int knapsackBottomUp(int[] values, int[] weights, int maxWeightConstraint, int[][] cache) {
     for (int totalItems = 0; totalItems <= values.length; totalItems++) {
-      for (int weight = 0; weight <= maxWeight; weight++) {
+      for (int maxWeight = 0; maxWeight <= maxWeightConstraint; maxWeight++) {
         /*
           I cache the name 'currentItem' for clarity when accessing values & weights, but I
           leave 'totalItems - 1' "raw" when we access the cache so you can visualize:
             1.) Without Item -> Going up 1 row
-            2.) With Item -> Go up 1 row & left 'weight[totalItems - 1]' columns
+            2.) With Item -> Go up 1 row & left 'weights[totalItems - 1]' columns
         */
         int currentItem = totalItems - 1;
 
-        if (totalItems == 0 || weight == 0) {
-          cache[totalItems][weight] = 0;
-        } else if (weights[currentItem] > weight) {
-          cache[totalItems][weight] = cache[totalItems - 1][weight];
+        if (totalItems == 0 || maxWeight == 0) {
+          cache[totalItems][maxWeight] = 0;
+        } else if (weights[currentItem] > maxWeight) {
+          cache[totalItems][maxWeight] = cache[totalItems - 1][maxWeight];
         } else {
-          int withItem = values[currentItem] + cache[totalItems - 1][weight - weights[totalItems - 1]];
-          int withoutItem = cache[totalItems - 1][weight];
+          int withItem = values[currentItem] + cache[totalItems - 1][maxWeight - weights[totalItems - 1]];
+          int withoutItem = cache[totalItems - 1][maxWeight];
 
-          cache[totalItems][weight] = Math.max(withItem, withoutItem);
+          cache[totalItems][maxWeight] = Math.max(withItem, withoutItem);
         }
       }
     }
 
-    return cache[values.length][maxWeight];
+    return cache[values.length][maxWeightConstraint];
   }
 
   /*
