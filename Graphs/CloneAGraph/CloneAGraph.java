@@ -6,10 +6,7 @@
 */
 
 public Node cloneGraph(Node start) {
-
-  /*
-    If the start node is null then we cannot do any cloning
-  */
+  // If the start node is null then we cannot do any cloning
   if (start == null) {
     return null;
   }
@@ -21,10 +18,7 @@ public Node cloneGraph(Node start) {
   Map<Node, Node> vertexMap = new HashMap<>();
   Queue<Node> queue = new LinkedList<>();
 
-  /*
-    Add the start node to the queue.
-    Give the start node a clone in the vertexMap
-  */
+  // Add the start node to the queue. Give the start node a clone in the vertexMap
   queue.add(start);
   vertexMap.put(start, createNode(start.val));
 
@@ -33,24 +27,15 @@ public Node cloneGraph(Node start) {
     in the original graph. We know this is done when the queue is empty
   */
   while (!queue.isEmpty()) {
-
-    /*
-      We grab a node. We will express all of the edges coming off of this
-      node.
-    */
+    // We grab a node. We will express all of the edges coming off of this node.
     Node currVertex = queue.remove();
 
-    /*
-      Iterate over all neighbors.
-    */
+    // Iterate over all neighbors.
     for (Node neighbor: currVertex.neighbors) {
-
-      /*
-        Has this neighbor been given a clone?
-      */
+      // Has this neighbor been given a clone?
       if (!vertexMap.containsKey(neighbor)) {
         /*
-          No. Give it a mapping and add the original neighbor to the
+          No? Give it a mapping and add the original neighbor to the
           search queue so we can express ITS edges later
         */
         vertexMap.put(neighbor, createNode(neighbor.val));
@@ -65,10 +50,7 @@ public Node cloneGraph(Node start) {
     }
   }
 
-  /*
-    Return the clone of the start. This is the entry point for the
-    cloned graph section.
-  */
+  // Return the clone of the start. This is the entry point for the cloned graph section.
   return vertexMap.get(start);
 }
 
