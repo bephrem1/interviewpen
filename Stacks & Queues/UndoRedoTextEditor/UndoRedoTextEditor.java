@@ -4,7 +4,7 @@
 */
 import java.util.*;
 
-class Main {
+class UndoRedoTextEditor {
   public static void main(String args[]) {
     Action[] actions = new Action[]{
       new Action('a', ActionType.INSERT), // "a"
