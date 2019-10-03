@@ -1,50 +1,29 @@
 /*
   Copy List with Random Pointer - LeetCode: https://leetcode.com/problems/copy-list-with-random-pointer/
-
-  Revisions by Benyam Ephrem (Jan. 28th 2019)
-    > Making variable names more conventional
-    > Adding more clarifying comments
-    > Moving code around to be more conventional
-
-  The video to explain this code is here: https://www.youtube.com/watch?v=OvpKeraoxW0
 */
 
-/*
-  This code passes all Leetcode test cases as of Jan. 28th 2019
-  Runtime: 3 ms, faster than 56.69% of Java online submissions for Copy List with Random Pointer.
-  (can't get much faster than this)
-
-  Credits: Leetcode user @jeantimex
-*/
+// This code passes all Leetcode test cases as of Oct. 3rd 2019
 class LinearSpaceApproach {
-
-  public RandomListNode copyRandomList(RandomListNode head) {
-
-    /*
-      If the head is null then no cloning can happen
-    */
+  public Node copyRandomList(Node head) {
     if (head == null) {
       return null;
     }
-    
+
     /*
       Our clone map. We map the original node to its clone.
 
       This is the key to the problem, from here all else
       is simple linear time iteration.
     */
-    Map<RandomListNode, RandomListNode> cloneMap = new HashMap<RandomListNode, RandomListNode>();
-    
-    /*
-      1st pass.
-      Give all nodes their clone in the mapping.
-    */
-    RandomListNode curr = head;
+    Map<Node, Node> cloneMap = new HashMap<Node, Node>();
+
+    // 1st pass: Give all nodes their clone in the mapping.
+    Node curr = head;
     while (curr != null) {
-      cloneMap.put(curr, new RandomListNode(curr.label));
+      cloneMap.put(curr, new Node(curr.val));
       curr = curr.next;
     }
-    
+
     /*
       2nd pass.
       Reset the curr pointer to the head of the original list
@@ -55,7 +34,6 @@ class LinearSpaceApproach {
     */
     curr = head;
     while (curr != null) {
-
       /*
         cloneMap.get(curr).next -> Set the next of curr's clone to...
         cloneMap.get(curr.next) -> The clone of curr's next.
@@ -70,30 +48,17 @@ class LinearSpaceApproach {
 
       curr = curr.next;
     }
-    
-    /*
-      Return the clone node of the head. This is the caller's access
-      to the newly copied list.
-    */
+
+    // Return the clone node of the head. This is the caller's access to the newly copied list.
     return cloneMap.get(head);
   }
-
 }
 
-/*
-  This code passes all Leetcode test cases as of Jan. 28th 2019
-  Runtime: 1 ms, faster than 99.37% of Java online submissions for Copy List with Random Pointer.
-
-  Buckle up and start your imagination...this is about to get tricky...
-
-  Credits: Leetcode user @liaison
-*/
+// This code passes all Leetcode test cases as of Oct. 3rd 2019
 class ConstantSpaceApproach {
-
-  public RandomListNode copyRandomList(RandomListNode head) {
-
-    RandomListNode curr = head;
-    RandomListNode next = null;
+  public Node copyRandomList(Node head) {
+    Node curr = head;
+    Node next = null;
 
     /*
       First pass.
@@ -101,11 +66,7 @@ class ConstantSpaceApproach {
       via the original node's net pointer
     */
     while (curr != null) {
-
-      /*
-        Stash the next value of the current node so we
-        do not lose it
-      */
+      // Stash the next value of the current node so we do not lose it
       next = curr.next;
 
       /*
@@ -114,26 +75,17 @@ class ConstantSpaceApproach {
         Point the next value of the copy node to curr (original node) next value.
         You'll see why we do this later...
       */
-      RandomListNode copy = new RandomListNode(curr.label);
+      Node copy = new Node(curr.val);
       curr.next = copy;
       copy.next = next;
 
-      /*
-        Advance to next node in the original list
-      */
+      // Advance to next node in the original list
       curr = next;
     }
 
-    /*
-      Second pass.
-      Reset curr to the head of the original list.
-    */
+    // Second pass: Reset curr to the head of the original list.
     curr = head;
     while (curr != null) {
-
-      /*
-        If there is a random pointer to copy
-      */
       if (curr.random != null) {
         /*
           Assign clone the random mapping
@@ -162,19 +114,17 @@ class ConstantSpaceApproach {
     }
 
     /*
-      Third pass.
-      Our goal is to restore the original list, and extract the copy list.
-      First reset curr to the head of the original list.
-
+      Third pass:
+        Our goal is to restore the original list, and extract the copy list.
+        First reset curr to the head of the original list.
     */
     curr = head;
 
-    RandomListNode dummyHead = new RandomListNode(0);
-    RandomListNode cloneListTail = dummyHead;
-    RandomListNode copy = null;
+    Node dummyHead = new Node(0);
+    Node cloneListTail = dummyHead;
+    Node copy = null;
 
     while (curr != null) {
-
       /*
         Stash the next value of the curr original node, remember this...
         we access that by saying "curr.next.next". We reach to the clone
@@ -182,25 +132,17 @@ class ConstantSpaceApproach {
       */
       next = curr.next.next;
 
-      /*
-        curr.next is curr's clone. Let's grab it.
-      */
+      // curr.next is curr's clone. Let's reference to it
       copy = curr.next;
 
-      /*
-        Append the copy to the final list tail
-      */
+      // Append the copy to the final list tail
       cloneListTail.next = copy;
       cloneListTail = copy;
 
-      /*
-        Restore curr (the original node's) next value
-      */
+      // Restore curr (the original node's) next value
       curr.next = next;
 
-      /*
-        Advance curr to the stashed next
-      */
+      // Advance curr to the stashed next
       curr = next;
     }
 
@@ -210,5 +152,4 @@ class ConstantSpaceApproach {
     */
     return dummyHead.next;
   }
-
 }
