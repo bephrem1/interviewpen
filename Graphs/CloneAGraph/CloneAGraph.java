@@ -1,8 +1,6 @@
 /*
   Clone Graph - LeetCode: https://leetcode.com/problems/clone-graph/
-
-  This code passes all Leetcode test cases as of Sept. 15 2019
-  Runtime: 2 ms, faster than 46.30% of Java online submissions for Clone Graph.
+  This code passes all Leetcode test cases as of Oct. 4 2019
 */
 
 public Node cloneGraph(Node start) {
