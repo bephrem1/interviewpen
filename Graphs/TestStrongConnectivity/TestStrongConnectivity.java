@@ -27,6 +27,17 @@ public class StrongConnectivity {
                3
     */
 
+    /*
+      If we reverse each edge:
+
+        0 <--- 1 <--- 2 <---> 4
+         \            ^
+          \         /
+            \     /
+             ⌄   /
+               3
+    */
+
     System.out.println(isStronglyConnected(originalNodeToAdjacents));
   }
 
