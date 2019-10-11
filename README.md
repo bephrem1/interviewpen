@@ -2,8 +2,7 @@
 
 An initiative to empower the software engineer to excel in the interview.
 
-<b>Join our class:</b> https://codinginterviewclass.com <br>
-<b>YouTube:</b> https://www.youtube.com/c/BackToBackSWE <br>
+<b>Website:</b> https://www.backtobackswe.com <br>
 
 <b>The Exhaustive Topics A Software Engineer Needs To Know To Pass A Big N Interview:</b>
 - Fundamentals of Computer Systems (just a general knowing how computers store information etc.)
