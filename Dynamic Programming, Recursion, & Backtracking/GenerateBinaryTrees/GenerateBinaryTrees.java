@@ -28,7 +28,7 @@ public List<TreeNode> generateTrees(int start, int end) {
     Imagine the iteration for n = 5, we need to generate trees 5 nodes in size. Here is
     how the calls would compose themselves.
 
-    Top level stact frame:
+    Top level stack frame:
       start = 1
       end = 5
 
