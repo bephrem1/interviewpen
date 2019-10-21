@@ -11,7 +11,7 @@
 */
 import java.util.*;
 
-public class Main {
+public class MostVisitedPages {
   public static void main(String args[]) {
     LogProcessor logProcessor = new LogProcessor();
 
@@ -50,7 +50,7 @@ public class Main {
     }
 
     private void topKHelper(TreeNode subtreeRoot, Counter nodesLeftToCollect, List<String> topKItems) {
-      if (subtreeRoot == null) {
+      if (subtreeRoot == null || nodesLeftToCollect.count() == 0) {
         return;
       }
 
@@ -64,6 +64,10 @@ public class Main {
       topKHelper(subtreeRoot.left, nodesLeftToCollect, topKItems);
     }
 
+    /*
+      There is no balancing provision so the tree printed
+      out may look weird
+    */
     public void insert(String visitedPageId) {
       TreeNode pageNode = null;
 
