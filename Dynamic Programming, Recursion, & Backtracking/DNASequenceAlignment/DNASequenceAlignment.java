@@ -88,8 +88,8 @@ public class DNASequenceAlignment {
         int alignmentCost = alignmentCosts.get(combined);
 
         int align = alignmentCost + opt[row - 1][col - 1]; // adds pair to conceptual matching set
-        int dontMatchS1Char = GAP_COST + opt[row - 1][col];
-        int dontMatchS2Char = GAP_COST + opt[row][col - 1];
+        int dontMatchS1Char = GAP_COST + opt[row - 1][col]; // leaves a gap in s2, char in s1 gets no match
+        int dontMatchS2Char = GAP_COST + opt[row][col - 1]; // leaves a gap in s1, char in s2 gets no match
 
         opt[row][col] = Math.min(align, Math.min(dontMatchS1Char, dontMatchS2Char));
       }
