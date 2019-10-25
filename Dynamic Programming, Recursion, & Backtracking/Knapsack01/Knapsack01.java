@@ -1,6 +1,6 @@
 /*
   The 0/1 Knapsack Problem solved with dynamic programming.
-
+  The video for this problem :--  https://www.youtube.com/watch?v=xCbYmUPvc2Q
   Given n items, each with a weight & value, pick a subset of the items that
   maximizes value and stays below a weight constraint.
 */
