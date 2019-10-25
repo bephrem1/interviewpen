@@ -28,7 +28,7 @@ public class DNASequenceAlignment {
       tuple of (i, j)
       matching = { (0, 0), (1, 1), (2, 3), (3, 4), (4, 5), (5, 6), (6, 7) }
                                   ^                   ^
-                        gap (s2's A unmatched)     mismatch
+                        gap (s2's A unmatched)  mismatch (w/ real cost)
     */
 
     initializeAlignmentCosts(alignmentCosts);
