@@ -106,6 +106,11 @@ public class DNASequenceAlignment {
     alignmentCosts.put("GG", 0); // same symbol
     alignmentCosts.put("TT", 0); // same symbol
 
+    /*
+      Costs arbitrarily chosen. Symmetry shouldn't guarantee same alignment cost because
+      character 1 is from s1 and character 2 is from s2. So "AC" could theoretically cost
+      more (or less) to align than "CA".
+    */
     alignmentCosts.put("AC", 1);
     alignmentCosts.put("CA", 1);
 
