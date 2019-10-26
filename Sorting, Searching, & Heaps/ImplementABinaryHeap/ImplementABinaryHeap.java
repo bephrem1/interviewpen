@@ -20,7 +20,7 @@
 */
 import java.util.*;
 
-public class ImplementAMinHeap {
+public class ImplementABinaryHeap {
   public static void main(String args[]) {
     MinHeap minHeap = new MinHeap();
     int[] insertItems = new int[]{ 0, 1, 3, 2, -4, 9, 1, 2 };
@@ -218,7 +218,7 @@ public class ImplementAMinHeap {
     }
 
     private boolean hasParent(int index) {
-      return getParentIndex(index) >= 0;
+      return index != 0 && getParentIndex(index) >= 0;
     }
 
     private int leftChild(int index) {
