@@ -14,9 +14,9 @@ public static int minDistance(String s1, String s2) {
 
 private static int levenshteinDistance(String s1, int s1Index , String s2, int s2Index,
                                                   int[][] opt) {
-  if (s1Index == 0) {
+  if (s1Index < 0) {
     return s2Index + 1; // If s1 is "", it is all insertions to get s1 to s2
-  } else if (s2Index == 0) {
+  } else if (s2Index < 0) {
     return s1Index + 1; // If s2 is "", it is all deletions to get s1 to s2
   }
 
