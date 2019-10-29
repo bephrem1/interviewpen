@@ -11,7 +11,7 @@
 */
 import java.util.*;
 
-public class MedianOfOnlineData {
+public class OnlineMedian {
   public static void main(String args[]) {
     int[] dataStream = new int[]{
       21, 19, 80, 21, 28, 27, 47, 21, 98, 81, 74, 73, 53, 72, 86, 83, 88, 64, 15, 51,
@@ -55,13 +55,13 @@ public class MedianOfOnlineData {
         2.) Item belongs in the upper half of items
         3.) Item belongs in the lower half of items
       */
-      if (lowerHalf.isEmpty()) {
-        lowerHalf.add(x); // 1
+      if (upperHalf.isEmpty()) {
+        upperHalf.add(x); // 1
       } else {
-        if (x >= lowerHalf.peek()) {
-          upperHalf.add(x); // 2
+        if (x < upperHalf.peek()) {
+          lowerHalf.add(x); // 2
         } else {
-          lowerHalf.add(x); // 3
+          upperHalf.add(x); // 3
         }
       }
 
