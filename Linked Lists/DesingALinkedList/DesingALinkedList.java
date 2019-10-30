@@ -37,7 +37,7 @@ class MyLinkedList {
   /*
     O(n) - can be made O(1) if we make the tail node doubly linked
     so it can "look back". This will complicate deletion and insertion
-    a bit (not really) so for simplicity the linear approach is shown.
+    a bit so for simplicity the linear approach is shown.
   */
   public void addAtTail(int val) {
     ListNode newNode = new ListNode(val);
