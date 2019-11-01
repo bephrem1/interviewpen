@@ -1,8 +1,8 @@
 /*
   Intersection of Two Arrays - LeetCode: https://leetcode.com/problems/intersection-of-two-arrays/
+  This code passes all Leetcode test cases as of September 28, 2019
 */
 
-// This code passes all Leetcode test cases as of September 28, 2019
 class BruteForce {
   public int[] intersection(int[] nums1, int[] nums2) {
     Set<Integer> intersection = new HashSet<>();
