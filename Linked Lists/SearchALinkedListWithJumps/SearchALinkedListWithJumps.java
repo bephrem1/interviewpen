@@ -42,7 +42,7 @@ public class SearchALinkedListWithJumps {
       stay in-memory as an object and we can pass it to recursive
       calls
     */
-    Integer order = 0; // start ordering at 0
+    IntegerWrapper order = new IntegerWrapper(0); // start ordering at 0
 
     setJumpOrderRecursiveHelper(head, order);
   }
@@ -52,15 +52,15 @@ public class SearchALinkedListWithJumps {
     deep into searching on the jump field to populate the 'order' field,
     come back, and then go deep into searching on the next field.
   */
-  private static void setJumpOrderRecursiveHelper(ListNode node, Integer currentOrder) {
+  private static void setJumpOrderRecursiveHelper(ListNode node, IntegerWrapper currentOrder) {
     if (node == null || node.order != -1) {
       return;
     }
 
-    node.order = currentOrder;
+    node.order = currentOrder.value;
 
     // Increment the counter
-    currentOrder += 1;
+    currentOrder.value += 1;
 
     // First we recurse deeply into the 'jump' pointer
     setJumpOrderRecursiveHelper(node.jump , currentOrder);
@@ -115,4 +115,13 @@ public class SearchALinkedListWithJumps {
       this.order = -1;
     }
   }
+
+  private static class IntegerWrapper {
+    int value;
+
+    IntegerWrapper(int value) {
+      this.value = value;
+    }
+  }
+
 }
