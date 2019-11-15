@@ -46,6 +46,7 @@ public List<Integer> spiralOrder(int[][] matrix) {
       what the right col already read.
     */
     if (leftFence <= rightFence) {
+      // Walk left fence
       for (int row = bottomFence; row >= topFence; row--) {
         spiralSequence.add(matrix[row][leftFence]);
       }
