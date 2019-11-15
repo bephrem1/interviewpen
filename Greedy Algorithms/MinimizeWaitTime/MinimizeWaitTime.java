@@ -31,13 +31,13 @@ public int leastInterval(char[] tasks, int n) {
     meaning now.
   */
   while (tasks[25] > 0) {
-    int opsPerformed = 0;
+    int batchOpsPerformed = 0;
 
     /*
       As soon as we let a task 'cool off' long enough, we want to return
       to doing it. This is what these conditions say:
 
-      opsPerformed <= n
+      batchOpsPerformed <= n
         To maximize interleaving of tasks, we stop this loop when it has been
         n cycles since the first task happened. It means that we are open to now
         schedule the first task we scheduled
@@ -45,26 +45,26 @@ public int leastInterval(char[] tasks, int n) {
       tasks[25] != 0
         If there are no more operations to perform we will stop the loop.
     */
-    while (opsPerformed <= n && tasks[25] != 0) {
+    while (batchOpsPerformed <= n && tasks[25] != 0) {
       int countOfTaskLeftToDo = map[25 - i]; // extracted to a variable for name to provide clarity
 
       /*
-        opsPerformed < 26:
+        batchOpsPerformed < 26:
           If the cool off is >= 26 then that means we will have to stay idle
           and cannot perform a task. This iteration is an idle iteration.
         
         countOfTaskLeftToDo > 0:
-          There are operations left to do in this task. If opsPerformed < 26 but
+          There are operations left to do in this task. If batchOpsPerformed < 26 but
           we marched back from the end of the array to reach the region of 0's, then
           that means that this is an idle iteration where no tasks can be done. We
-          must stay idle until opsPerformed > n - the cool off time has been satisfied
+          must stay idle until batchOpsPerformed > n - the cool off time has been satisfied
       */
-      if (opsPerformed < 26 && countOfTaskLeftToDo > 0) {
+      if (batchOpsPerformed < 26 && countOfTaskLeftToDo > 0) {
         map[25 - i]--; // perform the task
       }
 
+      batchOpsPerformed++; // this iteration is an operation or an idle cycle
       clockCycles++; // count a clock cycle
-      opsPerformed++; // this iteration is an operation or an idle cycle
     }
 
     /*
