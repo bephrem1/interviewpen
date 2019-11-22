@@ -1,75 +1,79 @@
-/*
-  Authorship: ALL credit for the code in this file goes to the authors of the
-  book "Elements of Programming Interviews" by Adnan Aziz, Amit Prakash, and
-  Tsung-Hsien Lee.
+public class InterconvertStringAndInteger {
+  public static void main(String args[]) {
+    int[] numbers = new int[]{ 123, -1 };
+    String[] strings = new String[]{ "123", "-1" };
 
-  I have just added explanatory comments, reformatted the code, & changed
-  variable names for understanding.
+    System.out.println("Converting ints to strings: ");
+    for (int num: numbers) {
+      String result = intToString(num);
+      System.out.println("Result: " + result + " of type " + result.getClass());
+    }
+    System.out.print("\n");
 
-  The video to explain this code is here: [a link will live here someday]
-*/
-
-public static String intToString(int inputInt) {
-
-  /*
-    Take note if the integer is negative before
-    we operate on it and take it to 0 during
-    our truncation
-  */
-  boolean isNegative = false;
-
-  if (inputInt < 0) {
-    isNegative = true;
+    System.out.println("Converting strings to ints: ");
+    for (String s: strings) {
+      int result = stringToInt(s);
+      System.out.println("Result: " + result + " of type " + ((result == (int)result) ? "int" : "not an int"));
+    }
   }
 
-  /*
-    "Eat" away the string character by character:
+  private static String intToString(int num) {
+    boolean isNegative = false;
+    if (num < 0) {
+      isNegative = true;
+    }
 
-    1.) Convert the ones place to a character
-    2.) Append it to the target string
-    3.) "Eat" away the ones place from the integer
-  */
-  StringBuilder sb = new StringBuilder();
-  do {
-    int onesPlace = inputInt % 10;
-    char onesPlaceAsChar = (char) ('0' + Math.abs(onesPlace));
-    sb.append(onesPlaceAsChar);
-    inputInt /= 10;
-  } while (inputInt != 0);
+    /*
+      "Eat" away the string character by character:
 
-  if (isNegative) {
-    sb.append('-'); // Adds the negative sign to the end
+      1.) Convert the ones place to a character
+      2.) Append it to the target string
+      3.) "Eat" away the ones place from the integer
+    */
+    StringBuilder sb = new StringBuilder();
+    do {
+      int onesPlace = num % 10;
+      char onesPlaceAsChar = (char) ('0' + Math.abs(onesPlace));
+
+      sb.append(onesPlaceAsChar);
+
+      // remove ones place
+      num /= 10;
+    } while (num != 0);
+
+    if (isNegative) {
+      sb.append('-'); // Adds the negative sign to the end
+    }
+
+    /*
+      By this point if the input was -123 then we will
+      have "321-". Reversed we will get what we want, "-123"
+    */
+    sb.reverse();
+
+    return sb.toString();
   }
 
-  /*
-    By this point if the input was -123 then we will
-    have "321-"
+  private static int stringToInt(String s) {
+    int result = 0;
 
-    Reversed we will get what we want, "-123"
-  */
-  sb.reverse();
+    int startIndex = s.charAt(0) == '-' ? 1 : 0;
+    for (int i = startIndex; i < s.length(); i++) {
+      /*
+        '0' has value 48 - see http://www.asciitable.com/, so if
+        s.charAt(i) is '1', then:
 
-  /*
-    Finally, convert the StringBuilder object to a string
-  */
-  return sb.toString();
-}
+        '1' -> 49
+        '0' -> 48
 
+        '1' - '0' = 49 - 48 = 1 (which is what '1' is in int form)
+      */
+      int digit = s.charAt(i) - '0';
 
-public static int stringToInt(String sb) {
+      result *= 10; // Make room in the ones place
+      result += digit; // Add it to the result's ones place
+    }
 
-  int result = 0;
-
-  /*
-    Determine where we want to start. If the first character is a '-' sign
-    we begin converting at index 1, if we do not have a '-' then we can
-    start decoding from index 0.
-  */
-  for (int i = sb.charAt(0) == '-' ? 1 : 0; i < sb.length(); i++) {
-    final int digit = sb.charAt(i) - '0'; // Grab the character and convert to an int
-    result *= 10; // Make room in the ones place
-    result = result + digit; // Add it to the result
+    return s.charAt(0) == '-' ? -result : result;
   }
-
-  return sb.charAt(0) == '-' ? -result : result;
 }
