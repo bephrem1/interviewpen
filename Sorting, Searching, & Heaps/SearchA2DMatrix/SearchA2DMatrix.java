@@ -99,7 +99,7 @@ public boolean searchMatrix(int[][] matrix, int target) {
 
       Look above for the mapping explanation
     */
-    int middleElementValue = matrix[middle / totalColumns][middle % totalColumns];
+    int middleElementValue = matrix[middle / totalRows][middle % totalColumns];
     
     /*
       3 possibilities:
