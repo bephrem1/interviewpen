@@ -37,7 +37,7 @@
 
   Given a 1D index position .. we declare our mapping equations:
 
-  row in 2D matrix: 1DIndex / totalColumns
+  row in 2D matrix: 1DIndex / totalRows
   col in 2D matrix: 1DIndex % totalColumns
 
   Example:
@@ -99,7 +99,7 @@ public boolean searchMatrix(int[][] matrix, int target) {
 
       Look above for the mapping explanation
     */
-    int middleElementValue = matrix[middle / totalColumns][middle % totalColumns];
+    int middleElementValue = matrix[middle / totalRows][middle % totalColumns];
     
     /*
       3 possibilities:
