@@ -72,7 +72,7 @@ class QuadraticTimeSolution {
       int runningWindowSum = 0;
 
       /*
-        We improve be noticing we are performing duplicate
+        We improve by noticing we are performing duplicate
         work. When we know the sum of the subarray from
         0 to right - 1...why would we recompute the sum
         for the subarray from 0 to right?
