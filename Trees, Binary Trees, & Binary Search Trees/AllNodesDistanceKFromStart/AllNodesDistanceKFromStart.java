@@ -62,15 +62,17 @@ public List<Integer> distanceK(TreeNode treeRoot, TreeNode startNode, int target
       How large is this layer? Let's process all node in the layer.
       This is Breadth First Search.
     */
-    int layerSize = queue.size();
-    for (int i = 0; i < layerSize; i++) {
-
-      /*
-        Pull a node from the search queue, we are going to basically
-        use our current layer to populate the next layer of nodes
-        that we need to search in the next while loop iteration
-      */
-      TreeNode currentNode = queue.poll();
+      ArrayList<TreeNode> al = new ArrayList<>();
+			al.addAll(queue);
+			queue.clear();
+			for (int i = 0; i < al.size(); i++)
+			{
+				/*
+				 * Pull a node from the search queue, we are going to basically use our current
+				 * layer to populate the next layer of nodes that we need to search in the next
+				 * while loop iteration
+				 */
+				TreeNode currentNode = al.get(i);
 
       /*
         Has left been touched before?
