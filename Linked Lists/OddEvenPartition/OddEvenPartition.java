@@ -1,6 +1,6 @@
 /*
   Odd Even Linked List - LeetCode: https://leetcode.com/problems/odd-even-linked-list/
-  This code passes all Leetcode test cases as of Oct. 30th 2019
+  This code passed all Leetcode test cases as of Oct. 30th 2019
 */
 
 class WithDummyHead {
