@@ -2,6 +2,7 @@
 
 """
 
+
 class ListNode:
     def __init__(self, val):
         self.val = val
@@ -12,7 +13,7 @@ class LinkedList:
     def __init__(self):
         self.head = None
 
-    def printListIterative( head ):
+    def printListIterative(head):
         """
            Common pattern. Create a reference variable to point to the
            head node so that we can operate on the LinkedList
@@ -21,12 +22,11 @@ class LinkedList:
 
         while workingPointer:
             """
-                Our work - this can be anything we want to do to 'node'. 'workingPointer'
-                literally points to an object on the heap that is a 'Listnode'
+                    Our work - this can be anything we want to do to 'node'. 'workingPointer'
+                    literally points to an object on the heap that is a 'Listnode'
             """
             print(workingPointer.val)
             workingPointer = workingPointer.next  # go to the next node in the list
-
 
     def printListRecursive(node):
         if not node:
@@ -42,21 +42,21 @@ class LinkedList:
             return
 
         """
-            Recursion first - drill down to the end of the list. Base
-            case will catch us.
-        """
+			Recursion first - drill down to the end of the list. Base
+			case will catch us.
+		"""
         LinkedList.printListInReverseRecursive(node.next)
 
         """
-            Our work. This will be fired by the last node first, then the 2nd to last node,
-            and so on...because we recursed first, got a ton of nodes on the stack in recursive calls,
-            and now they will run this as the recursion goes "back up"
-        """
+			Our work. This will be fired by the last node first, then the 2nd to last node,
+			and so on...because we recursed first, got a ton of nodes on the stack in recursive calls,
+			and now they will run this as the recursion goes "back up"
+		"""
         print(node.val)
 
     def printListInReverseIterative(head):
         """
-            Replace call stack with our own stack
+                Replace call stack with our own stack
         """
         stack = []
         workingPointer = head
@@ -70,20 +70,20 @@ class LinkedList:
 
     def deepCopyListIterative(head):
         """
-            A 'dummy head' node allows us to not have to handle the
-            initial empty case of a new list not being initialized with a first node.
+                A 'dummy head' node allows us to not have to handle the
+                initial empty case of a new list not being initialized with a first node.
 
-            We can immediately begin appending to this new list and 'chop off' this node
-            at the end and it will be garbage collected (probably, if no one is using the reference later)
+                We can immediately begin appending to this new list and 'chop off' this node
+                at the end and it will be garbage collected (probably, if no one is using the reference later)
         """
         newListHead = ListNode(-1)
 
         """
-            Point a working pointer to the old list, point a working pointer
-            to the dummy head.
-            
-            We will build off the 'next' field of the dummy head immediately.
-        """
+			Point a working pointer to the old list, point a working pointer
+			to the dummy head.
+			
+			We will build off the 'next' field of the dummy head immediately.
+		"""
         oldListWorkingPointer = head
         newListWorkingPointer = newListHead
 
@@ -100,27 +100,27 @@ class LinkedList:
             newListWorkingPointer = newListWorkingPointer.next
 
             """
-                We can also do the following, same reference to the same
-                node (the newly appended node):
-            """
+				We can also do the following, same reference to the same
+				node (the newly appended node):
+			"""
             # "Cut off" the dummy head just leaving the pure list created
             return newListHead.next
 
     def reverseLinkedListIterative(head):
         """
-            Common pattern. We keep 2 pointers, 1 to the previous element and 1
-            to the current element
+                Common pattern. We keep 2 pointers, 1 to the previous element and 1
+                to the current element
         """
         prev = None
         curr = head
 
         while curr:
             """
-                Another common pattern - preserve the pointer to the next node in
-                the list since we will overwrite this value later.
-                
-                Literally preserving the pointer to the next obkect in memory that
-                we want to visit...in a reference variable.
+                    Another common pattern - preserve the pointer to the next node in
+                    the list since we will overwrite this value later.
+
+                    Literally preserving the pointer to the next obkect in memory that
+                    we want to visit...in a reference variable.
             """
             preservedNextNode = curr.next
             curr.next = prev
@@ -129,11 +129,11 @@ class LinkedList:
             curr = preservedNextNode
 
             """
-                Useless pointer to rename things to make it clear what is happening,
-                prev is pointing to the last element when the above iteration ends.
-                
-                That is the head of the new reversed linked list.            
-            """
+				Useless pointer to rename things to make it clear what is happening,
+				prev is pointing to the last element when the above iteration ends.
+				
+				That is the head of the new reversed linked list.			
+			"""
             reversedLinkedListHead = prev
             return reversedLinkedListHead
 
@@ -142,30 +142,30 @@ class LinkedList:
             return node
 
         """
-            We need to preserve teh reference to the last node in the orginal
-            linked list since it will be the head of the new reversed linked list.
-            
-            We "bubble" that value up in our calls to the roor caller by recursing
-            deep first to get reference to the last node (and in the process creating n stack
-            frames on the call stack, each with reference to a node)
-        """
+			We need to preserve teh reference to the last node in the orginal
+			linked list since it will be the head of the new reversed linked list.
+			
+			We "bubble" that value up in our calls to the roor caller by recursing
+			deep first to get reference to the last node (and in the process creating n stack
+			frames on the call stack, each with reference to a node)
+		"""
         headOfReversedList = LinkedList.reverseLinkedListRecursive(node.next)
 
         """
-            When the base case is hit & returns, we will return to here.
-              1 node before the final node in the list:
-        
-              O -> O -> O -> O -> O -> O -> O -> x
-                                       ^
-                                       me
-              
-              In that frame we will have reference to a node 1 before
-              the end of the linked list. We point the node 'nodeToMyRight'
-              to 'me'.
-        
-              Then we cut off 'me's next because 'me' may be the last node in
-              the reversed linked list
-        """
+			When the base case is hit & returns, we will return to here.
+			  1 node before the final node in the list:
+		
+			  O -> O -> O -> O -> O -> O -> O -> x
+									   ^
+									   me
+			  
+			  In that frame we will have reference to a node 1 before
+			  the end of the linked list. We point the node 'nodeToMyRight'
+			  to 'me'.
+		
+			  Then we cut off 'me's next because 'me' may be the last node in
+			  the reversed linked list
+		"""
         nodeToMyRight = node.next
         nodeToMyRight.next = node
         node.next = None
@@ -178,36 +178,36 @@ class LinkedList:
         fast = head
 
         """
-        Even
-        O -> O -> O -> O -> O -> O -> x
-        ^
-        ^
+		Even
+		O -> O -> O -> O -> O -> O -> x
+		^
+		^
 
-        O -> O -> O -> O -> O -> O -> x
-             ^
-                  ^
+		O -> O -> O -> O -> O -> O -> x
+			 ^
+				  ^
 
-        O -> O -> O -> O -> O -> O -> x
-                       ^
-                                      ^
+		O -> O -> O -> O -> O -> O -> x
+					   ^
+									  ^
 
-        Odd
-        O -> O -> O -> O -> O -> x
-        ^
-        ^
+		Odd
+		O -> O -> O -> O -> O -> x
+		^
+		^
 
-        O -> O -> O -> O -> O -> x
-             ^
-                  ^
+		O -> O -> O -> O -> O -> x
+			 ^
+				  ^
 
-        O -> O -> O -> O -> O -> x
-                  ^
-                            ^
+		O -> O -> O -> O -> O -> x
+				  ^
+							^
 
-        Keep going until 'fast' is null or 'fast.next' is null.
-        Then return the reference;
-        
-        """
+		Keep going until 'fast' is null or 'fast.next' is null.
+		Then return the reference;
+		
+		"""
         while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
@@ -223,44 +223,44 @@ class LinkedList:
         rightOfWindow = head
 
         """
-            Move the right of the window so that the gap between the 2 references is length 'k'
-            Imagine k = 3, we want:
-            O -> O -> O -> O -> O -> O -> x
-                           ^
-            We do:
-            O -> O -> O -> O -> O -> O -> x
-            l
-            r
-            
-            O -> O -> O -> O -> O -> O -> x
-            l
-                           r
-        """
+			Move the right of the window so that the gap between the 2 references is length 'k'
+			Imagine k = 3, we want:
+			O -> O -> O -> O -> O -> O -> x
+						   ^
+			We do:
+			O -> O -> O -> O -> O -> O -> x
+			l
+			r
+			
+			O -> O -> O -> O -> O -> O -> x
+			l
+						   r
+		"""
 
         for i in range(k):
             rightOfWindow = rightOfWindow.next
 
         """
-        Now we do:
-        O -> O -> O -> O -> O -> O -> x
-        l
-                        r
+		Now we do:
+		O -> O -> O -> O -> O -> O -> x
+		l
+						r
 
-        O -> O -> O -> O -> O -> O -> x
-             l
-                            r
+		O -> O -> O -> O -> O -> O -> x
+			 l
+							r
 
 
-        O -> O -> O -> O -> O -> O -> x
-                  l
-                                 r
+		O -> O -> O -> O -> O -> O -> x
+				  l
+								 r
 
-        O -> O -> O -> O -> O -> O -> x
-                       l
-                                      r
-        And we have found the kth to last node
-        
-        """
+		O -> O -> O -> O -> O -> O -> x
+					   l
+									  r
+		And we have found the kth to last node
+		
+		"""
         while rightOfWindow:
             leftOfWindow = leftOfWindow.next
             rightOfWindow = rightOfWindow.next
@@ -312,8 +312,8 @@ LinkedList.printListIterative(reversedListHead1)
 print('\n')
 
 """
-    Restore the orginal list by reversing again...itis sitting reversed
-    in memory...we have to restore it
+	Restore the orginal list by reversing again...itis sitting reversed
+	in memory...we have to restore it
 """
 LinkedList.reverseLinkedListIterative(reversedListHead1)
 
