@@ -63,7 +63,7 @@ class ConstantSpaceApproach {
     /*
       First pass.
       Clone each node and link each original node to it's copy
-      via the original node's net pointer
+      via the original node's next pointer
     */
     while (curr != null) {
       // Stash the next value of the current node so we do not lose it
