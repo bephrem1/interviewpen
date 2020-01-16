@@ -1,10 +1,3 @@
-/**
-  Restore IP Addresses - LeetCode: https://leetcode.com/problems/restore-ip-addresses
-
-  This code passes all Leetcode test cases as of Sept. 3 2019
-  Runtime: 2 ms, faster than 90.39% of Java online submissions for Restore IP Addresses.
-*/
-
 public List<String> restoreIpAddresses(String rawIpString) {
   List<String> restoredIps = new ArrayList<>();
   restoreIps(0, 0, new int[4], rawIpString, restoredIps);

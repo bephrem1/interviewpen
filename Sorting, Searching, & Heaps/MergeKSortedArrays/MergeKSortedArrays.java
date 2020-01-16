@@ -1,15 +1,4 @@
 /*
-  Authorship: ALL credit for the code in this file goes to the authors of the
-  book "Elements of Programming Interviews" by Adnan Aziz, Amit Prakash, and
-  Tsung-Hsien Lee.
-
-  EPI Question: 11.1, Merge Sorted Files (Merge K Sorted Arrays)
-  Similar Question On Leetcode Here: https://leetcode.com/problems/merge-k-sorted-lists/
-
-  The video to explain this code is here: https://www.youtube.com/watch?v=ptYUCjfNhJY
-*/
-
-/*
   The ArrayEntry class serves to annotate the entries before
   we put them in the min heap. Then we can remember what array
   the item came from so if that item is ejected we can fetch the
@@ -23,6 +12,7 @@ private static class ArrayEntry {
     this.value = value;
     this.arrayId = arrayId;
   }
+
 }
 
 public static List<Integer> mergeSortedArrays(List<List<Integer>> sortedArrays){

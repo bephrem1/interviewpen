@@ -1,8 +1,3 @@
-/*
-  Diameter of Binary Tree - LeetCode: https://leetcode.com/problems/diameter-of-binary-tree/
-  This code passes all Leetcode test cases as of Oct. 2nd 2019
-*/
-
 public int diameterOfBinaryTree(TreeNode root) {
   RecursiveAnswer finalAnswer = subtreeMaxDiameter(root);
 

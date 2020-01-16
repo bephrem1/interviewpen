@@ -1,11 +1,4 @@
 /*
-  Super Egg Drop - LeetCode: https://leetcode.com/problems/super-egg-drop
-  Egg Dropping Puzzle | DP-11 - GeeksforGeeks: https://www.geeksforgeeks.org/egg-dropping-puzzle-dp-11/
-
-  The video to explain this code is here: https://www.youtube.com/watch?v=iOaRjDT0vjc
-*/
-
-/*
   This is what the dynamic programming table looks like for 27 floors
   and 6 eggs.
 
@@ -27,16 +20,6 @@
 
 */
 
-/*
-  This code passes all Leetcode test cases as of Feb. 14 2019
-  Runtime: Time Limit Exceeded
-
-  Watch Out. If you print the cache you won't see what I have above. This
-  is because of the path the recursion takes to solve the specific subproblem
-  we are asking the code to solve
-
-  Print the cache if you are curious to see what I mean
-*/
 class TopDown {
 
   public int superEggDrop(int totalEggs, int totalFloors) {
@@ -114,17 +97,6 @@ class TopDown {
 
 }
 
-/*
-  This code passes all Leetcode test cases as of Feb. 14 2019
-  Runtime*: 11339 ms, faster than 1.11% of Java online submissions for Super Egg Drop.
-  Memory Usage: 40.4 MB, less than 100.00% of Java online submissions for Super Egg Drop.
-  
-  This code gets Time Limit Exceeded as of April 4 2019. :*(
-
-  *Note: Leetcode offers solutions that are whole classes faster in terms of asymptotic
-  complexity so do not be worried by this speed. The fastest appraoches are the most
-  complex and most impossible to attain in an interview.
-*/
 class BottomUp {
 
   public int superEggDrop(int totalEggs, int totalFloors) {

@@ -1,10 +1,3 @@
-/*
-  Word Ladder - LeetCode: https://leetcode.com/problems/word-ladder
-*/
-
-/*
-  Exceeds Time Limit (but a valid solution)
-*/
 class SolutionWithRawSimulation {
   public int ladderLength(String beginWord, String endWord, List<String> wordList) {
 
@@ -76,10 +69,6 @@ class SolutionWithRawSimulation {
   }
 }
 
-/*
-  This code passes all Leetcode test cases as of Sept. 1 2019
-  Runtime: 45 ms, faster than 82.20% of Java online submissions for Word Ladder.
-*/
 class SolutionWithIdentifiers {
   private class Node {
     String word;

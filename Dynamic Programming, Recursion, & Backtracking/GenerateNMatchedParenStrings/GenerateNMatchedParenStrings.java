@@ -1,19 +1,3 @@
-/*
-  Authorship: ALL credit for the code in this file goes to the authors of the
-  book "Elements of Programming Interviews" by Adnan Aziz, Amit Prakash, and
-  Tsung-Hsien Lee.
-  
-  I have just adapted the code to pass on Leetcode, added explanatory comments,
-  reformatted the code, & changed variable names for understanding.
-
-  Generate Parentheses - LeetCode: https://leetcode.com/problems/generate-parentheses
-
-  This code passes all Leetcode test cases as of Jan. 13 2019
-  Runtime: 2 ms, faster than 95.74% of Java online submissions for Generate Parentheses.
-
-  The video to explain this code is here: https://www.youtube.com/watch?v=sz1qaKt0KGQ
-*/
-
 public static List<String> generateParenthesis(int numPairs) {
   List<String> result = new ArrayList<>();
   directedGenerateBalancedParentheses(numPairs, numPairs, "", result); // kick off the recursion

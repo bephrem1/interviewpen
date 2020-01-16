@@ -1,10 +1,3 @@
-/*
-  Palindrome Partitioning - LeetCode: https://leetcode.com/problems/palindrome-partitioning/
-
-  This code passes all Leetcode test cases as of Sept. 5th 2019
-  Runtime: 2 ms, faster than 97.25% of Java online submissions for Palindrome Partitioning.
-*/
-
 public List<List<String>> partition(String s) {
   List<List<String>> decompositions = new ArrayList();
   decomposeString(0, s, new ArrayList<>(), decompositions);

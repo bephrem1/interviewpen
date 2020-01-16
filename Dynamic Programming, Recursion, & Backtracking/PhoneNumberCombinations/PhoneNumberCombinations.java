@@ -1,10 +1,3 @@
-/*
-  Letter Combinations of a Phone Number - LeetCode: https://leetcode.com/problems/letter-combinations-of-a-phone-number/
-
-  This code passes all Leetcode test cases as of Sept. 3th 2019
-  Runtime: 0 ms, faster than 100.00% of Java online submissions for Letter Combinations of a Phone Number.
-*/
-
 // This can be a hashtable, any structure to map 'number' to 'letters' it can manifest as
 private List<String> digitToPossibleLetters = Arrays.asList(
   "",     // 0

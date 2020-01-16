@@ -1,8 +1,3 @@
-/*
-  Flatten a Multilevel Doubly Linked List - LeetCode: https://leetcode.com/problems/flatten-a-multilevel-doubly-linked-list/
-  This code passes all Leetcode test cases as of Sept. 16 2019
-*/
-
 public Node flatten(Node head) {
   if (head == null) {
     return head;

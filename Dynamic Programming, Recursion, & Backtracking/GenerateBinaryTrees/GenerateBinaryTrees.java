@@ -1,10 +1,3 @@
-/*
-  Unique Binary Search Trees II - Leetcode: https://leetcode.com/problems/unique-binary-search-trees-ii/
-
-  This code passes all Leetcode test cases as of Sept. 5th 2019
-  Runtime: 2 ms, faster than 67.03% of Java online submissions for Unique Binary Search Trees II.
-*/
-
 public List<TreeNode> generateTrees(int n) {
   if (n == 0) {
     List<TreeNode> trees = new ArrayList<>();

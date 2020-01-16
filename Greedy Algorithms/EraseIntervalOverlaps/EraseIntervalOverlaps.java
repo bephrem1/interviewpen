@@ -1,8 +1,3 @@
-/*
-  Non-overlapping Intervals - LeetCode: https://leetcode.com/problems/non-overlapping-intervals/
-  This code passes all Leetcode test cases as of Nov. 7 2019
-*/
-
 public int eraseOverlapIntervals(int[][] intervals) {
   if (intervals.length == 0) {
     return 0;

@@ -1,8 +1,3 @@
-/*
-  Design Linked List - LeetCode: https://leetcode.com/problems/design-linked-list/
-  This code passes all Leetcode test cases as of Oct. 30th 2019
-*/
-
 class MyLinkedList {
   ListNode head;
   int size;

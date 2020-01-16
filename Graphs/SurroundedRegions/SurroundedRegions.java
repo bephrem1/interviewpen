@@ -1,10 +1,3 @@
-/*
-  Surrounded Regions - LeetCode: https://leetcode.com/problems/surrounded-regions/
-
-  This code passes all Leetcode test cases as of Sept. 1 2019
-  Runtime: 2 ms, faster than 51.47% of Java online submissions for Surrounded Regions.
-*/
-
 class Solution {
   public static final char LETTER_O = 'O';
   public static final char LETTER_X = 'X';

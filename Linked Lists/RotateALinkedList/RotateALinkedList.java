@@ -1,9 +1,4 @@
 /*
-  Rotate List - LeetCode: https://leetcode.com/problems/rotate-list/
-  This code passes all Leetcode test cases as of Sept. 28 2019
-*/
-
-/*
   k = 6 (in reality the same as a shift by k = 2 because k % n = 6 % 4 = 2)
 
   In:

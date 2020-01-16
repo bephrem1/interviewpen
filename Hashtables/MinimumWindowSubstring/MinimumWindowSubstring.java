@@ -1,19 +1,3 @@
-/**
-  Minimum Window Substring - LeetCode: https://leetcode.com/problems/minimum-window-substring/
-
-  @author Benyam Ephrem (and I referenced the Leetcode solution for the optimal)
-
-  In the optimal solution I nest if statements and have redundant boolean values...I
-  know. This code is for learning purposes. My goal is for someone who reads this to
-  understand very quickly so that style can be adjusted to the programmer's desires.
-
-  The video to explain this code is here: https://www.youtube.com/watch?v=eS6PZLjoaq8
-*/
-
-/*
-  Brute Force: Complete Search. Search all windows.
-  Runtime: Time Limit Exceeded
-*/
 public String minWindow(String searchString, String t) {
 
   int n = searchString.length();
@@ -124,16 +108,6 @@ private boolean stringContainsAllCharacters(String searchString, String t) {
   return requiredCharacters.isEmpty();
 }
 
-
-/*
-  Sliding Window: Use 2 Pointers To Compose A Sliding Window
-  This code passes all Leetcode test cases as of Feb. 21 2019
-  Runtime*: 27 ms, faster than 44.99% of Java online submissions for Minimum Window Substring.
-  Memory Usage: 35.8 MB, less than 96.11% of Java online submissions for Minimum Window Substring.
-
-  * There is a tweak that we can make to make this run faster but it will not change asymptotic
-  time complexity so I am satisfied with this for example's sake
-*/
 public String minWindow(String searchString, String t) {
 
   // The characters a satisfiable window must cover mapped to their frequency

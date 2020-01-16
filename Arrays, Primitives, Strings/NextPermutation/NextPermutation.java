@@ -1,14 +1,3 @@
-/*
-  Next Permutation - LeetCode: https://leetcode.com/problems/next-permutation
-  This code passes all Leetcode test cases as of Jan. 13 2019
-
-  Note: This code will make no sense at all if you do not see the intuition behind
-  why we do what we do (explained in the video). We will just be memorizing random
-  information without this reasoning.
-  
-  The video to explain this code is here: https://www.youtube.com/watch?v=quAS1iydq7U
-*/
-
 public void nextPermutation(int[] nums) {
 
   /*

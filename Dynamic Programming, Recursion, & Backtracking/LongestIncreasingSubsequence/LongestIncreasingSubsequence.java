@@ -1,16 +1,10 @@
 /*
-  Longest Increasing Subsequence - LeetCode: https://leetcode.com/problems/longest-increasing-subsequence
-
-  This code passes all Leetcode test cases as of Sept. 10 2019
-  Runtime: 8 ms, faster than 62.34% of Java online submissions for Longest Increasing Subsequence.
-
-  PS: The only difference between LIS and LNDS (Longest Non-Decreasing Subsequence) is one change.
+  The only difference between LIS and LNDS (Longest Non-Decreasing Subsequence) is one change.
   We change "nums[i] > nums[j]" to "nums[i] >= nums[j]". We basically just change the conditions that
   allow us to consider an item for lengthening any longest subsequence already found.
 */
 
 public int lengthOfLIS(int[] nums) {
-  // Make Leetcode happy
   if (nums.length == 0) {
     return 0;
   }

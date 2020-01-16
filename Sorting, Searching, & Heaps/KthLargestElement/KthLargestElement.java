@@ -1,17 +1,4 @@
 /*
-  Kth Largest Element in an Array - LeetCode: https://leetcode.com/problems/kth-largest-element-in-an-array/
-
-  This optimal solution has the same fundamental reasoning that QuickSort uses. (the partitioning subroutine)
-
-  Check out that QuickSort video here: https://www.youtube.com/watch?v=uXBnyYuwPe8
-
-  This code passes all Leetcode test cases as of April 18 2019
-  Runtime: 1 ms, faster than 99.86% of Java online submissions for Kth Largest Element in an Array
-
-  The video to explain this code is here: https://www.youtube.com/watch?v=hGK_5n81drs
-*/
-
-/*
   We make the assumption k is between 1 and n (where n is the length of the array)
 
   The 1st largest element is the largest element.

@@ -1,8 +1,3 @@
-/*
-  Binary Tree Inorder Traversal - LeetCode: https://leetcode.com/problems/binary-tree-inorder-traversal/
-  This code passes all Leetcode test cases as of Sept. 16 2019
-*/
-
 public List<Integer> inorderTraversal(TreeNode root) {
   List<Integer> inorderTraversal = new ArrayList<>();
   Stack<TreeNode> stack = new Stack<>();

@@ -1,8 +1,3 @@
-/*
-  Palindrome Number - LeetCode: https://leetcode.com/problems/palindrome-number/
-  This code passes all Leetcode test cases as of Sept. 16 2019
-*/
-
 public boolean isPalindrome(int x) {
   if (x < 0) {
     return false; // A negative number can't be symmetric

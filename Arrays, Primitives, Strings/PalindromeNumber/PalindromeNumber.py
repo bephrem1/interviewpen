@@ -1,8 +1,3 @@
-'''
-  Palindrome Number - LeetCode: https://leetcode.com/problems/palindrome-number/
-  This code passes all Leetcode test cases as of Dec. 23 2019
-'''
-
 import math
 
 

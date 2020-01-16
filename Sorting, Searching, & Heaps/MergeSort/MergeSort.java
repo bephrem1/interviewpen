@@ -1,8 +1,3 @@
-/*
-  Sort List - LeetCode: https://leetcode.com/problems/sort-list/
-  This code passes all Leetcode test cases as of Sept. 28 2019
-*/
-
 // The split subroutine
 public ListNode sortList(ListNode head) {
   /*

@@ -1,8 +1,3 @@
-/*
-  Unique Paths - LeetCode: https://leetcode.com/problems/unique-paths/
-  This code passes all Leetcode test cases as of Oct. 30th 2019
-*/
-
 public int uniquePaths(int rows, int cols) {
   int[][] uniquePathsToPosition = new int[rows][cols];
 

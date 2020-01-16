@@ -1,10 +1,3 @@
-/*
-  Combinations - Leetcode: https://leetcode.com/problems/combinations/
-
-  This code passes all Leetcode test cases as of Sept. 5th 2019
-  Runtime: 2 ms, faster than 95.56% of Java online submissions for Combinations.
-*/
-
 public static List<List<Integer>> combine(int n, int k) {
   List<List<Integer>> combinations = new ArrayList<>();
   exploreCombinations(1, n, k, new ArrayList<>(), combinations);

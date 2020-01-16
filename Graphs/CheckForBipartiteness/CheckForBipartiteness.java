@@ -1,8 +1,3 @@
-/*
-  Is Graph Bipartite? - https://leetcode.com/problems/is-graph-bipartite/
-  This code passes all Leetcode test cases as of Sept. 29 2019
-*/
-
 public boolean isBipartite(int[][] adjList) {
   if (adjList.length == 0) {
     return false;

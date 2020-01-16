@@ -1,9 +1,3 @@
-"""
-        Leetcode : https://leetcode.com/problems/design-linked-list/
-    Geekforgeeks : https://www.educative.io/edpresso/how-to-create-a-linked-list-in-python
-    This code passed all test cases in Leetcode on 10.01.2020:
-"""
-
 class ListNode:
     def __init__(self, val):
         self.val = val

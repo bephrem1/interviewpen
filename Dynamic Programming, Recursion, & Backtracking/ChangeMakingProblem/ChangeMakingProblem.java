@@ -1,19 +1,3 @@
-/*
-  Coin Change - LeetCode: https://leetcode.com/problems/coin-change
-
-  All credit for code goes to user @elmirap who wrote the solution
-  section to this problem: https://leetcode.com/problems/coin-change/solution/
-
-  The video to explain this code is here: https://www.youtube.com/watch?v=jgiZlGzXMBw
-*/
-
-/*
-  The Top Down Approach
-
-  This code passes all Leetcode test cases as of Jan. 10 2019
-  Runtime: 53 ms
-*/
-
 public class CoinChangeTopDown {
 
   public int coinChange(int[] coins, int amount) {    
@@ -82,13 +66,6 @@ public class CoinChangeTopDown {
   }
 
 }
-
-/*
-  The Bottom Up Approach
-
-  This code passes all Leetcode test cases as of Jan. 10 2019
-  Runtime: 31 ms
-*/
 
 public class CoinChangeBottomUp {
 

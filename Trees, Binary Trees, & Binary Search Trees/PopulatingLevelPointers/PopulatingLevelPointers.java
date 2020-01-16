@@ -1,9 +1,3 @@
-/*
-  Populating Next Right Pointers in Each Node - LeetCode: https://leetcode.com/problems/populating-next-right-pointers-in-each-node/
-  Populating Next Right Pointers in Each Node II - LeetCode: https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/
-  This code passes all Leetcode test cases as of Oct. 13 2019
-*/
-
 class PartI {
   public Node connect(Node root) {
     if (root == null) {
@@ -48,7 +42,7 @@ class PartII {
 
     return root;
   }
-  
+
   private Node findNextNode(Node node) {
     if (node == null) {
       return null;

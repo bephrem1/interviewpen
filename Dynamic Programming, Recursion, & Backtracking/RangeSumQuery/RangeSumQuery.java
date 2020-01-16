@@ -1,15 +1,4 @@
-/** 
-  Range Sum Query - Immutable - LeetCode: https://leetcode.com/problems/range-sum-query-immutable/
-
-  This code passes all Leetcode test cases as of Feb. 6th 2019
-  Runtime: 66 ms, faster than 96.82% of Java online submissions for Range Sum Query - Immutable.
-  Memory Usage: 31.2 MB, less than 88.74% of Java online submissions for Range Sum Query - Immutable.
-
-  The video to explain this code is here: https://www.youtube.com/watch?v=ZMOFmHBVEcg
-*/
-
 class NumArray {
-
   int[] runningSumCache;
 
   public NumArray(int[] nums) {
@@ -90,5 +79,4 @@ class NumArray {
   public int sumRange(int i, int j) {
     return runningSumCache[j + 1] - runningSumCache[i];
   }
-
 }

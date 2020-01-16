@@ -1,9 +1,4 @@
 /*
-  Implement Trie (Prefix Tree) - Leetcode: https://leetcode.com/problems/implement-trie-prefix-tree/
-  This code passes all Leetcode test cases as of Sept. 17 2019
-*/
-
-/*
   Nodes are characters and edges indicate all possible characters
   that can come after a given character.
 
@@ -18,7 +13,7 @@ class Trie {
   }
 
   // Inserts a word into the trie
-  public void insert(String word) { 
+  public void insert(String word) {
     TrieNode curr = root;
 
     for (int level = 0; level < word.length(); level++) {
@@ -53,11 +48,10 @@ class Trie {
     }
 
     /*
-      We could walk the whole word, but it may still be a prefix
-      to some larger word in the trie. Ensure that this is actually
-      the terminating character of a word previously inserted into
-      the trie.
-    */
+     * We could walk the whole word, but it may still be a prefix to some larger
+     * word in the trie. Ensure that this is actually the terminating character of a
+     * word previously inserted into the trie.
+     */
     return curr.endsWord;
   }
 

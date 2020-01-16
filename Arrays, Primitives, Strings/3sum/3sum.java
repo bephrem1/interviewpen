@@ -1,11 +1,3 @@
-/*
-  3 Sum - Leetcode: https://leetcode.com/problems/3sum/
-  This code passes all Leetcode test cases as of Sept. 12 2019
-  
-  *using a Set to enforce uniqueness slows us down by about 160ms, but makes
-  the explanation clearer
-*/
-
 public List<List<Integer>> threeSum(int[] A) {
   Arrays.sort(A); // Sorting array of integers can take O(n) time via Bucket Sort or Radix Sort
 

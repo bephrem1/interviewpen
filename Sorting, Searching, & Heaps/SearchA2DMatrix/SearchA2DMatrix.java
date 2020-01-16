@@ -1,17 +1,15 @@
 /**
   The code below addresses these 2 problems:
 
-  Search a 2D Matrix - LeetCode: https://leetcode.com/problems/search-a-2d-matrix/
+  Search a 2D Matrix
   > Every row is sorted left to right in increasing order. The first integer of
   each row is greater than the last integer of the previous row.
 
-  Search a 2D Matrix II - LeetCode: https://leetcode.com/problems/search-a-2d-matrix-ii/
+  Search a 2D Matrix II 
   > Every row is sorted left to right in increasing order
   > Every column is sorted top to bottom in increasing order
   > There are no guarantees that the first item of any row or column relates to the
   last item in the previous row or column
-
-  The video to explain this code is here: https://www.youtube.com/watch?v=FOa55B9Ikfg
 */
 
 /***********************************************
@@ -49,12 +47,6 @@
   Output: (2, 0)
 
   We are correct.
-*/
-
-/*
-  This code passes all Leetcode test cases as of Mar. 8 2019
-  Runtime: 4 ms, faster than 100.00% of Java online submissions for Search a 2D Matrix.
-  Memory Usage: 39.9 MB, less than 15.59% of Java online submissions for Search a 2D Matrix.
 */
 
 public boolean searchMatrix(int[][] matrix, int target) {
@@ -127,14 +119,6 @@ public boolean searchMatrix(int[][] matrix, int target) {
               Search a 2D Matrix II
 ************************************************/
 
-/*
-  This code passes all Leetcode test cases as of Mar. 4 2019
-  Runtime: 5 ms, faster than 100.00% of Java online submissions for Search a 2D Matrix II.
-  Memory Usage: 45.8 MB, less than 73.92% of Java online submissions for Search a 2D Matrix II.
-
-  Linear with respect to both the rows and columns. Starting at top right.
-*/
-
 public boolean searchMatrix(int[][] matrix, int target) {
 
   /*
@@ -175,13 +159,6 @@ public boolean searchMatrix(int[][] matrix, int target) {
   return false;
 }
 
-/*
-  This code passes all Leetcode test cases as of Mar. 4 2019
-  Runtime: 5 ms, faster than 100.00% of Java online submissions for Search a 2D Matrix II.
-  Memory Usage: 46.3 MB, less than 32.09% of Java online submissions for Search a 2D Matrix II.
-
-  Linear with respect to both the rows and columns. Starting at bottom left.
-*/
 public boolean searchMatrix(int[][] matrix, int target) {
 
   /*
@@ -223,6 +200,7 @@ public boolean searchMatrix(int[][] matrix, int target) {
 }
 
 /*
-  There is an even faster approach addressed in "Cracking The Coding Interview" that operates
-  even faster. It is lengthy. For further investigation it is problem 10.9 in chapter 10.
+  There is an approach addressed in "Cracking The Coding Interview" that operates
+  even faster, but it is lengthy to explain. For further investigation it is problem
+  10.9 in chapter 10.
 */

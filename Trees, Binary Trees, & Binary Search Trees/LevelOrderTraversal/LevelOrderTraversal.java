@@ -1,21 +1,3 @@
-/*
-  Binary Tree Level Order Traversal - LeetCode:
-  https://leetcode.com/problems/binary-tree-level-order-traversal/
-
-  This code passes all Leetcode test cases as of Feb. 3 2019
-  Runtime: 1 ms, faster than 82.85% of Java online submissions for Binary Tree Level Order Traversal.
-  Memory Usage: 26.5 MB, less than 64.46% of Java online submissions for Binary Tree Level Order Traversal.
-
-  The video to explain this code is here: https://www.youtube.com/watch?v=gcR28Hc2TNQ
-*/
-
-public class TreeNode {
-  int val;
-  TreeNode left;
-  TreeNode right;
-  TreeNode(int x) { val = x; }
-}
-
 public List<List<Integer>> levelOrder(TreeNode root) {
 
   if (root == null) {

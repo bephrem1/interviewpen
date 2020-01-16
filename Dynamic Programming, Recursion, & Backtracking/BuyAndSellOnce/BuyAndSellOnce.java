@@ -1,8 +1,3 @@
-/*
-  Best Time to Buy and Sell Stock - LeetCode: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
-  This code passes all Leetcode test cases as of Oct. 27 2019
-*/
-
 class LinearSpace {
   public int maxProfit(int[] prices) {
     if (prices.length == 0) {

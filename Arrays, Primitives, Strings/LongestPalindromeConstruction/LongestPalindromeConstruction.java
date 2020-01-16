@@ -1,8 +1,3 @@
-/*
-  Longest Palindrome - LeetCode: https://leetcode.com/problems/longest-palindrome/
-  This code passes all Leetcode test cases as of Nov. 19 2019
-*/
-
 class WithHashtable {
   public int longestPalindrome(String s) {
     int longestPalindromeLength = 0;

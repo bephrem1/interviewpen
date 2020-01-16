@@ -1,12 +1,3 @@
-/*
-  Maximum Subarray - LeetCode: https://leetcode.com/problems/maximum-subarray/
-
-  The video to explain this code is here: https://www.youtube.com/watch?v=2MmGzdiKR9Y
-*/
-
-/*
-  Time Limit Exceeded.
-*/
 class CubicTimeSolution {
 
   public int maxSubArray(int[] nums) {
@@ -51,10 +42,6 @@ class CubicTimeSolution {
 
 }
 
-/*
-  This code passes all Leetcode test cases as of Jan. 30 2019
-  Runtime: 129 ms, faster than 1.17% of Java online submissions for Maximum Subarray.
-*/
 class QuadraticTimeSolution {
 
   public int maxSubArray(int[] nums) {
@@ -100,14 +87,6 @@ class QuadraticTimeSolution {
 
 }
 
-/*
-  This code passes all Leetcode test cases as of Jan. 30 2019
-  Runtime: 6 ms, faster than 100.00% of Java online submissions for Maximum Subarray.
-
-  Kadane's algorithm - Dynamic Programming
-
-  Credit: Leetcode user @cbmbbz
-*/
 class LinearTimeSolution {
 
   public int maxSubArray(int[] nums) {
@@ -117,8 +96,7 @@ class LinearTimeSolution {
       element.
 
       We also default to say the the best max ending at the first element
-      is...the first element. (this is because on Leetcode we must choose a
-      subarray of at least one item, we cannot choose nothing)
+      is...the first element.
     */
     int maxSoFar = nums[0];
     int maxEndingHere = nums[0];

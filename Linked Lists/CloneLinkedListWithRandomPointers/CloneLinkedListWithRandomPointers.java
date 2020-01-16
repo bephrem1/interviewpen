@@ -1,8 +1,3 @@
-/*
-  Copy List with Random Pointer - LeetCode: https://leetcode.com/problems/copy-list-with-random-pointer/
-*/
-
-// This code passes all Leetcode test cases as of Oct. 3rd 2019
 class LinearSpaceApproach {
   public Node copyRandomList(Node head) {
     if (head == null) {
@@ -54,7 +49,6 @@ class LinearSpaceApproach {
   }
 }
 
-// This code passes all Leetcode test cases as of Oct. 3rd 2019
 class ConstantSpaceApproach {
   public Node copyRandomList(Node head) {
     Node curr = head;

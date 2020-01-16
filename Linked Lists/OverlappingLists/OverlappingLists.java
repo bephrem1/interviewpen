@@ -1,8 +1,3 @@
-/*
-  Intersection of Two Linked Lists - LeetCode: https://leetcode.com/problems/intersection-of-two-linked-lists/
-  This code passes all Leetcode test cases as of Oct. 2nd 2019
-*/
-
 class BruteForce {
   public ListNode getIntersectionNode(ListNode l1, ListNode l2) {
     Set<ListNode> firstListNodes = new HashSet<>();
@@ -62,7 +57,7 @@ class ConstantSpace {
     if (head == null) {
       return 0;
     }
-  
+
     int length = 1;
     ListNode curr = head;
     while (curr != null) {

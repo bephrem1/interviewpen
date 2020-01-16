@@ -1,9 +1,4 @@
 /*
-  Permutations - LeetCode: https://leetcode.com/problems/permutations
-
-  This code passes all Leetcode test cases as of Sept. 3th 2019
-  Runtime: 1 ms, faster than 97.78% of Java online submissions for Permutations.
-  
   The items in the array are guaranteed unique. If this were permutations involving
   something like a string w/ non-unique characters we'd need to maintain a "working list"
   of items still available to "be inserted" into the "slot" we are working on in the output.

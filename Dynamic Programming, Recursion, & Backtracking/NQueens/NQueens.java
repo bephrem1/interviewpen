@@ -1,10 +1,3 @@
-/*
-  N-Queens - LeetCode: https://leetcode.com/problems/n-queens/
-
-  This code passes all Leetcode test cases as of Sept. 1 2019
-  Runtime: 5 ms, faster than 38.11% of Java online submissions for N-Queens.
-*/
-
 public List<List<String>> solveNQueens(int n) {
   List<List<String>> results = new ArrayList<>();
   solveNQueens(0, n, new ArrayList<>(), results);

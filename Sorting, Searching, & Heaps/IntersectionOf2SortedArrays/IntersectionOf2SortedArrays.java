@@ -1,8 +1,3 @@
-/*
-  Intersection of Two Arrays - LeetCode: https://leetcode.com/problems/intersection-of-two-arrays/
-  This code passes all Leetcode test cases as of September 28, 2019
-*/
-
 class BruteForce {
   public int[] intersection(int[] nums1, int[] nums2) {
     Set<Integer> intersection = new HashSet<>();
@@ -24,7 +19,7 @@ class BruteForce {
     int[] array = new int[set.size()];
 
     int index = 0;
-    for (int item: set) {
+    for (int item : set) {
       array[index] = item;
       index++;
     }
@@ -76,7 +71,7 @@ class BinarySearch {
     int[] array = new int[set.size()];
 
     int index = 0;
-    for (int item: set) {
+    for (int item : set) {
       array[index] = item;
       index++;
     }
@@ -115,7 +110,7 @@ class Linear {
     int[] array = new int[set.size()];
 
     int index = 0;
-    for (int item: set) {
+    for (int item : set) {
       array[index] = item;
       index++;
     }

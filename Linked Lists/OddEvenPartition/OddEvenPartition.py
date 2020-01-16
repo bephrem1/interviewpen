@@ -1,10 +1,3 @@
-"""
-    Even Odd Linked List - Leetcode: https://leetcode.com/problems/odd-even-linked-list/
-    Geekforgeeks - https://www.geeksforgeeks.org/rearrange-a-linked-list-such-that-all-even-and-odd-positioned-nodes-are-together/
-    This 2 solutions passed all Leetcode test cases on 11.01.2020
-"""
-
-
 class ListNode:
     def __init__(self, val):
         self.val = val

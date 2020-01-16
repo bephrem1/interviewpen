@@ -1,8 +1,3 @@
-/*
-  Rotate Image - LeetCode: https://leetcode.com/problems/rotate-image/
-  This code passes all Leetcode test cases as of Nov. 15 2019
-*/
-
 class LayerByLayerWithTemps {
   public void rotate(int[][] matrix) {
     int size = matrix.length - 1; // this is really the last index

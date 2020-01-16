@@ -1,8 +1,3 @@
-/*
-  Linked List Cycle - LeetCode: https://leetcode.com/problems/linked-list-cycle/
-  This code passes all Leetcode test cases as of Oct. 1st 2019
-*/
-
 class LinearSpace {
   public boolean hasCycle(ListNode head) {
     Set<ListNode> seen = new HashSet<>();

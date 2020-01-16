@@ -1,8 +1,3 @@
-/*
-  Clone Graph - LeetCode: https://leetcode.com/problems/clone-graph/
-  This code passes all Leetcode test cases as of Oct. 4 2019
-*/
-
 public Node cloneGraph(Node start) {
   // If the start node is null then we cannot do any cloning
   if (start == null) {
@@ -52,7 +47,7 @@ public Node cloneGraph(Node start) {
   return vertexMap.get(start);
 }
 
-// Can't modify Leetcode's constructor so abstracting here
+// Can't modify external lib's constructor so abstracting here
 private Node createNode(int value) {
   Node newNode = new Node(value);
   newNode.neighbors = new ArrayList<>();

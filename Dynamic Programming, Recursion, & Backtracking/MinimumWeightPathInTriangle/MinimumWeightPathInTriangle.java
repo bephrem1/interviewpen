@@ -1,8 +1,3 @@
-/*
-  Triangle - LeetCode: https://leetcode.com/problems/triangle/
-  This code passes all Leetcode test cases as of Sept. 17 2019
-*/
-
 public int minimumTotal(List<List<Integer>> triangle) {
   int totalLayers = triangle.size();
 

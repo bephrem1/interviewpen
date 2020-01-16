@@ -1,9 +1,4 @@
 /*
-  Reverse Linked List II - LeetCode: https://leetcode.com/problems/reverse-linked-list-ii/
-  This code passes all Leetcode test cases as of Oct. 2nd 2019
-*/
-
-/*
   Input:
     start = 2, end = 4
     1 -> 2 -> 3 -> 4 -> 5 -> x

@@ -1,8 +1,3 @@
-/*
-  Add Two Numbers - LeetCode: https://leetcode.com/problems/add-two-numbers/
-  This code passes all Leetcode test cases as of Sept. 26 2019
-*/
-
 public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
   ListNode ptr1 = l1;
   ListNode ptr2 = l2;

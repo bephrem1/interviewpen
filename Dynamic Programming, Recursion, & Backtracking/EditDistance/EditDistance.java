@@ -1,8 +1,3 @@
-/*
-  Edit Distance - LeetCode: https://leetcode.com/problems/edit-distance
-  This code passes all Leetcode test cases as of Oct. 27 2019
-*/
-
 public static int minDistance(String s1, String s2) {
   int[][] opt = new int[s1.length()][s2.length()];
   for (int[] row: opt) {

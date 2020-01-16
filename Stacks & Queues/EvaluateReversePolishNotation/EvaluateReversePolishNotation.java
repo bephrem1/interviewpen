@@ -1,14 +1,4 @@
 /*
-  Evaluate Reverse Polish Notation - LeetCode: https://leetcode.com/problems/evaluate-reverse-polish-notation/
-
-  This code passes all Leetcode test cases as of Feb. 23 2019
-  Runtime: 5 ms, faster than 97.02% of Java online submissions for Evaluate Reverse Polish Notation.
-  Memory Usage: 36.3 MB, less than 63.83% of Java online submissions for Evaluate Reverse Polish Notation.
-
-  The video to explain this code is here: https://www.youtube.com/watch?v=qN8LPIcY6K4
-*/
-
-/*
   We assume we get a valid Reverse Polish Notation expression encoded
   in the string array
 */

@@ -1,10 +1,3 @@
-/*
-  Subsets - Leetcode: https://leetcode.com/problems/subsets/
-
-  This code passes all Leetcode test cases as of Sept. 5th 2019
-  Runtime: 0 ms, faster than 100.00% of Java online submissions for Subsets.
-*/
-
 public List<List<Integer>> subsets(int[] inputSet) {
   List<List<Integer>> powerset = new ArrayList<>();
   generatePowerset(0, new ArrayList<>(), inputSet, powerset);

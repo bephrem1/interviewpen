@@ -1,18 +1,4 @@
-/*
-  Partition to K Equal Sum Subsets - LeetCode: https://leetcode.com/problems/partition-to-k-equal-sum-subsets
-
-  An adaption of the answer from user "climberig" on Leetcode.
-  Link: https://leetcode.com/problems/partition-to-k-equal-sum-subsets/discuss/108730/JavaC%2B%2BStraightforward-dfs-solution
-
-  Revision by Benyam Ephrem (Jan. 9th 2019)
-
-  This code passes all Leetcode test cases as of Jan. 9th 2019
-  Runtime: 10 ms, faster than 92.57% of Java online submissions for Partition to K Equal Sum Subsets.
-
-  The video to explain this code is here: https://www.youtube.com/watch?v=qpgqhp_9d1s
-*/
-
- public boolean canPartitionKSubsets(int[] arr, int k) {
+public boolean canPartitionKSubsets(int[] arr, int k) {
 
   /*
     Get the sum of all items in the array. We will use this to

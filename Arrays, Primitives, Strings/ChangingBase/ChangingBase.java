@@ -1,7 +1,4 @@
 /*
-  Base 7 - LeetCode: https://leetcode.com/problems/base-7/
-  This code passes all Leetcode test cases as of Sept. 16 2019
-
   This code can handle bases between 2 - 36, this is because for
   each digit we can represent:
 

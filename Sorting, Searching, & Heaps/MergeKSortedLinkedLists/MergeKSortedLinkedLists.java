@@ -1,17 +1,4 @@
-/*
-  Merge k Sorted Lists - LeetCode: https://leetcode.com/problems/merge-k-sorted-lists/
-
-  This code passes all Leetcode test cases as of Sept. 10 2019
-  Runtime: 5 ms, faster than 75.68% of Java online submissions for Merge k Sorted Lists.
-
-  If these were arrays we would need to create an augmented structure to cache what
-  array each item came from.
-
-  See 'mergeKSortedArrays.java'.
-*/
-
 public ListNode mergeKLists(ListNode[] lists) {
-  // Annoying empty state filters to make Leetcode happy
   if (lists == null || lists.length == 0) {
     return null;
   }

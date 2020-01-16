@@ -1,18 +1,3 @@
-/*
-  Climbing Stairs - LeetCode: https://leetcode.com/problems/climbing-stairs
-
-  An adaption of the Leetcode "Solution" section with many comments added
-  for teaching purposes: https://leetcode.com/problems/climbing-stairs/solution/
-
-  The video to explain this code is here: https://www.youtube.com/watch?v=NFJ3m9a1oJQ
-*/
-
-/*
-  Time Limit Exceeded
-
-  If we don't cache answers we will repeat subproblems we
-  already have the answer to
-*/
 class TopDownWithoutMemoization {
 
   public int climbStairs(int n) {
@@ -51,13 +36,6 @@ class TopDownWithoutMemoization {
 
 }
 
-/*
-  This code passes all Leetcode test cases as of Jan. 13 2019
-  Runtime: 3 ms, faster than 98.87% of Java online submissions for Climbing Stairs.
-
-  We now cache our previous answers. Therefore, we have a linear time compleity thus
-  letting this code pass
-*/
 class TopDownWithMemoization {
 
   public int climbStairs(int n) {
@@ -110,12 +88,6 @@ class TopDownWithMemoization {
 
 }
 
-/*
-  This code passes all Leetcode test cases as of Jan. 13 2019
-  Runtime: 3 ms, faster than 98.87% of Java online submissions for Climbing Stairs.
-
-  The bottom up approach. We start from the "bottom" and build up to n
-*/
 class BottomUp {
 
   public int climbStairs(int n) {

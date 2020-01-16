@@ -1,8 +1,3 @@
-/*
-  Odd Even Linked List - LeetCode: https://leetcode.com/problems/odd-even-linked-list/
-  This code passed all Leetcode test cases as of Oct. 30th 2019
-*/
-
 class WithDummyHead {
   public ListNode oddEvenList(ListNode head) {
     if (head == null || head.next == null) {
@@ -49,10 +44,10 @@ class WithLessPointers {
     ListNode oddHead = odd;
 
     while (odd != null && odd.next != null) {
-        even.next = odd.next;
-        even = odd.next;
-        odd.next = even.next;
-        odd = even.next;
+      even.next = odd.next;
+      even = odd.next;
+      odd.next = even.next;
+      odd = even.next;
     }
     even.next = oddHead;
 

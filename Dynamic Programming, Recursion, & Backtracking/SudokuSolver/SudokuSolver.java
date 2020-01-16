@@ -1,8 +1,3 @@
-/*
-  Sudoku Solver - LeetCode: https://leetcode.com/problems/sudoku-solver/
-  This code passes all Leetcode test cases as of Oct. 22nd 2019
-*/
-
 private static final char EMPTY_ENTRY = '.';
 
 public static void solveSudoku(char[][] board) {

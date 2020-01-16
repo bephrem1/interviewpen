@@ -1,8 +1,3 @@
-/*
-  LRU Cache - LeetCode: https://leetcode.com/problems/lru-cache/
-  This code passes all Leetcode test cases as of Oct. 1st 2019
-*/
-
 class LRUCache {
   // Hashtable backs up the Doubly Linked List for O(1) access to cache items
   Map<Integer, ListNode> hashtable = new HashMap<Integer, ListNode>();
@@ -26,11 +21,11 @@ class LRUCache {
     tail.prev = head;
   }
 
-  public int get(int key) {
+  public Integer get(int key) {
     ListNode node = hashtable.get(key);
 
     if (node == null) {
-      return -1; // we should throw an exception here, but for Leetcode's sake
+      return null;
     }
 
     // Item has been accessed. Move to the front of the cache

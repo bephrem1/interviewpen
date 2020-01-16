@@ -1,20 +1,3 @@
-/*
-  Merge Two Sorted Lists - LeetCode: https://leetcode.com/problems/merge-two-sorted-lists
-
-  Authorship: ALL credit for the iterative code in this file goes to the
-  authors of the book "Elements of Programming Interviews" by Adnan Aziz,
-  Amit Prakash, and Tsung-Hsien Lee.
-  
-  I have just adapted the solution to pass on Leetcode, added explanatory
-  comments, reformatted the code, & changed variable names for understanding.
-
-  The video to explain this code is here: https://www.youtube.com/watch?v=GfRQvf7MB3k
-*/
-
-/*
-  This code passes all Leetcode test cases as of Jan. 13 2019
-  Runtime: 12 ms, faster than 75.73% of Java online submissions for Merge Two Sorted Lists.
-*/
 class MergeIterative {
 
   public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
@@ -83,13 +66,8 @@ class MergeIterative {
     */
     return dummyHead.next;
   }
-
 }
 
-/*
-  This code passes all Leetcode test cases as of Jan. 13 2019
-  Runtime: 12 ms, faster than 75.73% of Java online submissions for Merge Two Sorted Lists.
-*/
 class MergeRecursive {
 
   public ListNode mergeTwoLists(ListNode l1, ListNode l2){
@@ -97,18 +75,18 @@ class MergeRecursive {
     /*
       l1 has been exhausted, return where we are at in l2
     */
-    if(l1 == null) {
+    if (l1 == null) {
       return l2;
     }
 
     /*
       l2 has been exhausted, return where we are at in l1
     */
-    if(l2 == null) {
+    if (l2 == null) {
       return l1;
     }
 
-    if(l1.val < l2.val){
+    if (l1.val < l2.val){
 
       /*
         l1 gets the placement, we first need to get the rest
@@ -129,7 +107,5 @@ class MergeRecursive {
       return l2;
 
     }
-
   }
-
 }

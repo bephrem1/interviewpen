@@ -5,6 +5,7 @@ An initiative to empower the software engineer to excel in the interview.
 <b>Website:</b> https://www.backtobackswe.com <br>
 
 <b>The Exhaustive Topics A Software Engineer Needs To Know To Pass A Big N Interview:</b>
+
 - Fundamentals of Computer Systems (just a general knowing how computers store information etc.)
 - Big O Time & Space Complexity Computation
 - Arrays
@@ -36,6 +37,7 @@ I am only a humble teacher, I am not perfect.
 If even one person gets an offer from my work my day is complete.
 
 ## Contributing
+
 I'd love any contributions from people to this repo. I just restructured it so that solutions in multiple languages can be added for a single problem.
 
 Just make sure that you follow the style conventions of your respective language.
@@ -45,10 +47,6 @@ Just make sure that you follow the style conventions of your respective language
 I'm not perfect. I watch finished videos 2 times over. I read and test all code samples. But I still make errors.
 
 If you see a mistake anywhere just open a pr & I'll merge it in.
-
-## Outdated Code
-
-Sometimes Leetcode function signatures change or the names on fields of objects change breaking the code. If you see this then just open an issue or pr if you want to fix it.
 
 ## Best Books For Prep
 

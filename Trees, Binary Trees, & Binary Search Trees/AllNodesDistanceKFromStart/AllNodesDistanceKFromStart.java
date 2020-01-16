@@ -1,23 +1,3 @@
-/*
-  All Nodes Distance K in Binary Tree - LeetCode: https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/
-
-  This code passes all Leetcode test cases as of Feb. 12th 2019
-  Runtime: 3 ms, faster than 64.42% of Java online submissions for All Nodes Distance K in Binary Tree.
-  (can't get much faster than that. Asymptotically this is identical to anything even remotely faster)
-
-  The video to explain this code is here: https://www.youtube.com/watch?v=nPtARJ2cYrg
-*/
-
-/**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode(int x) { val = x; }
- * }
- */
-
 public List<Integer> distanceK(TreeNode treeRoot, TreeNode startNode, int targetDistance) {
 
   /*

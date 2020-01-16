@@ -1,8 +1,3 @@
-/*
-  Spiral Matrix - LeetCode: https://leetcode.com/problems/spiral-matrix/
-  This code passes all Leetcode test cases as of Nov. 15 2019
-*/
-
 public List<Integer> spiralOrder(int[][] matrix) {
   List<Integer> spiralSequence = new ArrayList<>();
 

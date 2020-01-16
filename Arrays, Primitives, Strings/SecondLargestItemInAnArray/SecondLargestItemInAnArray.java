@@ -1,13 +1,3 @@
-/*
-  Similar question on Leetcode: Third Maximum Number
-  Link: https://leetcode.com/problems/third-maximum-number/
-
-  Thanks to GeeksForGeeks for this code sample. I just cleaned it up
-  and added explanatory comments: https://www.geeksforgeeks.org/find-second-largest-element-array/
-
-  The video to explain* this code is here: https://www.youtube.com/watch?v=NheWPxGpoxQ
-*/
-
 public static int secondLargest(int arr[]) { 
 
   int firstLargest = Integer.MIN_VALUE;

@@ -1,8 +1,3 @@
-/*
-  Longest Palindromic Substring - LeetCode: https://leetcode.com/problems/longest-palindromic-substring/
-  This code passes all Leetcode test cases as of Nov. 22 2019
-*/
-
 class ExplicitTesting {
   public String longestPalindrome(String s) {
     PalindromeFinder pf = new PalindromeFinder(s);

@@ -1,33 +1,28 @@
-/*
-  Convert Sorted Array to Binary Search Tree - LeetCode: https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/
-
-  This code passes all Leetcode test cases as of Sept. 10 2019
-  Runtime: 0 ms, faster than 100.00% of Java online submissions for Convert Sorted Array to Binary Search Tree.
-*/
-
-public TreeNode sortedArrayToBST(int[] nums) {
-  return buildMinHeighBST(nums, 0, nums.length);
-}
-
-private TreeNode buildMinHeighBST(int[] nums, int left, int right) {
-  if (left >= right) {
-    return null;
+class Solution {
+  public TreeNode sortedArrayToBST(int[] nums) {
+    return buildMinHeighBST(nums, 0, nums.length);
   }
 
-  /*
-    Pull out the value from the middle item and create a new node with
-    this value
-  */
-  int middleIndex = left + ((right - left) / 2);
-  TreeNode newNode = new TreeNode(nums[middleIndex]);
+  private TreeNode buildMinHeighBST(int[] nums, int left, int right) {
+    if (left >= right) {
+      return null;
+    }
 
-  /*
-    Set the left and right subtrees of this new node using this same function.
-    Each call will root the tree built at the "most balanced" node, which is
-    the middle of the sorted sub-section (between left & right)
-  */
-  newNode.left = buildMinHeighBST(nums, left, middleIndex);
-  newNode.right = buildMinHeighBST(nums, middleIndex + 1, right);
+    /*
+     * Pull out the value from the middle item and create a new node with this value
+     */
+    int middleIndex = left + ((right - left) / 2);
+    TreeNode newNode = new TreeNode(nums[middleIndex]);
 
-  return newNode;
+    /*
+     * Set the left and right subtrees of this new node using this same function.
+     * Each call will root the tree built at the "most balanced" node, which is the
+     * middle of the sorted sub-section (between left & right)
+     */
+    newNode.left = buildMinHeighBST(nums, left, middleIndex);
+    newNode.right = buildMinHeighBST(nums, middleIndex + 1, right);
+
+    return newNode;
+  }
+
 }

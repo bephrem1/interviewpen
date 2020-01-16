@@ -1,8 +1,3 @@
-/*
-  Decode Ways - LeetCode: https://leetcode.com/problems/decode-ways
-  This code passes all Leetcode test cases as of Oct. 23 2019
-*/
-
 class Recursive {
   public int numDecodings(String s) {
     int[] dp = new int[s.length()];
