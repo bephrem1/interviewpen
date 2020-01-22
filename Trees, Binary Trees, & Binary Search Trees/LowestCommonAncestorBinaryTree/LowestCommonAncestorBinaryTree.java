@@ -19,8 +19,8 @@ class Solution {
      * 
      * Search left and then search right.
      */
-    TreeNode leftSearchResult = search(root.left, p, q);
-    TreeNode rightSearchResult = search(root.right, p, q);
+    TreeNode leftSearchResult = lowestCommonAncestor(root.left, p, q);
+    TreeNode rightSearchResult = lowestCommonAncestor(root.right, p, q);
 
     /*
      * If nothing turned up on the left, return whatever we got back on the right.
