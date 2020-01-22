@@ -21,7 +21,7 @@ private void decomposeString(
 
   /*
     Take every snippet take from the 'workingIndex' to the end of the
-    string. This is out 'possibility space' that we can recurse into.
+    string. This is our 'possibility space' that we can recurse into.
   */
   for (int i = workingIndex; i < s.length(); i++) {
     /*
