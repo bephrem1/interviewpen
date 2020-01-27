@@ -25,7 +25,7 @@ An initiative to empower the software engineer to excel in the interview.
 - Trees, Binary Trees, & Binary Search Trees
 - System and OO design Principles (sometimes)
 
-And that is pretty much it. These are the topics you need to know well to pass.
+And that is pretty much it for Data Structures & Algorithms.
 
 The channel's goal is to contribute to the community of people bridging
 these topics to help engineers excel in the interview.
