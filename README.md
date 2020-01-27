@@ -2,7 +2,7 @@
 
 An initiative to empower the software engineer to excel in the interview.
 
-<b>Website:</b> https://www.backtobackswe.com <br>
+<b>Website:</b> https://backtobackswe.com <br>
 
 <b>The Exhaustive Topics A Software Engineer Needs To Know To Pass A Big N Interview:</b>
 
