@@ -1,25 +1,5 @@
-/*
-  A circular queue is a queue implemented as an array
-*/
-import java.util.*;
-
-public class ImplementACircularQueue {
-  public static void main(String args[]) {
-    CircularQueue queue = new CircularQueue(5);
-
-    for (int i = 0; i < 20; i++) {
-      queue.enqueue(i);
-      System.out.println("Enqueue " + i);
-    }
-
-    System.out.println();
-
-    for (int i = 0; i < 21; i++) {
-      System.out.println("Dequeue " + queue.dequeue());
-    }
-  }
-
-  private static class CircularQueue {
+class Solution {
+  public class CircularQueue {
     private int head = 0, tail = 0, size = 0;
     private static final int SCALE_FACTOR = 2;
     private int[] queue;

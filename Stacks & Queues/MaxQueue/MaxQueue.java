@@ -1,32 +1,5 @@
-/*
-  A queue with an O(1) max api
-*/
-import java.util.*;
-
-public class ImplementAMaxQueue {
-  public static void main(String args[]) {
-    MaxQueue queue = new MaxQueue();
-    int[] enqueueItems = new int[]{ 0, 1, 3, 2, 5, 9, 1, 2 };
-
-    for (int i = 0; i < enqueueItems.length; i++) {
-      queue.enqueue(enqueueItems[i]);
-      System.out.println("Enqueue " + enqueueItems[i]);
-      System.out.println("Max is " + queue.max());
-      queue.print();
-      System.out.println("\n");
-    }
-
-    System.out.println("\n\n");
-
-    for (int i = 0; i < enqueueItems.length; i++) {
-      System.out.println("Dequeue " + queue.dequeue());
-      System.out.println("Max is " + queue.max());
-      queue.print();
-      System.out.println("\n");
-    }
-  }
-
-  private static class MaxQueue {
+class Solution {
+  public class MaxQueue {
     private Queue<Integer> queue = new LinkedList<>();
 
     /*
@@ -88,14 +61,6 @@ public class ImplementAMaxQueue {
       }
 
       return maxCache.peek();
-    }
-
-    public void print() {
-      System.out.print("[ ");
-      for (int item: queue) {
-        System.out.print(item + " ");
-      }
-      System.out.print("]");
     }
   }
 }

@@ -1,32 +1,5 @@
-/*
-  We are given a list of buildings where index i in the list
-  indicates the height of building i.
-
-  The sun is to the left.
-  
-  index 0 is furthest left, index len(arr) - 1 is furthest right.
-
-  If building 'b' is anywhere to the right of building 'a', and
-  building 'a' is >= in height to building 'b', then building 'b'
-  cannot see the sunset.
-
-  Calculate the buildings that have a sunset view from right to left.
-*/
-
-import java.util.*;
-
-public class BuildingsWithASunsetView {
-  public static void main(String args[]) {
-    int[] buildingSetA = new int[]{ 1, 2, 3, 4, 5 };
-    int[] buildingSetB = new int[]{ 5, 3, 4, 2, 1 };
-    int[] buildingSetC = new int[]{ 7, 4, 8, 2, 9 };
-    
-    System.out.println(getBuildingsWithAView(buildingSetA));
-    System.out.println(getBuildingsWithAView(buildingSetB));
-    System.out.println(getBuildingsWithAView(buildingSetC));
-  }
-
-  private static List<Integer> getBuildingsWithAView(int[] buildings) {
+class Solution {
+  public List<Integer> getBuildingsWithAView(int[] buildings) {
     /*
       Stacks are useful to keep "histories". The LIFO ("last in, first out")
       behaviour allow us to access the most recent buildings in the order

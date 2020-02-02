@@ -1,11 +1,7 @@
-class MyQueue {
-
+class Solution {
   private Stack<Integer> pushStack;
   private Stack<Integer> popStack;
 
-  /*
-   * Initialize the 2 stacks and the size of the queue
-   */
   public MyQueue() {
     pushStack = new Stack<>();
     popStack = new Stack<>();
