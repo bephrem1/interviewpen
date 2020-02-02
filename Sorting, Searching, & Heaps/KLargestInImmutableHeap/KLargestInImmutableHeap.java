@@ -1,35 +1,5 @@
-/*
-  Return the k largest items from a max heap in which you
-  cannot execute the poll()/remove() operation.
-
-  Though, you are given the heap in its underlying array
-  form, so you may inspect that to create a solution.
-*/
-import java.util.*;
-
-public class KLargestInAnImmutableHeap {
-  public static void main(String args[]) {
-    int[] immutableHeap = new int[]{ 17, 7, 16, 2, 3, 15, 14 };
-
-    /*
-      This is what the max heap looks like:
-
-             17
-          /     \
-         7       16
-       /  \     /  \
-      2    3  15    14
-
-      Notice how if we read the heap top to bottom, left to right,
-      we get the original array above.
-    */
-
-    for (int i = 2; i <= immutableHeap.length; i++) {
-      System.out.println(i + " largest items: " + kLargestInImmutableHeap(immutableHeap, i));
-    }
-  }
-
-  public static List<Integer> kLargestInImmutableHeap(int[] immutableHeap, int k) {
+class Solution {
+  public List<Integer> kLargestInImmutableHeap(int[] immutableHeap, int k) {
     if (k <= 0) {
       return new ArrayList<>();
     }
@@ -71,14 +41,14 @@ public class KLargestInAnImmutableHeap {
     Priority Queue's in Java default to keeping smallest item at top, we need to
     implement a custom compare function to reverse this to have max heap behaviour
   */
-  private static class MaxHeapComparator implements Comparator<HeapItem> {
+  private class MaxHeapComparator implements Comparator<HeapItem> {
     @Override
     public int compare(HeapItem o1, HeapItem o2) {
       return Integer.compare(o2.value, o1.value);
     }
   }
 
-  private static class HeapItem {
+  private class HeapItem {
     int index;
     int value;
 

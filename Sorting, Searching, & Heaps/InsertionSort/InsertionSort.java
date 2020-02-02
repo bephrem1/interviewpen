@@ -1,20 +1,8 @@
-/*
-  Insertion Sort
-*/
-import java.util.*;
-
-public class InsertionSort {
-  public static void main(String args[]) {
-    int[] numbers = new int[]{ 1, -40, 4, 5, 8, 3, 4, 1, 4, 5, 100, -12 };
-    insertionSort(numbers);
-    System.out.println(Arrays.toString(numbers));
-  }
-
-  private static void insertionSort(int arr[]) {
+class Solution {
+  public void insertionSort(int arr[]) {
     int lastIndex = arr.length - 1;
 
     for (int i = 1; i <= lastIndex; i++) {
-
       /*
         Extract the arr[i] into the temp so we can trample over
         the value at index i as we shift items over

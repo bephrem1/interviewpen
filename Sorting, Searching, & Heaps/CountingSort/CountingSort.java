@@ -1,6 +1,5 @@
 class Solution {
   public int[] countingSort(int[] arr, int k) {
-
     /*
      * Our input is the 'arr' to sort and the total number of unique number values
      * in the array...'k'
@@ -68,5 +67,4 @@ class Solution {
 
     return sortedOutput;
   }
-
 }

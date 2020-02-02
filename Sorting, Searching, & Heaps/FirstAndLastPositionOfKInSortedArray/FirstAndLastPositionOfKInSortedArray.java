@@ -1,22 +1,9 @@
 class Solution {
-  private enum SearchType {
-    FIRST, LAST
-  }
-
   public int[] searchRange(int[] nums, int target) {
-    /*
-     * Initialize our search results
-     */
     int[] rangeResult = { -1, -1 };
 
-    /*
-     * We search for the first occurrence
-     */
     int leftBoundIndex = search(nums, target, SearchType.FIRST);
 
-    /*
-     * If first occurrence is not found, stop processing
-     */
     if (leftBoundIndex == -1) {
       return rangeResult;
     }
@@ -32,76 +19,29 @@ class Solution {
   }
 
   private int search(int[] nums, int target, SearchType searchType) {
-
-    /*
-     * Grab the first and last element in the array
-     */
     int left = 0;
     int right = nums.length - 1;
 
-    /*
-     * Search while left stays to the left (or on top) of the right pointer
-     */
     while (left <= right) {
-      /*
-       * Get the middle, doing: int mid = (left + right) / 2; is prone to overflow
-       * because we add left and right.
-       * 
-       * This way of getting the middle avoids a possible overflow in that
-       * intermediary addition operation
-       */
       int mid = left + (right - left) / 2;
 
-      /*
-       * If we hit the target we will take action depending on what search type this
-       * is
-       * 
-       * The only time we return a found equivalence is when the item is either at the
-       * bounds of the array, or the next item to the found equivalence is different
-       * meaning we have reached the first or last occurence of that element in the
-       * sorted sequence
-       */
       if (nums[mid] == target) {
-        /*
-         * We use an enum to diferentiate search types. I think booleans are like
-         * "magic numbers" (that is actually a term) and enums really codify our
-         * intentions better than a boolean or random number we choose
-         */
         if (searchType == SearchType.FIRST) {
           if (isInBounds(nums, mid - 1) && nums[mid - 1] == nums[mid]) {
             right = mid - 1;
           } else {
-            /*
-             * Only time this search stops is if we hit the left of the array or if the
-             * element to our left is not us therefore we have the first occurrence of k
-             */
             return mid;
           }
         } else if (searchType == SearchType.LAST) {
           if (isInBounds(nums, mid + 1) && nums[mid + 1] == target) {
             left = mid + 1;
           } else {
-            /*
-             * Only time this search stops is if we hit the right of the array or if the
-             * element to our right is not us therefore we have the last occurrence of k
-             */
             return mid;
-
           }
-
         }
       } else if (nums[mid] < target) {
-
-        /*
-         * Where we sit undershot the target. Go right, we need more value. We do this
-         * by narrowing the left bound.
-         */
         left = mid + 1;
       } else {
-        /*
-         * Where we sit overshot the target. Go left, we need less value. We do this by
-         * narrowing the right bound.
-         */
         right = mid - 1;
       }
     }
@@ -109,10 +49,11 @@ class Solution {
     return -1; // item not found
   }
 
-  /*
-   * Checks if a given 'index' is in bounds for a given array 'arr'
-   */
   private boolean isInBounds(int[] arr, int index) {
     return index >= 0 && index <= arr.length - 1;
+  }
+
+  private enum SearchType {
+    FIRST, LAST
   }
 }

@@ -1,36 +1,5 @@
-/*
-  "Online" algorithms are those that can process input piece-by-piece
-  instead of getting the whole input all at once to create an output from.
-
-  In this problem we are asked to create a structure that allows to know
-  the live median of an incoming sequence of data.
-
-  The full data stream is not known all at once and we must optimize for an
-  asymptotically fast median read time at all points in the data stream
-  being sent to us.
-*/
-import java.util.*;
-
-public class OnlineMedian {
-  public static void main(String args[]) {
-    int[] dataStream = new int[]{
-      21, 19, 80, 21, 28, 27, 47, 21, 98, 81, 74, 73, 53, 72, 86, 83, 88, 64, 15, 51,
-      90, 25, 3, 7, 4, 80, 76, 93, 15, 24, 88, 25, 94, 20, 97, 42, 5, 87, 81, 68, 31,
-      69, 46, 36, 71, 34, 21, 80, 46, 43, 83, 91, 1, 2, 66, 31, 20, 75, 32, 6, 39, 44,
-      44, 4, 58, 70, 60, 41, 53, 94, 58, 21, 35, 21, 69, 26, 95, 69, 75, 21, 68, 37,
-      23, 100, 86, 50, 83, 49, 99, 84, 7, 48, 92, 20, 31, 53, 85, 95, 96, 8
-    };
-
-    MedianManager medianManager = new MedianManager();
-
-    for (int i = 0; i < dataStream.length; i++) {
-      System.out.println("Inserting " + dataStream[i]);
-      medianManager.insert(dataStream[i]);
-      System.out.println("The new running median is " + medianManager.median() + "\n");
-    }
-  }
-
-  private static class MedianManager {
+class Solution {
+  public class MedianManager {
     private static final int INITIAL_CAPACITY = 10;
 
     /*

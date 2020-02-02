@@ -1,15 +1,4 @@
 class Solution {
-  /*
-   * Quicksort. Picking the pivot is 'pivotal' to the algorithm's performance ;)
-   * 
-   * This version picks the last item in the partition space as the pivot
-   * everytime, there are many other ways to choose a pivot item.
-   */
-
-  /*
-   * Top-level helper to help the caller pass less arguments in. We know that
-   * quicksort will start with considering the whole array
-   */
   public void quicksort(int arr[]) {
     quicksort(arr, 0, arr.length - 1);
   }
@@ -20,7 +9,6 @@ class Solution {
    */
   private void quicksort(int arr[], int left, int right) {
     if (left < right) {
-
       /*
        * Partition the array from left to right and find where the selected pivot
        * belongs
@@ -32,7 +20,6 @@ class Solution {
        */
       quicksort(arr, left, pivotFinalRestingPosition - 1);
       quicksort(arr, pivotFinalRestingPosition + 1, right);
-
     }
   }
 
@@ -59,13 +46,11 @@ class Solution {
      * j will scan for us.
      */
     for (int j = left; j < right; j++) {
-
       /*
        * If this item is less than the pivot it needs to be moved to the section of
        * items less than the pivot
        */
       if (arr[j] <= pivot) {
-
         /*
          * Move i forward so that we can swap the value at j into the tail of the items
          * less than the pivot
@@ -78,7 +63,6 @@ class Solution {
          */
         swap(arr, i, j);
       }
-
     }
 
     /*

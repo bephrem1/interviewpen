@@ -1,27 +1,4 @@
-class BruteForce {
-  public ListNode getIntersectionNode(ListNode l1, ListNode l2) {
-    Set<ListNode> firstListNodes = new HashSet<>();
-
-    ListNode curr = l1;
-    while (curr != null) {
-      firstListNodes.add(curr);
-      curr = curr.next;
-    }
-
-    ListNode curr2 = l2;
-    while (curr2 != null) {
-      if (firstListNodes.contains(curr2)) {
-        return curr2;
-      }
-
-      curr2 = curr2.next;
-    }
-
-    return null;
-  }
-}
-
-class ConstantSpace {
+class Solution {
   public ListNode getIntersectionNode(ListNode l1, ListNode l2) {
     if (l1 == null || l2 == null) {
       return null;

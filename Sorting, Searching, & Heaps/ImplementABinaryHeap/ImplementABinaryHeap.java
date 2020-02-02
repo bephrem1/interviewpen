@@ -1,51 +1,21 @@
-/*
-  A min heap implementation
+public class Solution {
+  /*
+    A min heap implementation
 
-  Array Form: [ 5, 7, 6, 10, 15, 17, 12 ]
+    Array Form: [ 5, 7, 6, 10, 15, 17, 12 ]
 
-  Complete Binary Tree Form:
-                   5
-              /         \
-          7               6
-      /     \          /     \
-    10      15        17      12
+    Complete Binary Tree Form:
+                    5
+                /         \
+            7               6
+        /     \          /     \
+      10      15        17      12
 
-  Mappings:
-    Parent -> (childIndex - 1) / 2
-    Left Child -> 2 * parentIndex + 1
-    Right Child -> 2 * parentIndex + 2
-    
-  YouTube explanation: https://www.youtube.com/watch?v=g9YK6sftDi0
-  Heap Sort explanation: https://www.youtube.com/watch?v=k72DtCnY4MU
-*/
-import java.util.*;
-
-public class ImplementABinaryHeap {
-  public static void main(String args[]) {
-    MinHeap minHeap = new MinHeap();
-    int[] insertItems = new int[]{ 0, 1, 3, 2, -4, 9, 1, 2 };
-
-    for (int i = 0; i < insertItems.length; i++) {
-      minHeap.add(insertItems[i]);
-      System.out.println("Add " + insertItems[i]);
-      System.out.println("Min is " + minHeap.peek());
-
-      minHeap.printUnderlyingArray();
-
-      System.out.println("\n");
-    }
-
-    System.out.println("\n\n");
-
-    for (int i = 0; i < insertItems.length; i++) {
-      System.out.println("Remove " + minHeap.remove());
-      System.out.println("Min is " + minHeap.peek());
-
-      minHeap.printUnderlyingArray();
-
-      System.out.println("\n");
-    }
-  }
+    Mappings:
+      Parent -> (childIndex - 1) / 2
+      Left Child -> 2 * parentIndex + 1
+      Right Child -> 2 * parentIndex + 2
+  */
 
   private static class MinHeap {
     private int capacity = 5;
@@ -231,16 +201,6 @@ public class ImplementABinaryHeap {
 
     private int parent(int index) {
       return heap[getParentIndex(index)];
-    }
-
-    /***********************************************/
-
-    private void printUnderlyingArray() {
-      System.out.print("[ ");
-      for (int item: heap) {
-        System.out.print(item + " ");
-      }
-      System.out.print("]");
     }
   }
 }
