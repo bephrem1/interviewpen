@@ -2,15 +2,11 @@ class Solution {
   public int change(int amount, int[] coins) {
     int[][] dp = new int[coins.length + 1][amount + 1];
 
-    /*
-     * Max ways to make change for 0 will be 1, doing nothing.
-     */
+    // Max ways to make change for 0 will be 1, doing nothing.
     dp[0][0] = 1;
 
     for (int i = 1; i <= coins.length; i++) {
-      /*
-       * Set the subproblem for the amount of 0 to 1 when solving this row
-       */
+      // Set the subproblem for the amount of 0 to 1 when solving this row
       dp[i][0] = 1;
 
       for (int j = 1; j <= amount; j++) {

@@ -1,96 +1,5 @@
-class CubicTimeSolution {
-
+class Solution {
   public int maxSubArray(int[] nums) {
-
-    int n = nums.length;
-    int maximumSubArraySum = Integer.MIN_VALUE;
-
-    /*
-      We will use these outer 2 for loops to investigate all
-      windows of the array.
-      
-      We plant at each 'left' value and explore every
-      'right' value from that 'left' planting.
-
-      These are our bounds for the window we will investigate.
-    */
-    for (int left = 0; left < n; left++) {
-      for (int right = left; right < n; right++) {
-
-        /*
-          Let's investigate this window
-        */
-        int windowSum = 0;
-
-        /*
-          Add all items in the window
-        */
-        for (int k = left; k <= right; k++) {
-          windowSum += nums[k];
-        }
-
-        /*
-          Did we beat the best sum seen so far?
-        */
-        maximumSubArraySum = Math.max(maximumSubArraySum, windowSum);
-
-      }
-    }
-
-    return maximumSubArraySum;
-  }
-
-}
-
-class QuadraticTimeSolution {
-
-  public int maxSubArray(int[] nums) {
-
-    int n = nums.length;
-    int maximumSubArraySum = Integer.MIN_VALUE;
-
-    for (int left = 0; left < n; left++) {
-
-      /*
-        Reset our running window sum once we choose a new
-        left bound to plant at. We then keep a new running
-        window sum.
-      */
-      int runningWindowSum = 0;
-
-      /*
-        We improve by noticing we are performing duplicate
-        work. When we know the sum of the subarray from
-        0 to right - 1...why would we recompute the sum
-        for the subarray from 0 to right?
-
-        This is unnecessary. We just add on the item at
-        nums[right].
-      */
-      for (int right = left; right < n; right++) {
-
-        /*
-          We factor in the item at the right bound
-        */
-        runningWindowSum += nums[right];
-
-        /*
-          Does this window beat the best sum we have seen so far?
-        */
-        maximumSubArraySum = Math.max(maximumSubArraySum, runningWindowSum);
-
-      }
-    }
-
-    return maximumSubArraySum;
-  }
-
-}
-
-class LinearTimeSolution {
-
-  public int maxSubArray(int[] nums) {
-
     /*
       We default to say the the best maximum seen so far is the first
       element.
@@ -105,8 +14,7 @@ class LinearTimeSolution {
       We will investigate the rest of the items in the array from index
       1 onward.
     */
-    for (int i = 1; i < nums.length; i++){
-
+    for (int i = 1; i < nums.length; i++) {
       /*
         We are inspecting the item at index i.
 
@@ -146,13 +54,10 @@ class LinearTimeSolution {
       */
       maxEndingHere = Math.max(maxEndingHere + nums[i], nums[i]);
 
-      /*
-        Did we beat the 'maxSoFar' with the 'maxEndingHere'?
-      */
+      // Did we beat the 'maxSoFar' with the 'maxEndingHere'?
       maxSoFar = Math.max(maxSoFar, maxEndingHere);  
     }
 
     return maxSoFar;
   }
-
 }

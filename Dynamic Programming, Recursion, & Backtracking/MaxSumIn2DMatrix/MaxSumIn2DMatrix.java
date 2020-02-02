@@ -1,18 +1,5 @@
 class Solution {
-  public static void main(String args[]) {
-    int matrix[][] = { { 6, -5, -7, 4, -4 }, { -9, 3, -6, 5, 2 }, { -10, 4, 7, -6, 3 }, { -8, 9, -3, 3, -7 } };
-
-    Rectangle maxSumRectangle = maxSum(matrix);
-
-    System.out.println("Rectangle Sum: " + maxSumRectangle.interiorSum);
-
-    System.out.println("Left Index: " + maxSumRectangle.leftBorderIndex);
-    System.out.println("Right Index: " + maxSumRectangle.rightBorderIndex);
-    System.out.println("Top Index: " + maxSumRectangle.topBorderIndex);
-    System.out.println("Bottom Index: " + maxSumRectangle.bottomBorderIndex);
-  }
-
-  private Rectangle maxSum(int matrix[][]) {
+  public Rectangle maxSum(int matrix[][]) {
     /*
      * Record the total amount of rows and columns
      */

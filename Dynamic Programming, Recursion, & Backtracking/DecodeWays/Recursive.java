@@ -1,4 +1,4 @@
-class Recursive {
+class Solution {
   public int numDecodings(String s) {
     int[] dp = new int[s.length()];
     Arrays.fill(dp, -1);

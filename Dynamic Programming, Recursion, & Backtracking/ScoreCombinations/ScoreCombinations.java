@@ -1,21 +1,5 @@
-/*
-  You are given the final score of a football (American) game
-  where there are 2, 3 & 7 point plays.
-
-  Write a generic program that determines the total ways that
-  the final score can be reached with the point values of each
-  possible scoring event.
-*/
-
-public class ScoreCombinations {
-  public static void main(String args[]) {
-    int score = 12;
-    int[] pointEvents = new int[]{ 2, 3, 7 };
-
-    System.out.println(totalWaysToReachScore(score, pointEvents));
-  }
-
-  private static int totalWaysToReachScore(int finalScore, int[] pointEvents) {
+public class Solution {
+  public int totalWaysToReachScore(int finalScore, int[] pointEvents) {
     /*
       The row indicates considering the row'th item for use. The column
       indicates the score amount to determine total combinations for.
@@ -52,17 +36,6 @@ public class ScoreCombinations {
       }
     }
 
-    printCache(waysCache);
-
     return waysCache[pointEvents.length][finalScore];
-  }
-
-  private static void printCache(int[][] cache) {
-    for (int[] row: cache) {
-      for (int col: row) {
-        System.out.print(col + " ");
-      }
-      System.out.println();
-    }
   }
 }

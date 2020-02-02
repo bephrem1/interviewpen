@@ -1,8 +1,7 @@
-class NumArray {
+class Solution {
   int[] runningSumCache;
 
   public NumArray(int[] nums) {
-
     /*
       The running sum cache will be the size of the array that we are given.
       We do nums.length + 1 for a reason, see below.
@@ -42,7 +41,6 @@ class NumArray {
     for (int i = 0; i < nums.length; i++) {
       runningSumCache[i + 1] += nums[i] + runningSumCache[i];
     }
-
   }
   
   /*
