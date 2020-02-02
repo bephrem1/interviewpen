@@ -1,6 +1,5 @@
 class Solution {
-  public static int[] plusOne(int[] digits) {
-
+  public int[] plusOne(int[] digits) {
     /*
      * Grab the last index and then perform the increment
      */
@@ -66,5 +65,4 @@ class Solution {
      */
     return digits;
   }
-
 }

@@ -1,23 +1,5 @@
-public class InterconvertStringAndInteger {
-  public static void main(String args[]) {
-    int[] numbers = new int[]{ 123, -1 };
-    String[] strings = new String[]{ "123", "-1" };
-
-    System.out.println("Converting ints to strings: ");
-    for (int num: numbers) {
-      String result = intToString(num);
-      System.out.println("Result: " + result + " of type " + result.getClass());
-    }
-    System.out.print("\n");
-
-    System.out.println("Converting strings to ints: ");
-    for (String s: strings) {
-      int result = stringToInt(s);
-      System.out.println("Result: " + result + " of type " + ((result == (int)result) ? "int" : "not an int"));
-    }
-  }
-
-  private static String intToString(int num) {
+public class Solution {
+  private String intToString(int num) {
     boolean isNegative = false;
     if (num < 0) {
       isNegative = true;
@@ -54,7 +36,7 @@ public class InterconvertStringAndInteger {
     return sb.toString();
   }
 
-  private static int stringToInt(String s) {
+  public int stringToInt(String s) {
     int result = 0;
 
     int startIndex = s.charAt(0) == '-' ? 1 : 0;

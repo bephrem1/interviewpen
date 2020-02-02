@@ -1,35 +1,5 @@
-/*
-  This code can handle bases between 2 - 36, this is because for
-  each digit we can represent:
-
-  0, 1, 2, 3, 4, 5, 6, 7, 8, 9 => 10 uniques
-  A, B, C, D, E, F, G, H, I, J, K, L, N, O, P, Q, R, S, T, U, V, W, X, Y, Z => 26 uniques
-
-  So 36 unique digits in each place can be handled at maximum. 0 - 'Z'
-
-  This code isn't thoroughly tested & I'm not an expert on this, but
-  this should get the general point across.
-*/
-import java.util.*;
-
-public class ChangingBase {
-  public static void main(String args[]) {
-    String a = "123456";
-    String b = "615";
-    String c = "263";
-    String d = "312312";
-    String e = "-111";
-    String f = "-1A4249";
-
-    System.out.println(changeBase(a, 10, 2)); // "11110001001000000"
-    System.out.println(changeBase(b, 7, 13)); // "1A7"
-    System.out.println(changeBase(c, 7, 20)); // "73"
-    System.out.println(changeBase(d, 4, 18)); // "AF0"
-    System.out.println(changeBase(e, 2, 10)); // "-7"
-    System.out.println(changeBase(f, 16, 8)); // "-6441111"
-  }
-
-  private static String changeBase(String numAsString, int b1, int b2) {
+public class Solution {
+  public String changeBase(String numAsString, int b1, int b2) {
     boolean isNegative = numAsString.startsWith("-");
 
     /*
@@ -90,7 +60,7 @@ public class ChangingBase {
     }
   }
 
-  private static String base10ToNewBase(int numberUnderBase10, int base) {
+  private String base10ToNewBase(int numberUnderBase10, int base) {
     if (numberUnderBase10 == 0) {
       return "";
     }
@@ -119,3 +89,16 @@ public class ChangingBase {
     return everythingElseToOurLeft + lsdAsChar;
   }
 }
+
+/*
+  This code can handle bases between 2 - 36, this is because for
+  each digit we can represent:
+
+  0, 1, 2, 3, 4, 5, 6, 7, 8, 9 => 10 uniques
+  A, B, C, D, E, F, G, H, I, J, K, L, N, O, P, Q, R, S, T, U, V, W, X, Y, Z => 26 uniques
+
+  So 36 unique digits in each place can be handled at maximum. 0 - 'Z'
+
+  This code isn't thoroughly tested & I'm not an expert on this, but
+  this should get the general point across.
+*/
