@@ -1,8 +1,6 @@
 class Solution {
   public void nextPermutation(int[] nums) {
-    /*
-      Grab the index of the 2nd to last element in the array
-    */
+    // Grab the index of the 2nd to last element in the array
     int i = nums.length - 2;
 
     /*
@@ -54,9 +52,7 @@ class Solution {
     reverse(nums, i + 1);
   }
 
-  /*
-    Reverses from 'start' to the end of the array 'nums'
-  */
+  // Reverses from 'start' to the end of the array 'nums'
   private void reverse(int[] nums, int start) {
     int left = start;
     int right = nums.length - 1;
@@ -68,9 +64,6 @@ class Solution {
     }
   }
 
-  /*
-    Swap helper
-  */
   private void swap(int[] nums, int i, int j) {
     int temp = nums[i];
     nums[i] = nums[j];
