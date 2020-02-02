@@ -1,6 +1,4 @@
-import java.util.*;
-
-public class TopologicalSort {
+public class Solution {
   public static void main(String args[]) {
     smallGraphExample();
     biggerGraphExample();

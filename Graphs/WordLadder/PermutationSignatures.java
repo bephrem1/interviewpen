@@ -1,86 +1,5 @@
-class SolutionWithRawSimulation {
-  public int ladderLength(String beginWord, String endWord, List<String> wordList) {
-
-    if (!wordList.contains(endWord)) {
-      return 0;
-    }
-
-    // Initialize the breadth first search
-    Queue<String> queue = new LinkedList<String>();
-    queue.add(beginWord);
-    
-    // Mark start word as visited
-    Set<String> visited = new HashSet<String>();
-    visited.add(beginWord);
-    
-    // The current level of "hops" we have taken from the start word
-    int currentLevel = 1;
-    int itemsLeftToProcessInLevel = 1;
-
-    while (!queue.isEmpty()) {
-      String word = queue.poll();
-      
-      // Physically modify each character
-      for (int i = 0; i < word.length(); i++) {
-
-        // Convert the string to a char array so we can manipulate characters directly
-        char[] chars = word.toCharArray();
-        
-        for (char character = 'a'; character <= 'z'; character++) {
-          // Modify the character at 'i'
-          chars[i] = character;
-          
-          // Rebuild the string, we now have a string 1 'transformation' away
-          String transformedWord = new String(chars);
-          
-          // If this word is a match for the end then we have found a path
-          if (transformedWord.equals(endWord)) {
-            return currentLevel + 1;
-          }
-          
-          /*
-            If the word is in the 'wordList' and has not been visited, then
-            add it to the queue to eventually be searched
-          */
-          if (wordList.contains(transformedWord) && !visited.contains(transformedWord)) {
-            queue.add(transformedWord);
-            visited.add(transformedWord);
-          }
-        }
-      }
-    
-      // 1 less item to process in the current level
-      itemsLeftToProcessInLevel--;
-
-      /*
-        If we have just processed all of the items in the current level, the
-        items in the queue represent all of the items in the next level.
-
-        Get the queue's size (which is the size of the next level), set our state,
-        and increment the level.
-      */
-      if (itemsLeftToProcessInLevel == 0) {
-        currentLevel++;
-        itemsLeftToProcessInLevel = queue.size();
-      }
-    }
-
-    return 0;
-  }
-}
-
-class SolutionWithIdentifiers {
-  private class Node {
-    String word;
-    int distance;
-
-    public Node(String word, int distance) {
-      this.word = word;
-      this.distance = distance;
-    }
-  }
-
-  public int ladderLength(String beginWord, String endWord, List<String> wordList) {
+class Solution {
+  public int distance(String beginWord, String endWord, List<String> wordList) {
     /*
       Maps each uniquely identified "jump identifier" to all of the words in wordList
       that are reachable from that idendifier
@@ -104,7 +23,6 @@ class SolutionWithIdentifiers {
 
       // Try each possible transformation
       for (int i = 0; i < wordLength; i++) {
-
         // A "permutationIdentifier" to represent all "distance 1" transformations from "word"
         String permutationIdentifier = word.substring(0, i) + '*' + word.substring(i + 1, wordLength);
 
@@ -113,7 +31,6 @@ class SolutionWithIdentifiers {
 
         // Process each word that can be reached via this transformation
         for (String reachableWord: reachableWords) {
-
           // If the word that can be reached return +1 our current distance to not actually do the hop
           if (reachableWord.equals(endWord)) {
             return distance + 1;
@@ -194,5 +111,15 @@ class SolutionWithIdentifiers {
     }
 
     return identifierToReachableWords;
+  }
+
+  private class Node {
+    String word;
+    int distance;
+
+    public Node(String word, int distance) {
+      this.word = word;
+      this.distance = distance;
+    }
   }
 }

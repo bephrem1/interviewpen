@@ -1,6 +1,4 @@
-import java.util.*;
-
-public class MinimumSpanningTrees {
+public class Solution {
   public static void main(String args[]) {
     List<Edge> edges = new ArrayList<>();
 
@@ -50,7 +48,7 @@ public class MinimumSpanningTrees {
     Prim's w/ lazy edge elimination.
     (elimination when an edge connects a tree vertex to another tree vertex)
   */
-  private static void lazyPrims(List<Edge> edges) {
+  private void lazyPrims(List<Edge> edges) {
     List<Edge> mstEdges = new ArrayList<>();
     Set<Character> mstNodes = new HashSet<>();
     Character startNode = 'a';
@@ -86,11 +84,11 @@ public class MinimumSpanningTrees {
   }
 
   // Left unimplemented, reference: https://www.cs.cmu.edu/~avrim/451f13/lectures/lect0912.pdf
-  private static void kruskals(List<Edge> edges) { }
+  private void kruskals(List<Edge> edges) { }
 
   /***************   Helpers   ***************/
 
-  private static Map<Character, List<Edge>> buildAdjacencyMapping(List<Edge> edges) {
+  private Map<Character, List<Edge>> buildAdjacencyMapping(List<Edge> edges) {
     Map<Character, List<Edge>> vertexToAdjacents = new HashMap<>();
 
     for (Edge e: edges) {
@@ -122,7 +120,7 @@ public class MinimumSpanningTrees {
 
   /***************   Classes   ***************/
 
-  private static class Edge {
+  private class Edge {
     char start;
     char end;
     int weight;

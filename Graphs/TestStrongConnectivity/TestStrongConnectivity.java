@@ -1,6 +1,4 @@
-import java.util.*;
-
-public class StrongConnectivity {
+public class Solution {
   public static void main(String args[]) {
     /*
       Here you are given the adjacency list, but even if you were
