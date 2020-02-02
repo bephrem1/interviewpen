@@ -1,6 +1,4 @@
-import java.util.*;
-
-public class DirectoryAccess {
+public class Solution {
   public static void main(String args[]) {
     Set<String> access = new HashSet<>(Arrays.asList(
       "B",

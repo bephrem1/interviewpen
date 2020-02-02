@@ -1,5 +1,3 @@
-#!/usr/bin/python
-
 class BalancedParens:
   def checkParens(s):
     '''
@@ -82,4 +80,3 @@ def testBalancedParens():
 
 if __name__ == '__main__':
   testBalancedParens()
-

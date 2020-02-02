@@ -1,8 +1,7 @@
-public class Solution {
+class Solution {
   private static final String NULL_SYMBOL = "X";
   private static final String DELIMITER = ",";
 
-  // Encodes a tree into a single string.
   public String serialize(TreeNode root) {
 
     // If we have a null symbol...we encode a null symbol
@@ -44,7 +43,7 @@ public class Solution {
    * We materialize a node, set its left and right subtrees respectively, and then
    * return the node itself
    */
-  public TreeNode deserializeHelper(Queue<String> nodesLeftToMaterialize) {
+  private TreeNode deserializeHelper(Queue<String> nodesLeftToMaterialize) {
 
     String valueForNode = nodesLeftToMaterialize.poll();
 
@@ -57,9 +56,8 @@ public class Solution {
     newNode.right = deserializeHelper(nodesLeftToMaterialize);
 
     /*
-     * ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ I know what you are
-     * thinking..."how does the call to 'right' know where to pick up where the
-     * 'left' call left off?
+     * How does the call to 'right' know where to pick up where the 'left' call
+     * left off?
      * 
      * Well, the queue ensures that whatever is at the front is the next node to
      * process, we don't need to carry state between calls because the queue

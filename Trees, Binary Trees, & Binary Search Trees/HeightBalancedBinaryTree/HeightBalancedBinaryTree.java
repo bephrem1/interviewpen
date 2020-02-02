@@ -1,27 +1,9 @@
 class Solution {
-  /*
-   * We care about 2 things as our recursion goes upwards after bottoming out:
-   * 
-   * - The node's height - Whether its left and right subtrees are balanced
-   */
-  private class BalanceStatusWithHeight {
-    public boolean isBalanced;
-    public int height;
-
-    public BalanceStatusWithHeight(boolean isBalanced, int height) {
-      this.isBalanced = isBalanced;
-      this.height = height;
-    }
-  }
-
-  /*
-   * Kick off the recursion, the result will be what we return
-   */
   public boolean isBalanced(TreeNode root) {
     return checkBalanced(root).isBalanced;
   }
 
-  private static BalanceStatusWithHeight checkBalanced(TreeNode root) {
+  private BalanceStatusWithHeight checkBalanced(TreeNode root) {
 
     /*
      * Base case, an empty subtree is balanced and has a height of -1 as we define
@@ -60,4 +42,21 @@ class Solution {
 
     return new BalanceStatusWithHeight(subtreesAreBalanced, height);
   }
+
+  /*
+    We care about 2 things as our recursion goes upwards after bottoming out:
+    1.)  The node's height
+    2.)  Whether its left and right subtrees are balanced
+  */
+  private class BalanceStatusWithHeight {
+    public boolean isBalanced;
+    public int height;
+
+    public BalanceStatusWithHeight(boolean isBalanced, int height) {
+      this.isBalanced = isBalanced;
+      this.height = height;
+    }
+  }
 }
+
+/* Solution via EPI (Elements of Programming Interviews) */

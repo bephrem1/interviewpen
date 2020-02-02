@@ -1,6 +1,5 @@
 class Solution {
-  private TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
-
+  public TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
     /*
      * Our base cases. How our recursion stops. When we have an answer.
      * 
@@ -41,5 +40,4 @@ class Solution {
      */
     return root;
   }
-
 }

@@ -1,11 +1,3 @@
-/**
- * These are the 3 fundamental tree traversals all done recursively.
- * 
- * Very basic, very straightforward. These can be done iteratively as well as in
- * O(1) space, but then they get trickier to implement but don't worry. If you
- * can grasp these, you can grasp those.
- */
-
 class Solution {
   private class TreeNode {
     int val;

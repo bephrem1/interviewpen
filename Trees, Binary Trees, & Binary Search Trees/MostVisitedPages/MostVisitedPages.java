@@ -1,37 +1,4 @@
-/*
-  Keep track of the most visited pages given server log
-  files notating pages accessed.
-
-  This is an online algorithm so repeated calls with new log entries
-  should be accounted for & querying the top k most visited entries
-  should remain as fast as possible.
-
-  No provision is provided here to keep the binary search tree balanced
-  so if the tree is printed it will basically be a linked list.
-*/
-import java.util.*;
-
-public class MostVisitedPages {
-  public static void main(String args[]) {
-    LogProcessor logProcessor = new LogProcessor();
-
-    String[] pagesVisited = new String[]{
-      "a", "b", "c", "d", "e", "f", "g", "h", "i",
-      "a", "a", "a", "a", "b", "b", "b", "f", "f",
-      "g", "h", "i"
-    };
-
-    for (String page: pagesVisited) {
-      System.out.println("Insert: " + page);
-      logProcessor.insert(page);
-      logProcessor.printTree();
-    }
-
-    for (int i = 2; i <= 7; i++) {
-      System.out.println("Top " + i + " pages: " + logProcessor.topKVisitedPages(i));
-    }
-  }
-
+class Solution {
   private static class LogProcessor {
     Map<String, TreeNode> pageIdToNode;
     TreeNode root;
@@ -196,7 +163,7 @@ public class MostVisitedPages {
     }
   }
 
-  private static class TreeNode implements Comparable<TreeNode> {
+  private class TreeNode implements Comparable<TreeNode> {
     String pageId;
     int visitCount;
 
@@ -229,7 +196,7 @@ public class MostVisitedPages {
     }
   }
 
-  private static class Counter {
+  private class Counter {
     int counter;
 
     public Counter(int counter) {

@@ -1,10 +1,3 @@
-/*
-  Write a program that finds the distance between the closest pair
-  of equivalent entries
-*/
-
-import java.util.*;
-
 public class NearestRepeatedEntries {
   public static void main(String args[]) {
     String[] sentence = new String[]{

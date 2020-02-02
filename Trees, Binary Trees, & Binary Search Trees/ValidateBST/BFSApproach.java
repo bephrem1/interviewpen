@@ -1,25 +1,4 @@
-class RecursiveApproach {
-  public boolean isValidBST(TreeNode root) {
-    return isNodeValueInRange(root, Long.MIN_VALUE, Long.MAX_VALUE);
-  }
-
-  private boolean isNodeValueInRange(TreeNode node, long min, long max) {
-    if (node == null) {
-      return true;
-    } else if (node.val <= min || node.val >= max) {
-      return false;
-    }
-
-    return isNodeValueInRange(node.left, min, node.val) && isNodeValueInRange(node.right, node.val, max);
-  }
-}
-
-/*
- * Validating in a breadth-first manner improves the real elapsed time because
- * we will find a violating node often earlier by not going depth-first into the
- * left subtree
- */
-class BFSWithNodeAugmentation {
+class Solution {
   public boolean isValidBST(TreeNode root) {
     Queue<AugmentedTreeNode> queue = new LinkedList<>();
     queue.add(new AugmentedTreeNode(root, Long.MIN_VALUE, Long.MAX_VALUE));
