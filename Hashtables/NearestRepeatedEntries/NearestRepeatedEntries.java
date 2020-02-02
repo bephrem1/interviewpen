@@ -1,21 +1,5 @@
-public class NearestRepeatedEntries {
-  public static void main(String args[]) {
-    String[] sentence = new String[]{
-      "This",
-      "is",
-      "a",
-      "sentence",
-      "with",
-      "is",
-      "repeated",
-      "then",
-      "repeated"
-    };
-
-    System.out.println("Distance between closest repeated entries: " + distanceOfClosestRepeatedEntries(sentence));
-  }
-
-  private static int distanceOfClosestRepeatedEntries(String[] sentence) {
+class Solution {
+  public int distanceOfClosestRepeatedEntries(String[] sentence) {
     Map<String, Integer> wordToIndexLastSeenAt = new HashMap<>();
     int nearestRepeatedEntryDistance = Integer.MAX_VALUE;
 

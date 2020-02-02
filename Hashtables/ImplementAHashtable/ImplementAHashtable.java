@@ -1,62 +1,10 @@
-/*
-  A rudimentary implementation of a hashtable with chaining to resolve collisions
-  and no provision for resizing to accomodate increased load factor
-
-  Hashtables: https://en.wikipedia.org/wiki/Hash_table
-*/
-import java.util.*;
-
-public class ImplementAHashtable {
-  public static void main(String args[]) {
-    Hashtable<String, Integer> studentToGrade = new Hashtable<>();
-
-    String[] keys = new String[]{
-      "John",
-      "Gracie",
-      "Cara",
-      "Polly",
-      "Adelina",
-      "Owen",
-      "Federico",
-      "Craig",
-      "Ishan",
-      "Michael",
-      "Zack",
-      "Zach",
-      "Luis",
-      "Joshua",
-      "Kyrie",
-      "Adit",
-      "Amit"
-    };
-
-    int[] values = new int[]{ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 };
-
-    for (int i = 0; i < keys.length; i++) {
-      System.out.println("Inserting " + keys[i] + "'s grade.");
-      studentToGrade.put(keys[i], values[i]);
-    }
-
-    System.out.println();
-
-    for (int i = 0; i < keys.length; i++) {
-      System.out.println(keys[i] + "'s grade is: " + studentToGrade.get(keys[i]));
-    }
-
-    System.out.println();
-
-    int updateValue = 1000;
-    System.out.println("Updating " + keys[0] + " with a new grade of " + updateValue);
-    studentToGrade.put(keys[0], updateValue);
-    System.out.println(keys[0] + "'s new grade is: " + studentToGrade.get(keys[0]));
-  }
-
+public class Solution {
   /*
     We will use generics so that the keys and values can be whatever the
     caller would like. We can implement the buckets with a plain array, but
     here we use an ArrayList (which uses an array underneath) for convenience
   */
-  private static class Hashtable<K, V> {
+  public class Hashtable<K, V> {
     List<Entry<K, V>> buckets;
     int capacity = 20;
     int size = 0;
