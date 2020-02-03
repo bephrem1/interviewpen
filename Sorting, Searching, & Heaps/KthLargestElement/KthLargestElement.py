@@ -1,4 +1,16 @@
+'''
+    Kth Largest Element in an Array - LeetCode: https://leetcode.com/problems/kth-largest-element-in-an-array/
 
+    This optimal solution has the same fundamental reasoning that QuickSort uses. (the partitioning subroutine)
+
+    Check out that QuickSort video here: https://www.youtube.com/watch?v=uXBnyYuwPe8
+
+    This code passes all Leetcode test cases as of February 03 2020
+    Runtime: 1 ms, faster than 99.86% of Java online submissions for Kth Largest Element in an Array
+
+    The video to explain this code is here: https://www.youtube.com/watch?v=hGK_5n81drs
+
+'''
 import random
 class Solution:
     def quickselect(arr, k):
