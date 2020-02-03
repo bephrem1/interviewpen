@@ -5,6 +5,7 @@
     there are many other ways to choose a pivot item.
 
     The video to explain this code is here: https://www.youtube.com/watch?v=uXBnyYuwPe8
+    Dteailed info about QuickSort you can find from here : https://www.geeksforgeeks.org/quick-sort/
 '''
 
 
