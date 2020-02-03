@@ -13,8 +13,9 @@ class Solution {
     }
 
     if (leftSubtreeRoot != null && rightSubtreeRoot != null) {
-      return leftSubtreeRoot.val == rightSubtreeRoot.val && checkSymmetry(leftSubtreeRoot.right, rightSubtreeRoot.left)
-          && checkSymmetry(leftSubtreeRoot.left, rightSubtreeRoot.right);
+      return leftSubtreeRoot.val == rightSubtreeRoot.val &&
+        checkSymmetry(leftSubtreeRoot.right, rightSubtreeRoot.left) &&
+        checkSymmetry(leftSubtreeRoot.left, rightSubtreeRoot.right);
     }
 
     return false;
