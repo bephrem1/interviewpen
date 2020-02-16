@@ -34,7 +34,7 @@ class Solution {
         - Gray: The cycle will be caught in the next call and 'false' will bubble
           up the call stack
     */
-    for (GraphVertex adjacent: vertex.edges) {
+    for (GraphVertex adjacent: vertex.adjacents) {
       if (adjacent.color != GraphVertex.Color.BLACK) {
         if (hasCycleFromVertex(adjacent)) {
           return true;
