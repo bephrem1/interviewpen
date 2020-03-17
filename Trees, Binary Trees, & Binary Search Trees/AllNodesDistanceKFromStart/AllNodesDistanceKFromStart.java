@@ -7,7 +7,7 @@ class Solution {
     queue.add(startNode);
 
     /*
-      The is an undirected graph now that we can go to and from nodes.
+      The binary tree is an undirected graph now that we can go to and from nodes.
       Before we could only go down the tree.
 
       Therefore, we need a hashtable to keep track of nodes we have
