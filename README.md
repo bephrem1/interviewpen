@@ -1,3 +1,13 @@
+<p align="center">
+  <img
+    src="https://backtobackswe.s3.us-west-1.amazonaws.com/images/logo.png"
+    height="250px"
+    width="250px"
+    align="center"
+    alt="Back To Back SWE Logo"
+  />
+</p>
+
 # Back To Back SWE
 
 An initiative to empower the software engineer to excel in the interview.
