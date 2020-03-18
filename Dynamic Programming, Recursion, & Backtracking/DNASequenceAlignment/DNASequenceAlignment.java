@@ -1,3 +1,12 @@
+/*
+  This repository is no longer actively maintained. To find all solutions
+  to this problem (and practice coding more problems) at:
+
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+  https://backtobackswe.com
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
 public class Solution {
   private static final int GAP_COST = 1;
   private static final Map<String, Integer> alignmentCosts = new HashMap<>();

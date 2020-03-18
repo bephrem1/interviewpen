@@ -1,3 +1,12 @@
+/*
+  This repository is no longer actively maintained. To find all solutions
+  to this problem (and practice coding more problems) at:
+
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+  https://backtobackswe.com
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
 class Solution {
   public boolean isValidBST(TreeNode root) {
     return isNodeValueInRange(root, Long.MIN_VALUE, Long.MAX_VALUE);

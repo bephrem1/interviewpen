@@ -1,3 +1,12 @@
+/*
+  This repository is no longer actively maintained. To find all solutions
+  to this problem (and practice coding more problems) at:
+
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+  https://backtobackswe.com
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
 public class Solution {
   /*
     We will use generics so that the keys and values can be whatever the

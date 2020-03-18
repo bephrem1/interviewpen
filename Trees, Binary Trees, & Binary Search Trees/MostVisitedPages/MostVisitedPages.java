@@ -1,3 +1,12 @@
+/*
+  This repository is no longer actively maintained. To find all solutions
+  to this problem (and practice coding more problems) at:
+
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+  https://backtobackswe.com
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
 class Solution {
   private static class LogProcessor {
     Map<String, TreeNode> pageIdToNode;

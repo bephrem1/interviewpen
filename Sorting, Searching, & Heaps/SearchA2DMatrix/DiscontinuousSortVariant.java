@@ -1,3 +1,12 @@
+/*
+  This repository is no longer actively maintained. To find all solutions
+  to this problem (and practice coding more problems) at:
+
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+  https://backtobackswe.com
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
 class Solution {
   public boolean search(int[][] matrix, int target) {
     if (matrix.length == 0) {
@@ -6,7 +15,7 @@ class Solution {
 
     int col = matrix[0].length - 1;
     int row = 0;
-=
+
     while (col >= 0 && row <= matrix.length - 1) {
       /*
         Cases:

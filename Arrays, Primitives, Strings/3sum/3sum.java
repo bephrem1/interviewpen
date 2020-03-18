@@ -1,6 +1,6 @@
 /*
   This repository is no longer actively maintained. To find all solutions
-  to this problem (and practice coding more problems) visit us at:
+  to this problem (and practice coding more problems) at:
 
   ~~~~~~~~~~~~~~~~~~~~~~~~~
   https://backtobackswe.com

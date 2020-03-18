@@ -1,3 +1,12 @@
+/*
+  This repository is no longer actively maintained. To find all solutions
+  to this problem (and practice coding more problems) at:
+
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+  https://backtobackswe.com
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
 class Solution {
   public int knapsackBottomUp(int[] values, int[] weights, int maxWeightConstraint, int[][] cache) {
     for (int totalItems = 0; totalItems <= values.length; totalItems++) {

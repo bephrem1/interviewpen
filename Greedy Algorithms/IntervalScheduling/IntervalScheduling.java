@@ -1,3 +1,12 @@
+/*
+  This repository is no longer actively maintained. To find all solutions
+  to this problem (and practice coding more problems) at:
+
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+  https://backtobackswe.com
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
 public class Solution {
   public List<Interval> constructOptimalSchedule(List<Interval> intervals) {
     List<Interval> optimalSchedule = new ArrayList<>();
