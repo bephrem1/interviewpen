@@ -14,7 +14,8 @@
 An initiative to empower the software engineer to excel in the interview.
 
 <b>Website:</b> https://backtobackswe.com <br>
-- 🏃 Run Code
+- 📹 Intuitive Video Explanations
+- 🏃 Run Code As You Learn
 - 💾 Save Progress
 - ❓New Unseen Questions
 - 🔎 Get All Solutions
