@@ -1,3 +1,12 @@
+/*
+  This repository is no longer actively maintained. To find all solutions
+  to this problem (and practice coding more problems) visit us at:
+
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+  https://backtobackswe.com
+  ~~~~~~~~~~~~~~~~~~~~~~~~~
+*/
+
 class Solution {
   public List<List<Integer>> threeSum(int[] A) {
     Arrays.sort(A); // Sorting array of integers can take O(n) time via Bucket Sort or Radix Sort
