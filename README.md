@@ -5,6 +5,7 @@
     width="250px"
     align="center"
     alt="Back To Back SWE Logo"
+    draggable="false"
   />
 </p>
 
