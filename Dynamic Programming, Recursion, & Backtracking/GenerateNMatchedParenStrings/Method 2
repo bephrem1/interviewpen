@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class NMatchedParentheses {
+
+	public static void main(String[] args) {
+		
+		int n = 5; 
+		int left = n ; 
+		int right = n ; 
+		String s = "" ; 
+		
+		List<String> list = new ArrayList<>(); 
+		
+    topDown(left, right, s, list);
+		
+		System.out.println("Strings are: \n" + list);
+		
+	}
+	
+	public static void topDown(int left, int right, String s, List<String> list) {
+		
+		if(left == 0 && right == 0) { // Base Case 
+			list.add(s) ; 
+			return ; 
+		}
+		
+		if(left == 0) {  // Mixture of base case and recursive call. 
+			topDown(left, right-1, s+")",  list) ;
+			return ; 
+		}	
+		
+		if (left == right ) {
+			topDown(left-1, right, s + "(",  list) ;
+		} else {							// right > left 
+			topDown(left-1, right, s + "(", list) ; 
+			topDown(left, right-1, s + ")", list) ; 	
+		}
+		
+	}
+  
+  }
